@@ -61,17 +61,13 @@ function audioSection(){
  return 'activities';
 }
 function attachWelcomeAudio(){
- const box=document.createElement('div');box.className='compact-welcome';
- box.innerHTML=`<button type="button" class="welcome-toggle listen" aria-pressed="false" aria-label="استمع إلى ترحيب المعلمة آلاء"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12H11L18 6V26L11 20H5Z" fill="currentColor"/><g class="welcome-waves" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11Q27 16 22 21"/><path d="M26 7Q34 16 26 25"/></g></svg><span>استمع إلى ترحيب المعلمة آلاء</span></button><audio hidden preload="metadata" src="assets/audio/welcome.mp3" aria-label="تسجيل الترحيب بصوت المعلمة آلاء"></audio>`;
- document.querySelector('#welcome-title').after(box);
- const button=box.querySelector('button'),player=box.querySelector('audio');let pending=false,revision=0;
- function update(){const playing=!player.paused&&!player.ended;button.classList.toggle('is-playing',playing);button.setAttribute('aria-pressed',String(playing));button.setAttribute('aria-label',playing?'إيقاف ترحيب المعلمة آلاء مؤقتًا':player.currentTime>0?'استكمال ترحيب المعلمة آلاء':'استمع إلى ترحيب المعلمة آلاء');button.title=button.getAttribute('aria-label');}
- async function start(){const ticket=++revision;pending=true;currentAudio=player;try{if(player.ended)player.currentTime=0;await player.play();if(!box.isConnected){player.pause();return;}if(ticket!==revision)return;pending=false;update();}catch{if(ticket!==revision)return;pending=false;if(currentAudio===player)currentAudio=null;update();}}
- button.onclick=()=>{if(pending||!player.paused){revision++;pending=false;player.pause();if(currentAudio===player)currentAudio=null;update();}else start();};
- player.onplay=()=>{if(!box.isConnected){player.pause();return;}if(player.paused)return;if(currentAudio&&currentAudio!==player)currentAudio.pause();currentAudio=player;update();};
- player.onpause=()=>{if(currentAudio===player)currentAudio=null;update();};player.onended=()=>{pending=false;if(currentAudio===player)currentAudio=null;update();};
- player.onerror=()=>{pending=false;if(currentAudio===player)currentAudio=null;update();button.title='تعذر تشغيل الترحيب؛ اضغط للمحاولة مجددًا.';};
- // Attempt only the existing recording; browser restrictions leave the same button ready.
+ const player=document.createElement('audio');player.hidden=true;player.preload='auto';player.autoplay=true;player.src='assets/audio/welcome.mp3';player.setAttribute('aria-label','تسجيل الترحيب بصوت المعلمة آلاء');
+ document.querySelector('#welcome-title').after(player);
+ const gestures=new AbortController();
+ async function start(){if(!player.isConnected)return;currentAudio=player;try{await player.play();if(!player.isConnected)player.pause();}catch(error){if(currentAudio===player)currentAudio=null;if(error.name==='NotAllowedError'&&player.isConnected&&!gestures.signal.aborted){const retry=()=>{gestures.abort();if(player.isConnected)start();};document.addEventListener('pointerdown',retry,{once:true,capture:true,signal:gestures.signal});document.addEventListener('keydown',retry,{once:true,capture:true,signal:gestures.signal});}}}
+ player.onplay=()=>{gestures.abort();if(!player.isConnected){player.pause();return;}if(currentAudio&&currentAudio!==player)currentAudio.pause();currentAudio=player;};
+ player.onpause=player.onended=()=>{if(currentAudio===player)currentAudio=null;};
+ player.onerror=()=>{gestures.abort();if(currentAudio===player)currentAudio=null;};
  start();
 }
 function attachAudio(){
