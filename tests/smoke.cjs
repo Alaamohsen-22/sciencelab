@@ -53,7 +53,7 @@ const cases=[
  [8,'bread',['bread','iodine'],'الخبز بنفسجي'],[8,'milk',['milk','iodine'],'لا يتغيّر لون الحليب'],
  [9,null,['salt','water','stir','silver'],'راسب أبيض'],
  [10,'acid',['acid','extract'],'أحمر'],[10,'base',['base','extract'],'أخضر'],
- [11,null,['magnesium','sandpaper','tongs','burner'],'أكسيد المغنيسيوم']
+ [11,null,['magnesium','tongs','burner'],'أكسيد المغنيسيوم']
 ];
 for(const mode of ['click','drag'])for(const [n,sample,materials,outcome] of cases){
  await p.evaluate(n=>go(n),n);if(sample)await p.locator('#sample').selectOption(sample);
