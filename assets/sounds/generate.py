@@ -19,6 +19,8 @@ def save(name, duration, notes):
         out.setnchannels(1); out.setsampwidth(2); out.setframerate(RATE)
         out.writeframes(b''.join(samples))
 
-save('success', 1.45, [(0,523.25,.5,.16),(.16,659.25,.5,.16),(.32,783.99,.6,.16),(.50,1046.5,.85,.10),(.50,659.25,.85,.08)])
+# Bright ascending arpeggio with a short major-chord resolution; original composition.
+save('success', 1.60, [(0,523.25,.28,.16),(.11,659.25,.28,.17),(.22,783.99,.3,.17),(.35,1046.5,.34,.15),(.52,1318.51,.33,.10),(.69,1046.5,.88,.10),(.69,783.99,.88,.09),(.69,659.25,.88,.08)])
 save('error', .30, [(0,330,.16,.10),(.13,293.66,.16,.08)])
-save('click', .09, [(0,740,.075,.07)])
+# A quiet high-to-low electronic blip, distinct from the melodic success cue.
+save('click', .09, [(0,1320,.04,.06),(.025,660,.055,.045)])

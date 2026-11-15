@@ -35,7 +35,7 @@ const Effects=(()=>{
  function updateToggle(){toggle.textContent=enabled?'🔊':'🔇';toggle.setAttribute('aria-pressed',String(enabled));toggle.setAttribute('aria-label',enabled?'كتم المؤثرات الصوتية':'تشغيل المؤثرات الصوتية');toggle.title=toggle.getAttribute('aria-label');}
  toggle.onclick=()=>{enabled=!enabled;if(!enabled)stop();else unlock();try{localStorage.setItem('lab-effects',enabled?'on':'muted');}catch{}updateToggle();};updateToggle();document.body.append(toggle);
  document.addEventListener('click',unlock,{capture:true});document.addEventListener('pointerdown',unlock,{capture:true});document.addEventListener('keydown',unlock,{capture:true});
- document.addEventListener('click',e=>{if(e.target.closest('#effects-toggle'))return;const el=e.target.closest('button,input[type=radio],select');if(!el||el.disabled)return;const skip=suppressClick;suppressClick=false;if(!skip)play('click');});
+ document.addEventListener('click',e=>{if(e.target.closest('#effects-toggle'))return;const el=e.target.closest('button,input[type=radio],select');if(!el||el.disabled||el.hasAttribute('data-effect-silent'))return;const skip=suppressClick;suppressClick=false;if(!skip)play('click');});
  // Drag-and-drop and change/submit handlers also use result(); clear only the click suppression flag.
  document.addEventListener('pointerdown',()=>{suppressClick=false;},{capture:true});document.addEventListener('keydown',()=>{suppressClick=false;},{capture:true});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
