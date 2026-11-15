@@ -87,7 +87,7 @@ function attachSlideAudio(file){
 }
 function attachAudio(){
  if(page===-1){attachWelcomeAudio();return;}
- const slideRecordings={1:'goals.mp3',2:'rust-formation.mp3',3:'reactants-products.mp3',4:'materials-balance.mp3'};
+ const slideRecordings={1:'goals.mp3',2:'rust-formation.mp3',3:'reactants-products.mp3',4:'materials-balance.mp3',5:'equations-balancing.mp3',6:'zinc-balloon.mp3'};
  if(slideRecordings[page]){attachSlideAudio(slideRecordings[page]);return;}
  const id=audioSection(), box=document.createElement('section');box.className='audio recording-panel';
  box.setAttribute('aria-label','تسجيل المعلمة');
