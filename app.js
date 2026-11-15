@@ -75,6 +75,15 @@ function attachAudio(){
  player.onplay=()=>{if(!box.isConnected){player.pause();return;}if(currentAudio&&currentAudio!==player)currentAudio.pause();currentAudio=player;};
  player.onended=()=>status.textContent='اكتمل التسجيل. يمكنك إعادة الاستماع.';
  player.onerror=()=>status.textContent='تعذر قراءة التسجيل؛ جرّبي ملف MP3 أو WAV صالحًا.';
+ if(page===-1){
+  box.querySelector('h3').textContent='ترحيب المعلمة آلاء';
+  const listen=box.querySelector('.listen');listen.textContent='▶ استمع إلى ترحيب المعلمة آلاء';listen.classList.remove('secondary');
+  player.setAttribute('aria-label','تسجيل الترحيب بصوت المعلمة آلاء');player.preload='metadata';
+  useURL(audioURLs.get(id)||'assets/audio/welcome.mp3');
+  status.textContent='نحاول تشغيل الترحيب؛ يمكنك سماعه من زر الاستماع إذا منعه المتصفح.';
+  const ticket=revision;currentAudio=player;
+  player.play().then(()=>{if(!box.isConnected||ticket!==revision){player.pause();return;}status.textContent='أهلًا بكم! جارٍ تشغيل ترحيب المعلمة آلاء.';}).catch(()=>{if(!box.isConnected||ticket!==revision)return;if(currentAudio===player)currentAudio=null;status.textContent='اضغط على «استمع إلى ترحيب المعلمة آلاء» لسماع التسجيل.';});
+ }
 }
 const preQuestions=[
  ['أيّ مما يأتي يُعدّ تغيّرًا كيميائيًا؟',['انصهار الجليد.','صدأ الحديد.','تقطيع الورق.'],1,'صدأ الحديد تغيّر كيميائي تتكوّن فيه مادة جديدة.'],
