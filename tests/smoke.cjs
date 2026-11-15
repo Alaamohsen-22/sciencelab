@@ -15,7 +15,7 @@ await p.locator('.listen').click();await p.waitForFunction(()=>document.querySel
 assert(await p.locator('audio').evaluate(a=>a.paused&&!a.getAttribute('src')),'Missing recording stays silent');
 await p.getByRole('button',{name:'ابدأ الاستكشاف'}).click();
 assert(await p.locator('h2').textContent()==='لغز العالم الصغير: ماذا حدث داخل المختبر؟');
-assert(await p.locator('#mystery-question').isHidden());await p.locator('#start-mystery').click();
+assert(await p.locator('#mystery-question').isHidden());for(const id of ['zinc','acid','balloon'])await p.locator(`[data-material="${id}"]`).click();
 assert(await p.locator('.inflating-balloon').count()===1);await p.locator('#mystery-question').waitFor({state:'visible'});
 await p.locator('[data-mystery="1"]').click();assert(await p.locator('#discover').isHidden());await p.locator('[data-mystery="0"]').click();await p.locator('#discover').click();
 // Low score does not prevent progress or change the post-test score.
@@ -41,7 +41,25 @@ await p.locator('[data-material="balloon"]').dragTo(p.locator('#flask-drop'));as
 for(const item of ['zinc','acid','balloon'])await p.locator(`[data-material="${item}"]`).dragTo(p.locator('#flask-drop'));
 await p.waitForFunction(()=>!document.querySelector('[data-choice="0"]').disabled);assert(await p.locator('.lab-checklist .completed').count()===3);
 await p.locator('#reset-lab').click();for(const item of ['zinc','acid','balloon'])await p.locator(`[data-material="${item}"]`).click();await p.locator('#reset-lab').click();await p.waitForTimeout(2700);assert(await p.locator('[data-choice="0"]').isDisabled());
-for(let n=7;n<=11;n++){await p.locator('#next').click();assert(await p.evaluate(()=>page)===n);await p.locator('#run').click();await p.locator('[data-choice="1"]').click();assert(await p.locator('#explain').isHidden());await p.locator('[data-choice="0"]').click();assert(await p.locator('#explain').isVisible());if(n===8||n===10){await p.locator('#sample').selectOption(n===8?'milk':'base');await p.locator('#run').click();assert((await p.locator('#sim-status').textContent()).includes(n===8?'لم يتغيّر':'أخضر'));}await p.locator('#reset').click();assert(await p.locator('[data-choice="0"]').isDisabled());}
+const cases=[
+ [7,null,['aluminum','clip','acid'],'تصاعد غاز الهيدروجين'],
+ [8,'bread',['bread','iodine'],'الخبز بنفسجي'],[8,'milk',['milk','iodine'],'لا يتغيّر لون الحليب'],
+ [9,null,['salt','water','stir','silver'],'راسب أبيض'],
+ [10,'acid',['acid','extract'],'أحمر'],[10,'base',['base','extract'],'أخضر'],
+ [11,null,['magnesium','sandpaper','tongs','burner'],'أكسيد المغنيسيوم']
+];
+for(const mode of ['click','drag'])for(const [n,sample,materials,outcome] of cases){
+ await p.evaluate(n=>go(n),n);if(sample)await p.locator('#sample').selectOption(sample);
+ assert(await p.locator('.student-guide').count()===1);
+ const add=async id=>mode==='drag'?p.locator(`[data-material="${id}"]`).dragTo(p.locator('.flask-drop')):p.locator(`[data-material="${id}"]`).click();
+ const before=await p.locator('.experiment-visual').innerHTML();await add(materials.at(-1));assert(await p.locator('.experiment-visual').innerHTML()===before);assert((await p.locator('.experiment-status').textContent()).includes('الخطوة التالية'));
+ for(const id of materials){assert(await p.locator('[data-choice="0"]').isDisabled());await add(id);}
+ assert((await p.locator('.experiment-visual').textContent()).includes(outcome));await p.waitForFunction(()=>!document.querySelector('[data-choice="0"]').disabled);
+ await p.locator('[data-choice="1"]').click();assert(await p.locator('#explain').isHidden());await p.locator('[data-choice="0"]').click();assert(await p.locator('#explain').isVisible());
+ await p.locator('.reset-experiment').click();assert(await p.locator('[data-choice="0"]').isDisabled());assert(await p.locator('#explain').isHidden());assert(await p.locator(`[data-material="${materials[0]}"]`).isEnabled());
+}
+// Switching samples cancels the previous result and its pending completion.
+await p.evaluate(()=>go(8));await p.locator('[data-material="bread"]').click();await p.locator('[data-material="iodine"]').click();await p.locator('#sample').selectOption('milk');await p.waitForTimeout(2700);assert(await p.locator('[data-choice="0"]').isDisabled());assert(await p.locator('[data-material="milk"]').isEnabled());
 await p.locator('[data-page="13"]').click();assert(await p.locator('#toquiz').isVisible());await p.locator('#toquiz').click();
 // A poor post-test cannot unlock the certificate, even with full pre-test marks.
 for(let i=0;i<7;i++)await p.locator(`input[name=q${i}][value="${[1,0,1,0,1,0,1][i]}"]`).check();await p.getByRole('button',{name:'اعرض نتيجتي'}).click();await p.locator('#next').click();assert(await p.locator('#toquiz').isVisible());await p.locator('#toquiz').click();
@@ -53,7 +71,7 @@ await p.route('**/assets/audio/welcome.wav',route=>route.fulfill({status:200,con
 await p.reload();await p.route('**/assets/audio/welcome.mp3',route=>route.fulfill({status:200,contentType:'audio/mpeg',body:encoded.stdout}));await p.locator('.listen').click();await p.waitForFunction(()=>document.querySelector('audio').currentTime>0);assert((await p.locator('audio').getAttribute('src')).endsWith('welcome.mp3'));
 // All step links and navigation boundaries work; no page overflows.
 for(const width of [390,1280]){await p.setViewportSize({width,height:900});for(let n=0;n<14;n++){await p.evaluate(n=>go(n),n);assert(await p.locator('progress').getAttribute('value')===String(n+1));assert(await p.locator('#content').evaluate(c=>c.firstElementChild.classList.contains('recording-panel')),'audio above lesson');assert(!(await p.locator('#content').textContent()).includes('في نشاط الكتاب'));assert(!(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth)),`overflow ${width} ${n}`);await p.locator('#home').click();assert(await p.locator('#begin').isVisible());await p.locator('#begin').click();await p.locator(`[data-page="${n}"]`).click();assert(await p.evaluate(()=>page)===n);}await p.evaluate(()=>go(0));await p.locator('#prev').click();assert(await p.locator('#begin').isVisible());}
-await p.locator('#begin').click();await p.locator('#start-mystery').click();await p.locator('#home').click();await p.waitForTimeout(2700);assert(await p.locator('#begin').isVisible());assert.deepEqual(errors,[]);
-const touch=await b.newContext({hasTouch:true,isMobile:true,viewport:{width:390,height:844}});const phone=await touch.newPage();await phone.goto(process.env.TEST_URL||'http://127.0.0.1:8000');await phone.locator('#begin').tap();await phone.locator('[data-page="6"]').tap();for(const item of ['zinc','acid','balloon'])await phone.locator(`[data-material="${item}"]`).tap();await phone.waitForFunction(()=>!document.querySelector('[data-choice="0"]').disabled);assert(await phone.locator('.bubble').count()>0);await phone.locator('#reset-lab').tap();assert(await phone.locator('.bubble').count()===0);await touch.close();
+await p.locator('#begin').click();for(const id of ['zinc','acid','balloon'])await p.locator(`[data-material="${id}"]`).click();await p.locator('#home').click();await p.waitForTimeout(2700);assert(await p.locator('#begin').isVisible());assert.deepEqual(errors,[]);
+const touch=await b.newContext({hasTouch:true,isMobile:true,viewport:{width:390,height:844}});const phone=await touch.newPage();await phone.goto(process.env.TEST_URL||'http://127.0.0.1:8000');await phone.locator('#begin').tap();await phone.locator('[data-page="6"]').tap();for(const item of ['zinc','acid','balloon'])await phone.locator(`[data-material="${item}"]`).tap();await phone.waitForFunction(()=>!document.querySelector('[data-choice="0"]').disabled);assert(await phone.locator('.bubble').count()>0);await phone.locator('#reset-lab').tap();assert(await phone.locator('.bubble').count()===0);for(const [n,sample,materials,outcome] of cases){await phone.evaluate(n=>go(n),n);if(sample)await phone.locator('#sample').selectOption(sample);for(const id of materials)await phone.locator(`[data-material="${id}"]`).tap();await phone.waitForFunction(()=>!document.querySelector('[data-choice="0"]').disabled);assert((await phone.locator('.experiment-visual').textContent()).includes(outcome));assert(await phone.locator('.student-guide').isVisible());assert(!(await phone.evaluate(()=>document.documentElement.scrollWidth>innerWidth)));await phone.locator('.reset-experiment').tap();assert(await phone.locator('[data-choice="0"]').isDisabled());}await touch.close();
 console.log('PASS: ordered lab click, keyboard, drag/drop and mobile taps, wrong order, reset and timer cancellation, audio above content,  complete journey, mystery timing/answers, pre-test 0/4 and 4/4 independent of post-test, objectives, all existing simulations, equations, post-test and certificate, all navigation/progress, teacher audio only, silent when missing, local upload, pause/resume/replay/stop, published WAV/MP3 paths, responsive layout, no JS errors');await b.close();
 })().catch(e=>{console.error(e);process.exit(1)});
