@@ -34,8 +34,9 @@ function journeyIcon(index){
  return index<3?`<svg class="journey-icon" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${paths[index]}</svg>`:'';
 }
 function stopAudio(){if(currentAudio){currentAudio.pause();currentAudio=null}}
-function go(n){clearTimeout(introTimer);stopAudio();page=Math.max(-1,Math.min(titles.length-1,n));render();window.scrollTo(0,0)}
+function go(n){Effects.stop(false);clearTimeout(introTimer);stopAudio();page=Math.max(-1,Math.min(titles.length-1,n));render();window.scrollTo(0,0)}
 function render(){
+ Effects.stop(false);
  atomsCleanup();atomsCleanup=()=>{};
 if(page===-1){app.innerHTML=`<main class="cover"><div><span class="badge">العلوم والحياة · الصف الثامن الفلسطيني</span><h1>مختبر <span>اكتشف</span><br>الافتراضي</h1><p class="lead">التفاعل الكيميائي ودلالاته</p><p>رحلة من الملاحظة إلى الاكتشاف.<br>شاهد، جرّب رقميًا، ثم فسّر ما يحدث.</p><button id="begin">ابدأ الاستكشاف ←</button><p class="eyebrow">الفصل الثاني · الدرس الثاني · الصفحات ٨–١٤</p></div><aside class="welcome-card" aria-labelledby="welcome-title"><div class="teacher-portrait"><img src="assets/welcome-teacher.png" alt="رسم توضيحي لمعلّمة مبتسمة بحجاب بنقشة الكوفية ترحّب بالطلاب" width="800" height="1000" fetchpriority="high"><span class="portrait-note">رفيقتكم في رحلة الاكتشاف</span></div><div class="welcome-message"><span class="badge">أهلًا بأبطال الاكتشاف ✦</span><h2 id="welcome-title">أهلًا بعلماء المستقبل!</h2><p>طلابي وطالباتي الأعزاء، أهلًا بكم في «مختبر اكتشف الافتراضي»! هنا يبدأ كل اكتشاف بسؤال، وتفتح كل ملاحظة بابًا جديدًا للتعلّم. سنستكشف معًا التفاعل الكيميائي ودلالاته من خلال تجارب رقمية آمنة وممتعة.</p><p class="welcome-signoff">كل سؤال منكم بداية اكتشاف… هيا نلاحظ، ونتعلّم، ونندهش معًا!</p></div></aside></main>`;document.querySelector('#begin').onclick=()=>go(0);attachAudio();return;}
 app.innerHTML=`<header class="topbar"><span class="brand">◈ مختبر اكتشف الافتراضي</span><button class="secondary" id="home">العودة للرئيسية</button></header><main class="shell"><nav class="steps" aria-label="محطات الدرس">${titles.map((t,i)=>`<button data-page="${i}" class="${i===page?'active':''}" ${i===page?'aria-current="step"':''}>${journeyIcon(i)}<span>${i+1}. ${t}</span></button>`).join('')}</nav><div class="meta">محطة ${page+1} من ${titles.length} · التفاعل الكيميائي ودلالاته</div><progress class="journey-progress" max="${titles.length}" value="${page+1}" aria-label="تقدم الرحلة التعليمية"></progress><h2>${titles[page]}</h2><div id="content"></div><nav class="nav"><button class="secondary" id="prev">→ السابق</button><button id="next" ${page===titles.length-1?'disabled':''}>التالي ←</button></nav><footer>المصدر العلمي: صفحات الدرس المرفقة، الترقيم المطبوع ٨–١٤ · محاكاة تعليمية</footer></main>`;
@@ -87,7 +88,7 @@ function attachSlideAudio(file){
 }
 function attachAudio(){
  if(page===-1){attachWelcomeAudio();return;}
- const slideRecordings={1:'goals.mp3',2:'rust-formation.mp3',3:'reactants-products.mp3',4:'materials-balance.mp3',5:'equations-balancing.mp3',6:'zinc-balloon.mp3'};
+ const slideRecordings={1:'goals.mp3',2:'rust-formation.mp3',3:'reactants-products.mp3',4:'materials-balance.mp3',5:'equations-balancing.mp3',6:'zinc-balloon.mp3',9:'precipitate.mp3',10:'natural-indicator.mp3',11:'magnesium-flash.mp3',13:'post-test.mp3',14:'certificate.mp3'};
  if(slideRecordings[page]){attachSlideAudio(slideRecordings[page]);return;}
  const id=audioSection(), box=document.createElement('section');box.className='audio recording-panel';
  box.setAttribute('aria-label','تسجيل المعلمة');

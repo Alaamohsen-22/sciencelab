@@ -1,0 +1,32 @@
+[
+  {
+    "id": "excellent",
+    "label": "ممتاز",
+    "file": "excellent.mp3"
+  },
+  {
+    "id": "creative",
+    "label": "إبداع",
+    "file": "creative.mp3"
+  },
+  {
+    "id": "well-done",
+    "label": "أحسنت",
+    "file": "well-done.mp3"
+  },
+  {
+    "id": "wow",
+    "label": "يا سلام",
+    "file": "wow.mp3"
+  },
+  {
+    "id": "wonderful",
+    "label": "رائع",
+    "file": "wonderful.mp3"
+  },
+  {
+    "id": "bravo",
+    "label": "برافو",
+    "file": "bravo.mp3"
+  }
+]
