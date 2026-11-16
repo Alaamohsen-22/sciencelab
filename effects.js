@@ -68,6 +68,19 @@ const Effects=(()=>{
   if(token!==epoch||!enabled||running||queue.length)return;
   await source(kind,buffers[kind],token);
  }
+ // Certificate awards use the existing real Bravo recording, never the random pool.
+ async function certificate(){
+  stop();unlock();if(!enabled||!context)return;
+  const token=epoch,awardRoot=root();running=true;
+  try{
+   await rewardsReady;
+   if(!enabled||token!==epoch||root()!==awardRoot||!awardRoot?.isConnected||document.hidden)return;
+   if(context.state==='suspended')await context.resume();
+   if(token!==epoch||!enabled)return;
+   const bravo=rewards.find(r=>r.id==='bravo');
+   if(bravo){lastReward=bravo.id;await source('reward',bravo.buffer,token,{id:bravo.id,label:bravo.label});}
+  }catch{}finally{if(token===epoch)running=false;}
+ }
  function result(ok,key,scope,target=scope){
   suppressClick=true;
   if(!scope)return;
@@ -87,5 +100,5 @@ const Effects=(()=>{
  // Drag-and-drop and change/submit handlers also use result(); clear only the click suppression flag.
  document.addEventListener('pointerdown',()=>{suppressClick=false;},{capture:true});document.addEventListener('keydown',()=>{suppressClick=false;},{capture:true});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
- return {result,batch,reset,play,stop};
+ return {result,batch,reset,play,stop,certificate};
 })();
