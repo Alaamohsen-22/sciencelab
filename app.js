@@ -2,7 +2,7 @@ const app=document.querySelector('#app');
 const titles=['ماذا أعرف قبل أن أبدأ؟','الأهداف التعليمية','كيف يتكوّن الصدأ؟','المواد المتفاعلة والناتجة','المواد في الميزان','المعادلة وموازنتها','المختبر الرقمي: الخارصين والبالون','حرارة وغاز','تغيّر اللون','تشكّل راسب','كاشف طبيعي','إنتاج وميض','خريطة الدرس: إنفوجرافيك','الاختبار البعدي','شهادة الإنجاز'];
 let page=-1, observed={}, answers={}, score=null, student='';
 let introTimer=null, introSeen=false, preAnswers={}, preScore=null;
-const audioURLs=new Map();let currentAudio=null;
+let currentAudio=null;
 let atomsCleanup=()=>{};
 const f=s=>`<span class="formula">${s}</span>`;
 const activities=[
@@ -36,9 +36,10 @@ function journeyIcon(index){
 function stopAudio(){if(currentAudio){currentAudio.pause();currentAudio=null}}
 function go(n){Effects.stop(false);clearTimeout(introTimer);stopAudio();page=Math.max(-1,Math.min(titles.length-1,n));render();window.scrollTo(0,0)}
 function render(){
+ celebrationCleanup();
  Effects.stop(false);
  atomsCleanup();atomsCleanup=()=>{};
-if(page===-1){app.innerHTML=`<main class="cover"><div><span class="badge">العلوم والحياة · الصف الثامن الفلسطيني</span><h1>مختبر <span>اكتشف</span><br>الافتراضي</h1><p class="lead">التفاعل الكيميائي ودلالاته</p><p>رحلة من الملاحظة إلى الاكتشاف.<br>شاهد، جرّب رقميًا، ثم فسّر ما يحدث.</p><button id="begin">ابدأ الاستكشاف ←</button><p class="eyebrow">الفصل الثاني · الدرس الثاني · الصفحات ٨–١٤</p></div><aside class="welcome-card" aria-labelledby="welcome-title"><div class="teacher-portrait"><img src="assets/welcome-teacher.png" alt="رسم توضيحي لمعلّمة مبتسمة بحجاب بنقشة الكوفية ترحّب بالطلاب" width="800" height="1000" fetchpriority="high"><span class="portrait-note">رفيقتكم في رحلة الاكتشاف</span></div><div class="welcome-message"><span class="badge">أهلًا بأبطال الاكتشاف ✦</span><h2 id="welcome-title">أهلًا بعلماء المستقبل!</h2><p>طلابي وطالباتي الأعزاء، أهلًا بكم في «مختبر اكتشف الافتراضي»! هنا يبدأ كل اكتشاف بسؤال، وتفتح كل ملاحظة بابًا جديدًا للتعلّم. سنستكشف معًا التفاعل الكيميائي ودلالاته من خلال تجارب رقمية آمنة وممتعة.</p><p class="welcome-signoff">كل سؤال منكم بداية اكتشاف… هيا نلاحظ، ونتعلّم، ونندهش معًا!</p></div></aside></main>`;document.querySelector('#begin').onclick=()=>go(0);attachAudio();return;}
+if(page===-1){app.innerHTML=`<main class="cover"><div><span class="badge">العلوم والحياة · الصف الثامن الفلسطيني</span><h1>مختبر <span>اكتشف</span><br>الافتراضي</h1><p class="lead">التفاعل الكيميائي ودلالاته</p><p class="cover-teacher">إعداد المعلمة: <strong>آلاء محسن كلاب</strong></p><p>رحلة من الملاحظة إلى الاكتشاف.<br>شاهد، جرّب رقميًا، ثم فسّر ما يحدث.</p><button id="begin">ابدأ الاستكشاف ←</button><p class="eyebrow">الفصل الثاني · الدرس الثاني · الصفحات ٨–١٤</p></div><aside class="welcome-card" aria-labelledby="welcome-title"><div class="teacher-portrait"><img src="assets/welcome-teacher.png" alt="رسم توضيحي لمعلّمة مبتسمة بحجاب بنقشة الكوفية ترحّب بالطلاب" width="800" height="1000" fetchpriority="high"><span class="portrait-note">رفيقتكم في رحلة الاكتشاف</span></div><div class="welcome-message"><span class="badge">أهلًا بأبطال الاكتشاف ✦</span><h2 id="welcome-title">أهلًا بعلماء المستقبل!</h2><p>طلابي وطالباتي الأعزاء، أهلًا بكم في «مختبر اكتشف الافتراضي»! هنا يبدأ كل اكتشاف بسؤال، وتفتح كل ملاحظة بابًا جديدًا للتعلّم. سنستكشف معًا التفاعل الكيميائي ودلالاته من خلال تجارب رقمية آمنة وممتعة.</p><p class="welcome-signoff">كل سؤال منكم بداية اكتشاف… هيا نلاحظ، ونتعلّم، ونندهش معًا!</p></div></aside></main>`;document.querySelector('#begin').onclick=()=>go(0);attachAudio();return;}
 app.innerHTML=`<header class="topbar"><span class="brand">◈ مختبر اكتشف الافتراضي</span><button class="secondary" id="home">العودة للرئيسية</button></header><main class="shell"><nav class="steps" aria-label="محطات الدرس">${titles.map((t,i)=>`<button data-page="${i}" class="${i===page?'active':''}" ${i===page?'aria-current="step"':''}>${journeyIcon(i)}<span>${i+1}. ${t}</span></button>`).join('')}</nav><div class="meta">محطة ${page+1} من ${titles.length} · التفاعل الكيميائي ودلالاته</div><progress class="journey-progress" max="${titles.length}" value="${page+1}" aria-label="تقدم الرحلة التعليمية"></progress><h2>${titles[page]}</h2><div id="content"></div><nav class="nav"><button class="secondary" id="prev">→ السابق</button><button id="next" ${page===titles.length-1?'disabled':''}>التالي ←</button></nav><footer>المصدر العلمي: صفحات الدرس المرفقة، الترقيم المطبوع ٨–١٤ · محاكاة تعليمية</footer></main>`;
 document.querySelector('#home').onclick=()=>go(-1);document.querySelector('#prev').onclick=()=>go(page-1);document.querySelector('#next').onclick=()=>go(page+1);document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>go(+b.dataset.page));
 const c=document.querySelector('#content');
@@ -51,18 +52,69 @@ function renderBalance(c){c.innerHTML=`<div class="grid"><article class="card"><
 function renderEquation(c){c.innerHTML=`<article class="card"><span class="badge">ص ٩–١١</span><h3>من الكلمات إلى الرموز</h3><p data-explain>نكتب أسماء المتفاعلات والنواتج، ثم رموزها وصيغها. يفصل بينها سهم تُكتب عليه ظروف التفاعل. تشير الرموز s إلى الصلب، وl إلى السائل، وg إلى الغاز، وaq إلى المحلول المائي.</p><div class="equation">كالسيوم + أكسجين ⟶ أكسيد الكالسيوم <small>(بالتسخين)</small></div><p data-explain>للموازنة نغيّر المعاملات قبل الصيغ، ولا نغيّر الأرقام الصغيرة داخل الصيغة. نبدأ بالذرة الأكثر عددًا غير الهيدروجين والأكسجين، ثم بقية الذرات، ثم الهيدروجين وأخيرًا الأكسجين.</p><h3>وازن مثال الكالسيوم</h3><div class="equation"><input id="ca" aria-label="معامل الكالسيوم" type="number" min="1" max="9" value="1"> Ca(s) + O₂(g) → <input id="cao" aria-label="معامل أكسيد الكالسيوم" type="number" min="1" max="9" value="1"> CaO(s)</div><button class="action" id="balance">تحقّق من الذرات</button><div id="balance-result" role="status"></div></article><article class="card"><h3>اكتشف مثالًا آخر</h3><p data-explain>تتفاعل كربونات البوتاسيوم مع حمض النتريك لإنتاج نترات البوتاسيوم والماء وثاني أكسيد الكربون. نوازن البوتاسيوم، ثم النيتروجين، فنجد بقية الذرات متساوية.</p><div class="equation">K₂CO₃(aq) + 2HNO₃(aq) → 2KNO₃(aq) + H₂O(l) + CO₂(g)</div><p>في كل طرف: K = ٢، N = ٢، C = ١، H = ٢، O = ٩.</p></article><section id="ammonia-activity" aria-label="جرّب تكوين الأمونيا"></section>`;renderAmmonia(c.querySelector('#ammonia-activity'));document.querySelector('#balance').onclick=()=>{const a=+document.querySelector('#ca').value,b=+document.querySelector('#cao').value;document.querySelector('#balance-result').className='feedback';document.querySelector('#balance-result').textContent=`Ca: ${a} مقابل ${b}، O: 2 مقابل ${b}. `+(a===2&&b===2?'أحسنت، المعادلة موزونة.':'جرّب مجددًا حتى تتساوى ذرات كل عنصر.');Effects.result(a===2&&b===2,'calcium',document.querySelector('#balance-result'));};}
 const questions=[['ما المواد الناتجة في نشاط الميزان؟',['الماء','الهيدروجين والأكسجين'],0],['أي معاملين يوازنان Ca + O₂ → CaO؟',['١، ١','٢، ٢'],1],['ما الغاز الناتج في نشاط الألمنيوم وحمض الكبريتيك؟',['الهيدروجين','الأكسجين'],0],['ما لون الخبز بعد إضافة اليود؟',['أخضر','بنفسجي غامق مائل إلى الأسود'],1],['ما الراسب الناتج عند مزج محلولي نترات الفضة وملح الطعام؟',['كلوريد الفضة الأبيض','أكسيد المغنيسيوم'],0],['ما لون ماء الملفوف عند إضافته إلى القاعدة؟',['أحمر','أخضر'],1],['ما ناتج تفاعل المغنيسيوم مع الأكسجين؟',['أكسيد المغنيسيوم الأبيض','كلوريد الفضة'],0]];
 function renderQuiz(c){c.innerHTML=`<article class="card"><span class="badge">أسئلة مستمدة من أنشطة الدرس</span><p>أجب عن الأسئلة السبعة. تحصل على شهادة الإنجاز عند الإجابة الصحيحة عن ٦ أسئلة على الأقل.</p><form id="quiz">${questions.map((q,i)=>`<div class="quiz-item"><h3>${i+1}. ${q[0]}</h3>${q[1].map((a,j)=>`<label><input required type="radio" name="q${i}" value="${j}" ${answers[i]===j?'checked':''}> ${a}</label>`).join('')}<div id="q-result-${i}"></div></div>`).join('')}<button class="action" type="submit">اعرض نتيجتي</button></form><div id="quiz-result" role="status"></div></article>`;document.querySelector('#quiz').onchange=e=>{if(e.target.matches('input[type=radio]')){answers[+e.target.name.slice(1)]=+e.target.value;score=null;document.querySelector('#quiz-result').textContent='أرسل إجاباتك لتحديث النتيجة.';document.querySelectorAll('[id^=q-result-]').forEach(el=>el.textContent='');}};document.querySelector('#quiz').onsubmit=e=>{e.preventDefault();score=0;questions.forEach((q,i)=>{answers[i]=+new FormData(e.target).get(`q${i}`);const ok=answers[i]===q[2];if(ok)score++;document.querySelector(`#q-result-${i}`).textContent=ok?'✓ إجابة صحيحة':`راجع هذا النشاط. الإجابة الصحيحة: ${q[1][q[2]]}`;});document.querySelector('#quiz-result').className='feedback';document.querySelector('#quiz-result').textContent=`نتيجتك ${score} من ٧. ${score>=6?'أحسنت! انتقل إلى شهادة الإنجاز.':'راجع المحطات، ثم عدّل إجاباتك وحاول مجددًا.'}`;Effects.batch(questions.map((q,i)=>({ok:answers[i]===q[2],key:'post-'+i,scope:document.querySelector(`#q-result-${i}`)})));};}
-function renderCertificate(c){if(score===null||score<6){c.innerHTML='<article class="card"><h3>شهادتك تنتظر اكتشافاتك</h3><p>أكمل الاختبار بدرجة ٦ من ٧ على الأقل لإصدار الشهادة.</p><button id="toquiz">الذهاب إلى الاختبار</button></article>';document.querySelector('#toquiz').onclick=()=>go(13);return}c.innerHTML=`<article class="card"><label for="student">اسم الطالب أو الطالبة</label> <input id="student" type="text" maxlength="70" placeholder="اكتب اسمك هنا"><button id="issue">إصدار الشهادة</button></article><div id="cert"></div>`;document.querySelector('#student').value=student;document.querySelector('#issue').onclick=()=>{student=document.querySelector('#student').value.trim();if(!student){document.querySelector('#student').focus();return}document.querySelector('#cert').innerHTML=`<article class="certificate"><div class="eyebrow">مختبر اكتشف الافتراضي</div><h2>شهادة إنجاز</h2><p>تُمنح هذه الشهادة إلى</p><strong id="cert-name"></strong><p>لإتمام استكشاف درس «التفاعل الكيميائي ودلالاته»<br>العلوم والحياة · الصف الثامن الفلسطيني</p><p>النتيجة: ${score} / ٧ · ${new Date().toLocaleDateString('ar-PS')}</p><span class="badge">لاحظتُ · فسّرتُ · اكتشفتُ</span><p class="legend">شهادة تعليمية داخل الموقع، وليست اعتمادًا رسميًا.</p><button id="print">طباعة / حفظ PDF</button></article>`;document.querySelector('#cert-name').textContent=student;Effects.result(true,'certificate',document.querySelector('#cert'));document.querySelector('#print').onclick=()=>window.print();};}
-// Only recordings supplied by the teacher are played; there is no generated voice.
-function audioSection(){
- if(page===-1||page===2)return 'welcome';
- if(page===0||page===14)return 'closing';
- if(page===1)return 'goals';
- if(page===4)return 'reactants';
- if(page===3)return 'concept';
- if(page===5)return 'balancing';
- if(page===12||page===13)return 'closing';
- return 'activities';
+let certificateDate=null,celebrationCleanup=()=>{};
+const certificateText='تقديرًا لاجتيازه/اجتيازها بنجاح رحلة التعلّم التفاعلي في درس التفاعل الكيميائي ودلالاته، وإظهاره/إظهارها مهارات الملاحظة والاستكشاف والتفكير العلمي';
+function celebrateCertificate(){
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const layer=document.createElement('div');layer.className='certificate-stars';layer.setAttribute('aria-hidden','true');
+ for(let i=0;i<48;i++){const star=document.createElement('span');star.textContent=i%3?'✦':'★';star.style.cssText=`--x:${Math.random()*100}vw;--drift:${(Math.random()-.5)*24}vw;--size:${12+Math.random()*25}px;--delay:${Math.random()*1.8}s;--duration:${2.8+Math.random()*1.2}s`;layer.append(star);}
+ document.body.append(layer);const timer=setTimeout(()=>layer.remove(),6500);
+ celebrationCleanup=()=>{clearTimeout(timer);layer.remove();};
 }
+function renderCertificate(c){
+ if(score===null||score<6){c.innerHTML='<article class="card"><h3>شهادتك تنتظر اكتشافاتك</h3><p>أكمل الاختبار بدرجة ٦ من ٧ على الأقل لإصدار الشهادة.</p><button id="toquiz">الذهاب إلى الاختبار</button></article>';document.querySelector('#toquiz').onclick=()=>go(13);return;}
+ certificateDate=certificateDate||new Date().toLocaleDateString('ar-PS');
+ c.innerHTML=`<article class="card certificate-form"><label for="student">اسم الطالب أو الطالبة</label> <input id="student" type="text" maxlength="70" placeholder="اكتب اسمك هنا"><button id="issue">إصدار الشهادة</button></article><div id="cert"></div>`;
+ const input=c.querySelector('#student');input.value=student;
+ function issue(){
+  student=input.value.trim();if(!student){input.focus();return;}
+  c.querySelector('#cert').innerHTML=`<article class="certificate"><div class="certificate-science" aria-hidden="true">⚛ · ⚗ · ⚛</div><div class="eyebrow">مختبر اكتشف الافتراضي · جائزة الاستكشاف العلمي</div><div class="certificate-medal" aria-hidden="true">★</div><h2>شهادة إنجاز</h2><p class="certificate-intro">تُمنح هذه الشهادة للطالب/ة</p><strong id="cert-name"></strong><p class="certificate-copy">${certificateText}</p><div class="certificate-motto">ملاحظة · استكشاف · تفكير علمي</div><div class="certificate-footer"><span>إعداد المعلمة: آلاء محسن كلاب</span><span>تاريخ الإنجاز: ${certificateDate}</span></div><p class="legend">النتيجة: ${score} / ٧ · العلوم والحياة · الصف الثامن الفلسطيني</p></article><div class="certificate-actions"><button id="download-certificate">تحميل شهادة الإنجاز</button><button class="secondary" id="print">طباعة / حفظ PDF</button><p class="legend" role="status" id="certificate-status">صورة عالية الجودة · طباعة A4 أفقية</p></div>`;
+  c.querySelector('#cert-name').textContent=student;
+  c.querySelector('#download-certificate').onclick=downloadCertificate;
+  c.querySelector('#print').onclick=()=>window.print();
+  Effects.result(true,'certificate',c.querySelector('#cert'));
+ }
+ c.querySelector('#issue').onclick=issue;
+ if(student)issue();
+ celebrateCertificate();
+}
+async function downloadCertificate(){
+ const button=document.querySelector('#download-certificate'),status=document.querySelector('#certificate-status');button.disabled=true;
+ try{
+  await document.fonts.ready;
+  const canvas=document.createElement('canvas');canvas.width=3508;canvas.height=2480;
+  const ctx=canvas.getContext('2d'),W=canvas.width,H=canvas.height;
+  ctx.fillStyle='#fffcf3';ctx.fillRect(0,0,W,H);
+  const gold=ctx.createLinearGradient(0,0,W,H);gold.addColorStop(0,'#8c6117');gold.addColorStop(.45,'#e4c575');gold.addColorStop(1,'#9c721e');
+  ctx.strokeStyle=gold;ctx.lineWidth=18;ctx.strokeRect(65,65,W-130,H-130);ctx.lineWidth=4;ctx.strokeRect(95,95,W-190,H-190);ctx.strokeRect(128,128,W-256,H-256);
+  for(const x of [165,W-165])for(const y of [165,H-165]){ctx.save();ctx.translate(x,y);ctx.rotate(Math.PI/4);ctx.fillStyle=gold;ctx.fillRect(-25,-25,50,50);ctx.restore();}
+  ctx.textAlign='center';ctx.direction='rtl';
+  function text(value,y,size,color='#263e47',bold=false){ctx.fillStyle=color;ctx.font=`${bold?'bold ':''}${size}px Tahoma, Arial, sans-serif`;ctx.fillText(value,W/2,y);}
+  text('مختبر اكتشف الافتراضي · جائزة الاستكشاف العلمي',300,52,'#80601e');
+  // Fine chemistry linework is part of the award, unlike the temporary star layer.
+  ctx.save();ctx.strokeStyle='#cbb371';ctx.lineWidth=5;
+  for(const x of [650,W-650]){for(const angle of [0,Math.PI/3,-Math.PI/3]){ctx.beginPath();ctx.ellipse(x,560,155,58,angle,0,Math.PI*2);ctx.stroke();}ctx.beginPath();ctx.arc(x,560,14,0,Math.PI*2);ctx.fillStyle='#b59348';ctx.fill();}
+  ctx.restore();
+  const medalGold=ctx.createLinearGradient(W/2-135,375,W/2+135,645);medalGold.addColorStop(0,'#947027');medalGold.addColorStop(.5,'#f5dfa0');medalGold.addColorStop(1,'#b98d31');
+  ctx.beginPath();ctx.arc(W/2,510,135,0,Math.PI*2);ctx.fillStyle=medalGold;ctx.fill();ctx.strokeStyle='#a88230';ctx.lineWidth=4;ctx.stroke();ctx.beginPath();ctx.arc(W/2,510,119,0,Math.PI*2);ctx.strokeStyle='#fff2c0';ctx.stroke();
+  text('★',568,165,'#fff9df');
+  text('شهادة إنجاز',875,160,'#80601e',true);
+  text('تُمنح هذه الشهادة للطالب/ة',1040,60);
+  let nameSize=112;ctx.font=`bold ${nameSize}px Tahoma, Arial, sans-serif`;
+  while(ctx.measureText(student).width>W-650&&nameSize>42){nameSize-=2;ctx.font=`bold ${nameSize}px Tahoma, Arial, sans-serif`;}
+  text(student,1230,nameSize,'#245866',true);
+  ctx.strokeStyle=gold;ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(950,1295);ctx.lineTo(W-950,1295);ctx.stroke();
+  ctx.font='62px Tahoma, Arial, sans-serif';let line='',lines=[];
+  for(const word of certificateText.split(' ')){const candidate=line?line+' '+word:word;if(ctx.measureText(candidate).width>W-720){lines.push(line);line=word;}else line=candidate;}if(line)lines.push(line);
+  lines.forEach((value,i)=>text(value,1460+i*112,62));
+  text('ملاحظة · استكشاف · تفكير علمي',1950,54,'#80601e',true);
+  text('إعداد المعلمة: آلاء محسن كلاب',2140,62,'#245866',true);
+  text(`تاريخ الإنجاز: ${certificateDate}     ·     النتيجة: ${score} / ٧`,2260,46);
+  const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw Error('export');
+  const url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='شهادة الإنجاز.png';link.click();setTimeout(()=>URL.revokeObjectURL(url),10000);status.textContent='تم تجهيز شهادة الإنجاز كصورة عالية الجودة.';
+ }catch{status.textContent='تعذر تنزيل الصورة؛ يمكنك استخدام زر طباعة / حفظ PDF.';}finally{button.disabled=false;}
+}
+// Only recordings supplied by the teacher are played; there is no generated voice.
 function attachWelcomeAudio(){
  const box=document.createElement('div');box.className='compact-welcome';
  box.innerHTML=`<button type="button" id="welcome-button" class="welcome-toggle" data-effect-silent aria-pressed="false"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12H11L18 6V26L11 20H5Z" fill="currentColor"/><g class="welcome-waves" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11Q27 16 22 21"/><path d="M26 7Q34 16 26 25"/></g></svg><span>المعلمة آلاء ترحب بكم</span></button><audio hidden preload="metadata" src="assets/audio/welcome-alaa.mp3" aria-label="الترحيب الجديد بصوت المعلمة آلاء"></audio>`;
@@ -88,23 +140,9 @@ function attachSlideAudio(file){
 }
 function attachAudio(){
  if(page===-1){attachWelcomeAudio();return;}
- const slideRecordings={1:'goals.mp3',2:'rust-formation.mp3',3:'reactants-products.mp3',4:'materials-balance.mp3',5:'equations-balancing.mp3',6:'zinc-balloon.mp3',9:'precipitate.mp3',10:'natural-indicator.mp3',11:'magnesium-flash.mp3',13:'post-test.mp3',14:'certificate.mp3'};
- if(slideRecordings[page]){attachSlideAudio(slideRecordings[page]);return;}
- const id=audioSection(), box=document.createElement('section');box.className='audio recording-panel';
- box.setAttribute('aria-label','تسجيل المعلمة');
- box.innerHTML=`<h3>بصوت معلمتك</h3><div class="audio-buttons"><button class="secondary listen" type="button">استمع إلى شرح المعلمة</button><button class="secondary pause" type="button">إيقاف مؤقت</button><button class="secondary replay" type="button">إعادة الاستماع</button></div><label>جرّبي تسجيلك من الجهاز <input type="file" accept=".mp3,.wav,audio/mpeg,audio/wav,audio/x-wav" aria-label="اختيار تسجيل المعلمة"></label><p class="legend">التجربة محلية لهذه الجلسة فقط. للنشر الدائم، أضيفي التسجيل إلى مجلد assets/audio في GitHub باسم ${id}.mp3 أو ${id}.wav.</p><span class="audio-status" role="status">الشرح متاح مكتوبًا. لا يصدر صوت دون تسجيل للمعلمة.</span><audio controls class="hidden" preload="none" aria-label="تسجيل شرح المعلمة"></audio>`;
- const target=page===-1?document.querySelector('.welcome-message'):document.querySelector('#content');if(page===-1)document.querySelector('#welcome-title').after(box);else target.prepend(box);
- const status=box.querySelector('.audio-status'),player=box.querySelector('audio');let revision=0;
- function useURL(url){if(player.getAttribute('src')!==url)player.src=url;player.classList.remove('hidden')}
- if(audioURLs.has(id))useURL(audioURLs.get(id));
- box.querySelector('input').onchange=e=>{const file=e.target.files[0];if(!file)return;if(!/\.(mp3|wav)$/i.test(file.name)){status.textContent='اختاري تسجيلًا بصيغة MP3 أو WAV.';return}revision++;player.pause();if(currentAudio===player)currentAudio=null;if(audioURLs.has(id))URL.revokeObjectURL(audioURLs.get(id));const url=URL.createObjectURL(file);audioURLs.set(id,url);useURL(url);status.textContent='التسجيل جاهز للتجربة؛ لم يُرفع إلى أي خادم.';};
- async function play(restart=false){const ticket=++revision;stopAudio();let url=audioURLs.get(id);if(!url){for(const ext of ['mp3','wav']){try{const candidate=`assets/audio/${id}.${ext}`,res=await fetch(candidate,{method:'HEAD'});if(res.ok&&(res.headers.get('content-type')||'').startsWith('audio/')){url=candidate;break}}catch{}}}if(!box.isConnected||ticket!==revision)return;if(!url){status.textContent='لم يُضف تسجيل لهذا القسم بعد. يمكنك قراءة الشرح أو اختيار تسجيل المعلمة من الجهاز.';return}useURL(url);if(restart)player.currentTime=0;try{currentAudio=player;await player.play();if(box.isConnected&&ticket===revision)status.textContent='جارٍ تشغيل تسجيل المعلمة.';else player.pause();}catch{status.textContent='تعذر تشغيل التسجيل؛ تأكدي من الملف ثم حاولي مجددًا.';}}
- box.querySelector('.listen').onclick=()=>play();box.querySelector('.replay').onclick=()=>play(true);
- box.querySelector('.pause').onclick=()=>{revision++;player.pause();status.textContent='أُوقف التسجيل مؤقتًا؛ يمكنك متابعة الاستماع.';};
- player.onplay=()=>{if(!box.isConnected){player.pause();return;}if(currentAudio&&currentAudio!==player)currentAudio.pause();currentAudio=player;};
- player.onended=()=>status.textContent='اكتمل التسجيل. يمكنك إعادة الاستماع.';
- player.onerror=()=>status.textContent='تعذر قراءة التسجيل؛ جرّبي ملف MP3 أو WAV صالحًا.';
-
+ if(page===12)return;
+ const slideRecordings={0:'ماذا أعرف قبل أن أبدأ _.mp3',1:'goals.mp3',2:'rust-formation.mp3',3:'reactants-products.mp3',4:'materials-balance.mp3',5:'equations-balancing.mp3',6:'zinc-balloon.mp3',7:'حرارة وغاز .mp3',8:'تغير اللون .mp3',9:'precipitate.mp3',10:'natural-indicator.mp3',11:'magnesium-flash.mp3',13:'post-test.mp3',14:'certificate.mp3'};
+ if(slideRecordings[page])attachSlideAudio(slideRecordings[page]);
 }
 const preQuestions=[
  ['أيّ مما يأتي يُعدّ تغيّرًا كيميائيًا؟',['انصهار الجليد.','صدأ الحديد.','تقطيع الورق.'],1,'صدأ الحديد تغيّر كيميائي تتكوّن فيه مادة جديدة.'],
