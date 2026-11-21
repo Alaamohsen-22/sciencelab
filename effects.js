@@ -55,14 +55,14 @@ const Effects=(()=>{
     if(!await source('success',buffers.success,token))break;
     if(token!==epoch||!enabled)break;
     await rewardsReady;if(token!==epoch||!enabled)break;
-    const reward=chooseReward();
+    const reward=(entry.preferredReward&&rewards.find(r=>r.id===entry.preferredReward))||chooseReward();
     if(reward){lastReward=reward.id;if(!await source('reward',reward.buffer,token,{id:reward.id,label:reward.label}))break;}
    }
   }finally{if(token===epoch){running=false;queue=[];resumeTeacher();}}
  }
- async function play(kind){
+ async function play(kind,preferredReward=null){
   if(!enabled||!context)return;
-  if(kind==='success'){queue.push({root:root()});drain();return;}
+  if(kind==='success'){queue.push({root:root(),preferredReward});drain();return;}
   if(running||queue.length)return;
   const token=epoch;await ready;
   if(token!==epoch||!enabled||running||queue.length)return;
@@ -81,14 +81,14 @@ const Effects=(()=>{
    if(bravo){lastReward=bravo.id;await source('reward',bravo.buffer,token,{id:bravo.id,label:bravo.label});}
   }catch{}finally{if(token===epoch)running=false;}
  }
- function result(ok,key,scope,target=scope,educational=true){
+ function result(ok,key,scope,target=scope,educational=true,preferredReward=null){
   suppressClick=true;
   if(!scope)return;
   let keys=seen.get(scope);if(!keys){keys=new Set();seen.set(scope,keys);}
   const repeated=ok&&keys.has(key);
   if(ok){keys.add(key);let badge=target.querySelector('.fx-reward');if(!badge){badge=document.createElement('span');badge.className='fx-reward';badge.setAttribute('aria-label','إجابة صحيحة');target.append(badge);}badge.textContent='✓';if(!repeated){badge.classList.remove('fx-pop');void badge.offsetWidth;badge.classList.add('fx-pop');}}
   if(repeated)return;
-  play(ok?(educational?'success':'click'):'error');
+  play(ok?(educational?'success':'click'):'error',preferredReward);
  }
  // A completed tool step keeps its visual feedback and a simple interaction tone.
  function step(ok,key,scope,target=scope){result(ok,key,scope,target,false);}
