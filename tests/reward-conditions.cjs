@@ -4,7 +4,7 @@ const url=process.env.TEST_URL||'http://127.0.0.1:8000';
 for(const mobile of [false,true]){
  const p=await b.newPage({hasTouch:mobile,isMobile:mobile,viewport:{width:mobile?390:1280,height:900}}),errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.addInitScript(()=>{window.fx=[];window.activeSounds=0;window.maxSounds=0;const start=AudioBufferSourceNode.prototype.start,stop=AudioBufferSourceNode.prototype.stop;AudioBufferSourceNode.prototype.start=function(...args){this.playbackRate.value=40;this.testLive=true;activeSounds++;maxSounds=Math.max(maxSounds,activeSounds);this.addEventListener('ended',()=>{if(this.testLive){this.testLive=false;activeSounds--;}});return start.apply(this,args);};AudioBufferSourceNode.prototype.stop=function(...args){if(this.testLive){this.testLive=false;activeSounds--;}return stop.apply(this,args);};document.addEventListener('lab-effect',e=>fx.push({...e.detail,page:document.querySelector('h2')?.textContent}));});
- await p.goto(url);await p.locator('#cover-student').fill('طالب التجارب');await p.locator('#begin').click();
+ await p.goto(url);await p.locator('#cover-student').fill('طالب التجارب');await p.locator('#begin').click();if(await p.locator('#lesson-catalog:focus').count())await p.locator('[data-lesson="reaction"]').click();
  async function clear(){await p.evaluate(()=>{Effects.stop();fx=[];});}
  async function ordinary(){await p.waitForTimeout(100);assert(!(await p.evaluate(()=>fx)).some(e=>e.kind==='reward'||e.kind==='success'));}
  async function rewarded(count){await p.waitForFunction(n=>fx.filter(e=>e.kind==='reward').length===n&&activeSounds===0,count);assert(await p.evaluate(()=>fx.filter(e=>e.kind==='success').length)===count);}
