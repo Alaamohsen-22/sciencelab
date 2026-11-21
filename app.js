@@ -71,7 +71,12 @@ function renderQuiz(c){
   const data=new FormData(form);if(!form.reportValidity())return;
   score=questions.reduce((total,q,i)=>{answers[i]=Number(data.get(`q${i}`));return total+(answers[i]===q[2]?1:0);},0);
   showResult();
-  if(score>=6)quizTransition=setTimeout(()=>{if(page===13)go(14);},1800);
+  // Finish the graded-answer rewards before certificate Bravo; navigation cancels both.
+  const attemptRoot=c;
+  Effects.assessment(score).then(()=>{
+   if(!attemptRoot.isConnected||page!==13)return;
+   if(score>=6)quizTransition=setTimeout(()=>{if(page===13)go(14);},1800);
+  });
  };
  if(score!==null)showResult();
 }
@@ -191,8 +196,8 @@ function renderZincLab(c){
  function place(id){
   if(finished){status.textContent='أكملت التجربة! يمكنك إعادتها من الزر أدناه.';return;}
   if(!items.some(item=>item[0]===id))return;
-  if(id!==items[step][0]){Effects.result(false,'step',status);status.className='feedback wrong';status.textContent=`محاولة جيدة! ${items.slice(0,step).some(item=>item[0]===id)?'أضفت هذه القطعة بالفعل. ':''}الخطوة التالية: ${items[step][1]}.`;hint.textContent=step===0?'جرّب وضع الخارصين أولًا':'تابع الترتيب بهدوء';return;}
-  const button=document.querySelector(`[data-material="${id}"]`);button.disabled=true;button.draggable=false;button.querySelector('.item-check').textContent='✓';step++;Effects.result(true,'step-'+step,status,button);
+  if(id!==items[step][0]){Effects.step(false,'step',status);status.className='feedback wrong';status.textContent=`محاولة جيدة! ${items.slice(0,step).some(item=>item[0]===id)?'أضفت هذه القطعة بالفعل. ':''}الخطوة التالية: ${items[step][1]}.`;hint.textContent=step===0?'جرّب وضع الخارصين أولًا':'تابع الترتيب بهدوء';return;}
+  const button=document.querySelector(`[data-material="${id}"]`);button.disabled=true;button.draggable=false;button.querySelector('.item-check').textContent='✓';step++;Effects.step(true,'step-'+step,status,button);
   document.querySelectorAll('[data-step]').forEach((el,i)=>el.classList.toggle('completed',i<step));
   document.querySelector('#lab-visual').innerHTML=labFlask(step,step===3);
   status.className='feedback';
@@ -257,8 +262,8 @@ function mountExperiment(host,kind,sample,onComplete,onReset=()=>{}){
  function place(id){
  if(complete)return;
  if(!recipe.some(x=>x[0]===id))return;
- if(id!==recipe[step][0]){Effects.result(false,'step',status);status.className='feedback wrong experiment-status';status.textContent=`محاولة جيدة! الخطوة التالية: ${recipe[step][1]}.`;hint.textContent='تابع الترتيب بهدوء';return;}
- const button=host.querySelector(`[data-material="${id}"]`);button.disabled=true;button.draggable=false;button.querySelector('.item-check').textContent='✓';step++;Effects.result(true,'step-'+step,status,button);
+ if(id!==recipe[step][0]){Effects.step(false,'step',status);status.className='feedback wrong experiment-status';status.textContent=`محاولة جيدة! الخطوة التالية: ${recipe[step][1]}.`;hint.textContent='تابع الترتيب بهدوء';return;}
+ const button=host.querySelector(`[data-material="${id}"]`);button.disabled=true;button.draggable=false;button.querySelector('.item-check').textContent='✓';step++;Effects.step(true,'step-'+step,status,button);
  host.querySelectorAll('[data-step]').forEach((el,i)=>el.classList.toggle('completed',i<step));
  complete=step===recipe.length;host.querySelector('.experiment-visual').innerHTML=experimentScene(kind,step,complete,sample,recipe);status.className='feedback experiment-status';
  if(!complete){status.textContent=`أحسنت! أضفت ${recipe[step-1][1]}. التالي: ${recipe[step][1]}.`;hint.textContent='رائع! تابع الإضافة';return;}
@@ -290,10 +295,10 @@ function renderMystery(c){
  c.innerHTML=`<article class="card"><span class="badge">لاحظ التحوّل · ثم فسّر</span><h3>من مسمار لامع إلى طبقة بنية محمرة</h3><p>أضف الماء إلى المسمار الافتراضي، ثم عرّضه للهواء. توقّع ما سيحدث مع مرور الوقت.</p><div class="lab-workbench rust-workbench"><div class="lab-materials"><button class="lab-item" id="rust-water">${materialIcon('water')}<span>أضف الماء</span></button><button class="lab-item" id="rust-air" disabled><svg viewBox="0 0 72 66" aria-hidden="true"><path d="M12 22H48Q65 22 57 10M18 34H62M12 46H45Q60 46 53 57" fill="none" stroke="#8abbd2" stroke-width="4" stroke-linecap="round"/></svg><span>عرّضه للهواء</span></button><button class="lab-item" id="rust-time" disabled><svg viewBox="0 0 72 66" aria-hidden="true"><circle cx="36" cy="32" r="23" fill="white" stroke="#a48acb" stroke-width="4"/><path d="M36 17V32L48 39" fill="none" stroke="#8058bd" stroke-width="4" stroke-linecap="round"/></svg><span>مرور الوقت</span></button></div><div class="flask-drop"><div id="rust-visual">${rustScene(false,false,0)}</div></div>${studentAvatar()}</div><p class="rust-time-note">المحاكاة تسرّع الزمن لتوضيح التغيّر؛ الصدأ لا يتكوّن فورًا، بل يحتاج إلى وقت بوجود الأكسجين والرطوبة.</p><p id="rust-status" class="feedback" role="status">ابدأ بإضافة الماء إلى المسمار.</p><button id="rust-reset" class="secondary">إعادة التجربة</button></article><article class="card hidden" id="rust-question"><h3>هل تغيّر شكل الحديد فقط، أم تكوّنت مادة جديدة؟</h3><div class="choices"><button data-rust-answer="shape">تغيّر شكل الحديد فقط.</button><button data-rust-answer="new">تكوّنت مادة جديدة.</button></div><p id="rust-feedback" role="status"></p><section class="explanation hidden" id="rust-definition"><h3>ماذا اكتشفنا؟</h3><p>الصدأ مادة جديدة تنتج عن تفاعل الحديد مع الأكسجين بوجود الرطوبة. لذلك لا يقتصر ما حدث على تغيّر شكل الحديد.</p><h3>تعريف التفاعل الكيميائي</h3><p>التغيّر في التركيب الكيميائي للمواد، الذي ينتج مواد جديدة بصفات جديدة، يُسمّى تفاعلًا كيميائيًا، عندما لا يمكن إعادة المواد الجديدة إلى حالتها الأصلية بطرق عادية.</p><span class="badge">تعريف الدرس · ص ٩</span><p>هيا نواصل اكتشاف المواد المتفاعلة والناتجة ودلالات التفاعل!</p><button id="discover">هيا نكتشف المزيد ←</button></section></article>`;
  const visual=c.querySelector('#rust-visual'),status=c.querySelector('#rust-status'),hint=c.querySelector('#student-hint');
  function paint(){visual.innerHTML=rustScene(step>=1,step>=2,level);}
- c.querySelector('#rust-water').onclick=()=>{if(step!==0)return;step=1;paint();c.querySelector('#rust-water').disabled=true;c.querySelector('#rust-air').disabled=false;status.textContent='أحسنت! أصبح المسمار مبلّلًا. عرّضه للهواء الآن.';hint.textContent='هل سيتغيّر المسمار؟';Effects.result(true,'water',status);};
- c.querySelector('#rust-air').onclick=()=>{if(step!==1)return;step=2;paint();c.querySelector('#rust-air').disabled=true;c.querySelector('#rust-time').disabled=false;status.textContent='الماء والهواء موجودان، والمسمار ما زال لامعًا. اضغط «مرور الوقت».';hint.textContent='لنراقب أثر الوقت';Effects.result(true,'air',status);};
+ c.querySelector('#rust-water').onclick=()=>{if(step!==0)return;step=1;paint();c.querySelector('#rust-water').disabled=true;c.querySelector('#rust-air').disabled=false;status.textContent='أحسنت! أصبح المسمار مبلّلًا. عرّضه للهواء الآن.';hint.textContent='هل سيتغيّر المسمار؟';Effects.step(true,'water',status);};
+ c.querySelector('#rust-air').onclick=()=>{if(step!==1)return;step=2;paint();c.querySelector('#rust-air').disabled=true;c.querySelector('#rust-time').disabled=false;status.textContent='الماء والهواء موجودان، والمسمار ما زال لامعًا. اضغط «مرور الوقت».';hint.textContent='لنراقب أثر الوقت';Effects.step(true,'air',status);};
  c.querySelector('#rust-time').onclick=()=>{if(step!==2)return;step=3;c.querySelector('#rust-time').disabled=true;status.textContent='نسرّع الزمن الآن… راقب ظهور اللون البني المحمر تدريجيًا.';hint.textContent='راقب لون السطح!';
-  const tick=()=>{if(!visual.isConnected)return;level++;paint();if(level<4){introTimer=setTimeout(tick,800);return;}status.textContent='ظهرت طبقة صدأ بنية محمرة بعد مرور زمن مُسرّع. ماذا تستنتج؟';hint.textContent='هل تكوّنت مادة جديدة؟';c.querySelector('#rust-question').classList.remove('hidden');Effects.result(true,'time',status);};
+  const tick=()=>{if(!visual.isConnected)return;level++;paint();if(level<4){introTimer=setTimeout(tick,800);return;}status.textContent='ظهرت طبقة صدأ بنية محمرة بعد مرور زمن مُسرّع. ماذا تستنتج؟';hint.textContent='هل تكوّنت مادة جديدة؟';c.querySelector('#rust-question').classList.remove('hidden');Effects.step(true,'time',status);};
   introTimer=setTimeout(tick,800);
  };
  const atomDiscovery=attachAtomDiscovery(c);atomsCleanup=()=>atomDiscovery.dispose();

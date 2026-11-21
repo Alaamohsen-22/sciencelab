@@ -81,14 +81,22 @@ const Effects=(()=>{
    if(bravo){lastReward=bravo.id;await source('reward',bravo.buffer,token,{id:bravo.id,label:bravo.label});}
   }catch{}finally{if(token===epoch)running=false;}
  }
- function result(ok,key,scope,target=scope){
+ function result(ok,key,scope,target=scope,educational=true){
   suppressClick=true;
   if(!scope)return;
   let keys=seen.get(scope);if(!keys){keys=new Set();seen.set(scope,keys);}
   const repeated=ok&&keys.has(key);
   if(ok){keys.add(key);let badge=target.querySelector('.fx-reward');if(!badge){badge=document.createElement('span');badge.className='fx-reward';badge.setAttribute('aria-label','إجابة صحيحة');target.append(badge);}badge.textContent='✓';if(!repeated){badge.classList.remove('fx-pop');void badge.offsetWidth;badge.classList.add('fx-pop');}}
   if(repeated)return;
-  play(ok?'success':'error');
+  play(ok?(educational?'success':'click'):'error');
+ }
+ // A completed tool step keeps its visual feedback and a simple interaction tone.
+ function step(ok,key,scope,target=scope){result(ok,key,scope,target,false);}
+ // Grade the post-test without revealing answers or adding feedback cards.
+ async function assessment(correctCount){
+  stop(true);unlock();if(!enabled||!context||correctCount<1)return;
+  for(let i=0;i<correctCount;i++)queue.push({root:root()});
+  await drain();
  }
  function batch(entries){let newCorrect=0,wrong=false;for(const {ok,key,scope} of entries){let keys=seen.get(scope);if(!keys){keys=new Set();seen.set(scope,keys);}if(ok){if(!keys.has(key))newCorrect++;keys.add(key);const badge=document.createElement('span');badge.className='fx-reward fx-pop';badge.textContent='✓';badge.setAttribute('aria-label','إجابة صحيحة');scope.append(badge);}else wrong=true;}suppressClick=true;if(newCorrect){for(let i=0;i<newCorrect;i++)play('success');}else if(wrong)play('error');}
  function reset(scope){seen.delete(scope);}
@@ -100,5 +108,5 @@ const Effects=(()=>{
  // Drag-and-drop and change/submit handlers also use result(); clear only the click suppression flag.
  document.addEventListener('pointerdown',()=>{suppressClick=false;},{capture:true});document.addEventListener('keydown',()=>{suppressClick=false;},{capture:true});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
- return {result,batch,reset,play,stop,certificate};
+ return {result,step,batch,assessment,reset,play,stop,certificate};
 })();

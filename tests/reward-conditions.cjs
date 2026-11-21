@@ -1,0 +1,31 @@
+const {chromium}=require('playwright');const assert=require('node:assert/strict');
+const url=process.env.TEST_URL||'http://127.0.0.1:8000';
+(async()=>{const b=await chromium.launch({executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
+for(const mobile of [false,true]){
+ const p=await b.newPage({hasTouch:mobile,isMobile:mobile,viewport:{width:mobile?390:1280,height:900}}),errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.addInitScript(()=>{window.fx=[];window.activeSounds=0;window.maxSounds=0;const start=AudioBufferSourceNode.prototype.start,stop=AudioBufferSourceNode.prototype.stop;AudioBufferSourceNode.prototype.start=function(...args){this.playbackRate.value=40;this.testLive=true;activeSounds++;maxSounds=Math.max(maxSounds,activeSounds);this.addEventListener('ended',()=>{if(this.testLive){this.testLive=false;activeSounds--;}});return start.apply(this,args);};AudioBufferSourceNode.prototype.stop=function(...args){if(this.testLive){this.testLive=false;activeSounds--;}return stop.apply(this,args);};document.addEventListener('lab-effect',e=>fx.push({...e.detail,page:document.querySelector('h2')?.textContent}));});
+ await p.goto(url);await p.locator('#cover-student').fill('طالب التجارب');await p.locator('#begin').click();
+ async function clear(){await p.evaluate(()=>{Effects.stop();fx=[];});}
+ async function ordinary(){await p.waitForTimeout(100);assert(!(await p.evaluate(()=>fx)).some(e=>e.kind==='reward'||e.kind==='success'));}
+ async function rewarded(count){await p.waitForFunction(n=>fx.filter(e=>e.kind==='reward').length===n&&activeSounds===0,count);assert(await p.evaluate(()=>fx.filter(e=>e.kind==='success').length)===count);}
+ const cases=[[6,null,['zinc','acid','balloon'],'غاز'],[7,null,['aluminum','clip','acid'],'غاز'],[8,'bread',['bread','iodine'],'الخبز بنفسجي'],[8,'milk',['milk','iodine'],'لا يتغيّر لون الحليب'],[9,null,['salt','water','stir','silver'],'راسب أبيض'],[10,'acid',['acid','extract'],'أحمر'],[10,'base',['base','extract'],'أخضر'],[11,null,['magnesium','tongs','burner'],'أكسيد المغنيسيوم']];
+ for(const mode of mobile?['tap']:['click','drag'])for(const [n,sample,ids,visual]of cases){
+  await p.evaluate(n=>go(n),n);await clear();if(sample)await p.locator('#sample').selectOption(sample);await ordinary();
+  const add=async id=>mode==='drag'?p.locator(`[data-material="${id}"]`).dragTo(p.locator('.flask-drop')):p.locator(`[data-material="${id}"]`)[mode]();
+  await add(ids.at(-1));await ordinary();
+  for(const id of ids){await add(id);await ordinary();}
+  await p.waitForFunction(()=>!document.querySelector('[data-choice="0"]').disabled);await ordinary();assert((await p.locator(n===6?'#lab-visual':'.experiment-visual').textContent()).includes(visual));assert((await p.evaluate(()=>fx)).some(e=>e.kind==='click'));
+  await p.locator('[data-choice="1"]').click();await ordinary();await p.locator('[data-choice="0"]').click();await rewarded(1);await p.locator('[data-choice="0"]').click();await p.waitForTimeout(100);assert(await p.evaluate(()=>fx.filter(e=>e.kind==='reward').length)===1);
+  await p.locator(n===6?'#reset-lab':'.reset-experiment').click();await clear();await ordinary();
+ }
+ await p.evaluate(()=>go(2));await clear();for(const id of ['water','air','time']){await p.locator(`#rust-${id}`).click();await ordinary();}await p.locator('#rust-question').waitFor({state:'visible'});await ordinary();await p.locator('[data-rust-answer="shape"]').click();await ordinary();await p.locator('[data-rust-answer="new"]').click();await rewarded(1);
+ await p.locator('#atom-discovery').scrollIntoViewIfNeeded();await p.locator('#atoms-question').waitFor({state:'visible'});assert(await p.evaluate(()=>fx.filter(e=>e.kind==='reward').length)===1);await p.locator('[data-atom-answer="1"]').click();await p.waitForTimeout(100);assert(await p.evaluate(()=>fx.filter(e=>e.kind==='reward').length)===1);await p.locator('[data-atom-answer="0"]').click();await rewarded(2);
+ // True equation solving and both graded quizzes still receive one phrase per correct answer.
+ await p.evaluate(()=>go(4));await clear();await p.selectOption('#water','2');await rewarded(1);await p.selectOption('#water','3');await p.selectOption('#water','2');await p.waitForTimeout(100);assert(await p.evaluate(()=>fx.filter(e=>e.kind==='reward').length)===1);
+ await p.evaluate(()=>go(0));await clear();for(const[i,v]of [1,1,0,2].entries())await p.locator(`input[name=pre${i}][value="${v}"]`).check();await ordinary();await p.locator('#pretest button').click();await rewarded(4);
+ await p.evaluate(()=>go(13));await clear();for(let i=0;i<7;i++)await p.locator(`input[name=q${i}][value="${i<5?[0,1,0,1,0,1,0][i]:1-[0,1,0,1,0,1,0][i]}"]`).check();await ordinary();await p.locator('#quiz button').click();await rewarded(5);assert(await p.evaluate(()=>score)===5);assert(await p.locator('#retry-quiz').count()===1);assert(await p.locator('.fx-reward,[id^=q-result-]').count()===0);assert((await p.evaluate(()=>fx)).filter(e=>e.kind==='reward').every(e=>e.page==='الاختبار البعدي'));
+ // Navigation interrupts post-test rewards and must not reopen the certificate later.
+ await p.locator('#retry-quiz').click();await clear();for(let i=0;i<7;i++)await p.locator(`input[name=q${i}][value="${[0,1,0,1,0,1,0][i]}"]`).check();await p.locator('#quiz button').click();await p.locator('[data-page="1"]').click();await p.waitForTimeout(2100);assert(await p.evaluate(()=>page)===1);const count=await p.evaluate(()=>fx.filter(e=>e.kind==='reward').length);await p.waitForTimeout(200);assert(await p.evaluate(()=>fx.filter(e=>e.kind==='reward').length)===count);
+ assert(await p.evaluate(()=>maxSounds)===1);assert.deepEqual(errors,[]);await p.close();
+}
+await b.close();console.log('PASS: all experiments and samples via click/drag/touch, no success music or teacher reward on ordinary steps/simulation/reset, clicks and visuals retained, one phrase per correct observation/inference/equation/graded quiz, deduplication and navigation cancellation, single-source audio');})().catch(e=>{console.error(e);process.exit(1)});

@@ -5,7 +5,7 @@ const fs=require('node:fs');
 assert(!/speechSynthesis|SpeechSynthesisUtterance/.test(fs.readFileSync('app.js','utf8')),'No generated voice API');
 const b=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
 const p=await b.newPage();async function finishAtoms(page){await page.locator('#atom-discovery').scrollIntoViewIfNeeded();await page.locator('#atoms-question').waitFor({state:'visible'});await page.locator('[data-atom-answer="0"]').click();}const errors=[];p.on('pageerror',e=>errors.push(e.message));
-await p.goto(process.env.TEST_URL||'http://127.0.0.1:8000');await p.locator('#cover-student').fill('طالب الاستكشاف');
+await p.addInitScript(()=>{const start=AudioBufferSourceNode.prototype.start;AudioBufferSourceNode.prototype.start=function(...args){this.playbackRate.value=60;return start.apply(this,args);};});await p.goto(process.env.TEST_URL||'http://127.0.0.1:8000');await p.locator('#cover-student').fill('طالب الاستكشاف');
 await p.locator('.teacher-portrait img').evaluate(i=>i.decode());
 await p.getByRole('button',{name:'ابدأ المختبر'}).click();
 assert(await p.locator('h2').textContent()==='ماذا أعرف قبل أن أبدأ؟');
