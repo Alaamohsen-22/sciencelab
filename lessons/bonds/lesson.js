@@ -55,9 +55,9 @@ const Bonds=(()=>{
    if(index!==last){last=index;event(m.id==='ch4'&&kind==='single-bond'?'share':kind,index);}
    if(p>=.75&&!arrivals.has(index)&&(kind==='transfer'||m.id==='ch4'&&kind==='single-bond')){arrivals.add(index);event(kind==='transfer'?'receive':'single-bond',index,p);}
   }
-  function tick(now){if(!running||disposed||!host.isConnected)return;elapsed=Math.min(total,now-origin);draw();if(elapsed<total)frame=requestAnimationFrame(tick);else{running=false;controls('complete');state.watched.add(m.id);host.closest('.bond-example').querySelector('[data-explanation]').hidden=false;}}
+  function tick(now){if(!running||disposed||!host.isConnected)return;elapsed=Math.min(total,Math.max(0,now-origin));draw();if(elapsed<total)frame=requestAnimationFrame(tick);else{running=false;controls('complete');state.watched.add(m.id);host.closest('.bond-example').querySelector('[data-explanation]').hidden=false;}}
   function start(restart){BondAudio.stop();Effects.stop(false);BondAudio.unlock();if(restart){elapsed=0;last=-1;arrivals=new Set();}running=true;origin=performance.now()-elapsed;controls('running');draw();frame=requestAnimationFrame(tick);}
-  function freeze(){if(!running)return;elapsed=Math.min(total,performance.now()-origin);running=false;cancelAnimationFrame(frame);BondAudio.stop();controls('paused');}
+  function freeze(){if(!running)return;elapsed=Math.min(total,Math.max(0,performance.now()-origin));running=false;cancelAnimationFrame(frame);BondAudio.stop();controls('paused');}
   host.querySelector('[data-zoom]').onclick=e=>{const enlarged=view.classList.toggle('is-zoomed');e.currentTarget.setAttribute('aria-pressed',String(enlarged));e.currentTarget.textContent=enlarged?'تصغير الرسم':'تكبير الرسم';};
   watch.onclick=()=>start(true);host.querySelector('[data-replay]').onclick=()=>{cancelAnimationFrame(frame);start(true);};pause.onclick=freeze;
   resume.onclick=()=>{if(running||elapsed>=total)return;start(false);const index=Math.min(m.stages.length-1,Math.floor(elapsed/unit)),p=(elapsed%unit)/unit;if(m.stages[index][1]==='transfer'&&p<.75)event('transfer',index,p/.75);};
