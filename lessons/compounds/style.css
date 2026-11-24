@@ -8,3 +8,4 @@
 .cp-ion-negative{animation-direction:alternate-reverse}
 .cp-current-flow{animation:cp-current-path 1s linear infinite}@keyframes cp-current-path{to{stroke-dashoffset:-38}}
 .cp-drag-tray{display:flex;justify-content:center;padding:8px}.cp-drag-tray button{font-size:12px;background:#ffffffbf;color:#77568f;border:1px dashed #af99c8;min-height:44px;cursor:grab;line-height:1.8}.cp-drag-tray button:active{cursor:grabbing}
+.cp-lab[data-motion=paused] .cp-bubble,.cp-lab[data-motion=paused] .cp-ion-moving,.cp-lab[data-motion=paused] .cp-flame,.cp-lab[data-motion=paused] .cp-current-flow,.cp-lab[data-motion=paused] .cp-crystal{animation-play-state:paused}
