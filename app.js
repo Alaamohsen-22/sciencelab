@@ -143,13 +143,13 @@ async function downloadCertificate(){
 // Only recordings supplied by the teacher are played; there is no generated voice.
 function attachWelcomeAudio(){
  const box=document.createElement('div');box.className='compact-welcome';
- box.innerHTML=`<button type="button" id="welcome-button" class="welcome-toggle" data-effect-silent aria-pressed="false"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12H11L18 6V26L11 20H5Z" fill="currentColor"/><g class="welcome-waves" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11Q27 16 22 21"/><path d="M26 7Q34 16 26 25"/></g></svg><span>المعلمة آلاء ترحب بكم</span></button><audio hidden preload="metadata" src="assets/audio/welcome-alaa.mp3" aria-label="الترحيب الجديد بصوت المعلمة آلاء"></audio>`;
+ box.innerHTML=`<button type="button" id="welcome-button" class="welcome-toggle" data-effect-silent aria-pressed="false"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12H11L18 6V26L11 20H5Z" fill="currentColor"/><g class="welcome-waves" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11Q27 16 22 21"/><path d="M26 7Q34 16 26 25"/></g></svg><span>المعلمة آلاء ترحب بكم</span></button><audio hidden preload="metadata" src="assets/audio/welcome-alaa-clear.mp3?v=20261124-cover7" aria-label="الترحيب الجديد بصوت المعلمة آلاء"></audio>`;
  document.querySelector('#welcome-title').after(box);
  const button=box.querySelector('button'),player=box.querySelector('audio');let pending=false,revision=0;
  function update(){const playing=!player.paused&&!player.ended;button.classList.toggle('is-playing',playing);button.setAttribute('aria-pressed',String(playing));button.title=playing?'إيقاف الترحيب مؤقتًا':player.currentTime>0&&!player.ended?'استكمال الترحيب':'المعلمة آلاء ترحب بكم';}
  async function start(){const ticket=++revision;pending=true;Effects.stop();currentAudio=player;try{if(player.ended)player.currentTime=0;await player.play();if(!box.isConnected){player.pause();return;}if(ticket!==revision)return;pending=false;update();}catch{if(ticket!==revision)return;pending=false;if(currentAudio===player)currentAudio=null;update();button.title='اضغط للمحاولة مجددًا';}}
  button.onclick=()=>{if(pending||!player.paused){revision++;pending=false;player.pause();if(currentAudio===player)currentAudio=null;update();}else start();};
- player.onplay=()=>{if(!box.isConnected){player.pause();return;}if(player.paused)return;if(currentAudio&&currentAudio!==player)currentAudio.pause();currentAudio=player;update();};
+ player.onplay=()=>{player.volume=LabAudio.muted?0:Math.min(1,LabAudio.volume*1.35);if(!box.isConnected){player.pause();return;}if(player.paused)return;if(currentAudio&&currentAudio!==player)currentAudio.pause();currentAudio=player;update();};
  player.onpause=player.onended=()=>{if(currentAudio===player)currentAudio=null;update();};player.onerror=()=>{pending=false;if(currentAudio===player)currentAudio=null;update();button.title='تعذر تشغيل التسجيل؛ حاول مجددًا';};
  // No autoplay or document-level gesture retry: this recording starts only from its button.
 }
