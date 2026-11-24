@@ -4,9 +4,10 @@ const LabGuide=(()=>{
  let enabled=false,container=null,text='',lastContext='',timer=null,announcement=null;
  try{enabled=localStorage.getItem('lab-guide-enabled')==='yes';}catch{}
  function react(expression,message){clearTimeout(announcement);if(!container?.isConnected)return;container.dataset.expression=expression;if(message){text=message;} }
- function status(message){const button=container?.querySelector('[data-guide-play]');if(button)button.title=message;}
+ function status(message){const button=container?.querySelector('[data-guide-listen]');if(button)button.title=message;}
  function speak(message=text){LabAudio.unlock();text=message;react('explain',message);if(!LabAudio.say(message)){status(LabAudio.muted||LabAudio.volume===0?'الصوت مكتوم وفق الإعداد المحفوظ.':'لا يتوفر صوت عربي مناسب على هذا الجهاز؛ تسجيلات المعلمة الأصلية متاحة في مواضعها.');return false;}status('استمع إلى شرح المعلمة');return true;}
- function mount(host,message){clearTimeout(announcement);container=host;host.className='lab-guide';host.dataset.expression='welcome';host.innerHTML=`${art()}<button data-guide-play data-effect-silent>استمع إلى شرح المعلمة</button>`;text=message;host.classList.toggle('is-speaking',LabAudio.speaking);host.querySelector('[data-guide-play]').onclick=()=>speak(text);
+ function mount(host,message){clearTimeout(announcement);container=host;host.className='lab-guide';host.dataset.expression='welcome';host.innerHTML=art();text=message;host.classList.toggle('is-speaking',LabAudio.speaking);const recording=document.querySelector('#content > .slide-audio');if(recording){host.append(recording);}else{const button=document.createElement('button');button.type='button';button.dataset.guideListen='';button.dataset.effectSilent='';button.className='welcome-toggle';button.textContent='استمع إلى شرح المعلمة';button.onclick=()=>speak(text);host.append(button);}
+
  if(enabled&&LabAudio.unlocked&&!LabAudio.speaking&&message!==lastContext)speak(message);lastContext=message;
  }
  document.addEventListener('lab-voice-error',()=>status('تعذر تشغيل صوت الجهاز؛ اضغط للمحاولة مجددًا.'));document.addEventListener('lab-audio-state',e=>{clearTimeout(timer);if(!container?.isConnected)return;container.classList.toggle('is-speaking',e.detail.speaking);if(e.detail.expression)container.dataset.expression=e.detail.expression;if(e.detail.duration)timer=setTimeout(()=>container?.classList.remove('is-speaking'),e.detail.duration*1000);});
