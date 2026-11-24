@@ -5,7 +5,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict');
   const page=await browser.newPage({viewport:{width,height:900},isMobile:width<600,hasTouch:width<600}),errors=[];
   page.on('pageerror',e=>errors.push(e.message));
   await page.addInitScript(()=>{window.cues=[];document.addEventListener('bond-sound',e=>cues.push({kind:e.detail.kind,bonds:document.querySelectorAll('[data-methane-bond]').length}));});
-  await page.goto(process.env.TEST_URL||'http://127.0.0.1:8031');await page.locator('#cover-student').fill('جود فلسطين');await page.locator('[data-lesson=bonds]').click();
+  await page.goto(process.env.TEST_URL||'http://127.0.0.1:8031');await page.locator('#cover-student').fill('جود فلسطين');await page.locator('#begin').click();await page.locator('[data-lesson=bonds]').click();
   await page.locator('[data-bond-page="5"]').click();const m=page.locator('.bond-methane');
   await m.locator('[data-zoom-practice]').click();assert(await m.locator('.is-zoomed').count()===1);assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)));await m.locator('[data-zoom-practice]').click();
   // Cancel a bond during the movement: no stale completion is allowed.
