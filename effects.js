@@ -20,7 +20,7 @@ const Effects=(()=>{
  function stopSource(){
   const resolve=finishSource;finishSource=null;
   if(active){active.onended=null;try{active.stop();}catch{}active.disconnect();active=null;}
-  if(activeGain){activeGain.disconnect();activeGain=null;}activeKind=null;resolve?.(false);
+  if(activeGain){LabAudio.unregister(activeGain);activeGain.disconnect();activeGain=null;}activeKind=null;resolve?.(false);
  }
  function stop(resume=false){epoch++;queue=[];running=false;stopSource();if(resume)resumeTeacher();else pausedTeacher=null;}
  async function decode(url){const response=await fetch(url);if(!response.ok)throw Error('Audio unavailable');return context.decodeAudioData(await response.arrayBuffer());}
@@ -36,12 +36,12 @@ const Effects=(()=>{
  }
  function source(kind,buffer,token,detail={}){
   if(!buffer||!enabled||token!==epoch||context.state!=='running')return Promise.resolve(false);
-  stopSource();
+  stopSource();if(!LabAudio.claim('feedback',()=>stop(false)))return Promise.resolve(false);
   return new Promise(resolve=>{
-   const node=context.createBufferSource(),gain=context.createGain();node.buffer=buffer;gain.gain.value=kind==='reward'?.9:.65;node.connect(gain);gain.connect(context.destination);
+   const node=context.createBufferSource(),gain=context.createGain();node.buffer=buffer;LabAudio.register(gain,kind==='reward'?.9:.65);node.connect(gain);gain.connect(context.destination);
    active=node;activeGain=gain;activeKind=kind;finishSource=resolve;
-   node.onended=()=>{node.onended=null;try{node.stop();}catch{}if(active===node){active=null;activeGain=null;activeKind=null;finishSource=null;}node.disconnect();gain.disconnect();resolve(true);};
-   node.start();document.dispatchEvent(new CustomEvent('lab-effect',{detail:{kind,...detail}}));
+   node.onended=()=>{node.onended=null;try{node.stop();}catch{}if(active===node){active=null;activeGain=null;activeKind=null;finishSource=null;}node.disconnect();LabAudio.unregister(gain);gain.disconnect();LabAudio.release('feedback');resolve(true);};
+   node.start();document.dispatchEvent(new CustomEvent('lab-effect',{detail:{kind,duration:buffer.duration,...detail}}));
   });
  }
  function chooseReward(){const available=rewards.filter(r=>rewards.length===1||r.id!==lastReward);return available[Math.floor(Math.random()*available.length)];}
@@ -61,7 +61,7 @@ const Effects=(()=>{
   }finally{if(token===epoch){running=false;queue=[];resumeTeacher();}}
  }
  async function play(kind,preferredReward=null){
-  if(!enabled||!context)return;
+  if(!enabled||!context||LabAudio.volume===0)return;
   if(kind==='success'){queue.push({root:root(),preferredReward});drain();return;}
   if(running||queue.length)return;
   const token=epoch;await ready;
@@ -70,7 +70,7 @@ const Effects=(()=>{
  }
  // Certificate awards use the existing real Bravo recording, never the random pool.
  async function certificate(){
-  stop();unlock();if(!enabled||!context)return;
+  stop();unlock();if(!enabled||!context||LabAudio.volume===0)return;
   const token=epoch,awardRoot=root();running=true;
   try{
    await rewardsReady;
@@ -83,16 +83,17 @@ const Effects=(()=>{
  }
  function result(ok,key,scope,target=scope,educational=true,preferredReward=null){
   suppressClick=true;
-  if(!scope)return;
+  if(!scope)return;if(educational&&typeof LabRuntime!=='undefined'&&LabRuntime.isDemonstrating){if(ok)LabAudio.tone('complete');return;}
   let keys=seen.get(scope);if(!keys){keys=new Set();seen.set(scope,keys);}
   const repeated=ok&&keys.has(key);
   if(ok){keys.add(key);let badge=target.querySelector('.fx-reward');if(!badge){badge=document.createElement('span');badge.className='fx-reward';badge.setAttribute('aria-label','إجابة صحيحة');target.append(badge);}badge.textContent='✓';if(!repeated){badge.classList.remove('fx-pop');void badge.offsetWidth;badge.classList.add('fx-pop');}}
   if(repeated)return;
-  play(ok?(educational?'success':'click'):'error',preferredReward);
+  if(educational)LabGuide.react(ok?'cheer':'think',target.querySelector?.('[data-feedback],[data-answer-feedback]')?.textContent||target.textContent|| (ok?'ممتاز، توصلت إلى الإجابة الصحيحة.':'فكر مرة أخرى، يمكنك الوصول إلى الإجابة.'));
+  if(ok&&!educational){LabAudio.tone('pickup');return;}play(ok?'success':'error',preferredReward);
  }
  // A completed tool step keeps its visual feedback and a simple interaction tone.
  function step(ok,key,scope,target=scope){result(ok,key,scope,target,false);}
- // Grade the post-test without revealing answers or adding feedback cards.
+ // Play rewards for correct graded answers; callers retain first-attempt scoring.
  async function assessment(correctCount){
   stop(true);unlock();if(!enabled||!context||correctCount<1)return;
   for(let i=0;i<correctCount;i++)queue.push({root:root()});
@@ -101,12 +102,13 @@ const Effects=(()=>{
  function batch(entries){let newCorrect=0,wrong=false;for(const {ok,key,scope} of entries){let keys=seen.get(scope);if(!keys){keys=new Set();seen.set(scope,keys);}if(ok){if(!keys.has(key))newCorrect++;keys.add(key);const badge=document.createElement('span');badge.className='fx-reward fx-pop';badge.textContent='✓';badge.setAttribute('aria-label','إجابة صحيحة');scope.append(badge);}else wrong=true;}suppressClick=true;if(newCorrect){for(let i=0;i<newCorrect;i++)play('success');}else if(wrong)play('error');}
  function reset(scope){seen.delete(scope);}
  const toggle=document.createElement('button');toggle.id='effects-toggle';toggle.type='button';
- function updateToggle(){toggle.textContent=enabled?'🔊':'🔇';toggle.setAttribute('aria-pressed',String(enabled));toggle.setAttribute('aria-label',enabled?'كتم المؤثرات الصوتية':'تشغيل المؤثرات الصوتية');toggle.title=toggle.getAttribute('aria-label');}
- toggle.onclick=()=>{enabled=!enabled;if(!enabled)stop(true);else unlock();try{localStorage.setItem('lab-effects',enabled?'on':'muted');}catch{}updateToggle();};updateToggle();document.body.append(toggle);
+ function updateToggle(){toggle.textContent=enabled?'🔊':'🔇';toggle.setAttribute('aria-pressed',String(enabled));toggle.setAttribute('aria-label',enabled?'كتم جميع أصوات المختبر':'تشغيل جميع أصوات المختبر');toggle.title=toggle.getAttribute('aria-label');}
+ toggle.onclick=()=>{enabled=!enabled;LabAudio.setMuted(!enabled);if(!enabled)stop(true);else unlock();try{localStorage.setItem('lab-effects',enabled?'on':'muted');}catch{}updateToggle();};updateToggle();document.body.append(toggle);document.addEventListener('lab-audio-settings',()=>{const next=!LabAudio.muted;if(next!==enabled){enabled=next;if(!enabled)stop(false);updateToggle();}});
  document.addEventListener('click',e=>{unlock();if(e.target.closest('.teacher-audio-toggle,.welcome-toggle,.listen,.replay,.pause,.reset-experiment,#reset-lab,#rust-reset,#atoms-replay,#ammonia-reset'))stop(false);},{capture:true});document.addEventListener('pointerdown',unlock,{capture:true});document.addEventListener('keydown',unlock,{capture:true});
- document.addEventListener('click',e=>{if(e.target.closest('#effects-toggle'))return;const el=e.target.closest('button,input[type=radio],select');if(!el||el.disabled||el.hasAttribute('data-effect-silent'))return;const skip=suppressClick;suppressClick=false;if(!skip)play('click');});
+ document.addEventListener('click',e=>{if(e.target.closest('#effects-toggle'))return;const el=e.target.closest('button,input[type=radio],select');if(!el||el.disabled||el.hasAttribute('data-effect-silent')||el.matches('.lab-item,#atoms-replay,#atoms-manual,.reset-experiment,#reset-lab,#rust-reset'))return;const skip=suppressClick;suppressClick=false;if(!skip)play('click');});
  // Drag-and-drop and change/submit handlers also use result(); clear only the click suppression flag.
  document.addEventListener('pointerdown',()=>{suppressClick=false;},{capture:true});document.addEventListener('keydown',()=>{suppressClick=false;},{capture:true});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
- return {result,step,batch,assessment,reset,play,stop,certificate};
+ function whenIdle(){return new Promise(resolve=>{const check=()=>{if(!running&&!queue.length&&!active)resolve();else setTimeout(check,25);};check();});}
+ return {result,step,batch,assessment,whenIdle,reset,play,stop,certificate};
 })();
