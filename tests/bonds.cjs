@@ -17,7 +17,7 @@ for(const mobile of [false,true]){
   document.addEventListener('bond-sound',e=>trace.sound.push({...e.detail,time:performance.now(),stage:document.querySelector('.bond-simulation')?.dataset.stage,lines:document.querySelectorAll('.bond-view .bond-covalent-line').length,formula:document.querySelector('.bond-view [data-final-formula]')?.textContent}));
   document.addEventListener('lab-effect',e=>{if(e.detail.kind==='reward')trace.reward.push(e.detail);});
  });
- await p.goto(base);assert(await p.locator('.teacher-portrait img').getAttribute('src')==='assets/welcome-teacher.png');assert.deepEqual(await p.locator('.lesson-card h3').allTextContents(),['الروابط الكيميائية','التفاعل الكيميائي ودلالاته']);await p.locator('[data-lesson=bonds]').click();assert(await p.locator('.cover').count()===1);
+ await p.goto(base);assert(await p.locator('.teacher-portrait img').getAttribute('src')==='assets/welcome-teacher.png');assert.deepEqual(await p.locator('.lesson-card h3').allTextContents(),['الروابط الكيميائية','التفاعل الكيميائي ودلالاته','أنواع المركبات الكيميائية']);await p.locator('[data-lesson=bonds]').click();assert(await p.locator('.cover').count()===1);
  await p.locator('#cover-student').fill('ليان أحمد محسن');await p.locator('[data-lesson=bonds]').click();assert(await p.locator('.bond-lesson').count()===1);assert(await p.locator('.goals li').count()===6);
  // All sections are freely accessible before any completion.
  for(let n=0;n<10;n++){await p.locator(`[data-bond-page="${n}"]`).click();assert(await p.locator('progress').first().getAttribute('value')===String(n+1));assert(!(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth)));}assert(await p.locator('.bond-certificate').count()===0);
