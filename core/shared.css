@@ -17,3 +17,7 @@ body :is(span,em,strong,caption,summary,footer,.eyebrow,.portrait-note){font-siz
 .guide-panel{flex:1;min-width:0}.guide-panel>summary{cursor:pointer;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;min-height:50px;color:#60468a}.guide-panel>summary button{min-width:90px}.guide-panel[open]>summary{border-bottom:1px solid #c8ccdd;padding-bottom:12px;margin-bottom:12px}.guide-panel:not([open]){align-self:center}.guide-panel>summary::after{content:'⌄';font-size:22px;line-height:1}.guide-panel[open]>summary::after{content:'⌃'}
 @media(max-width:700px){.steps{flex-wrap:nowrap!important;overflow-x:auto;align-items:stretch;padding-block:8px;max-width:100%}.steps button{flex:0 0 170px;max-width:180px;min-height:64px}}
 .pointer-dragging{outline:3px solid #9a7bbd;outline-offset:3px}
+
+/* Separate entry views, without changing lesson content. */
+.catalog-page{padding-top:24px;padding-bottom:32px;min-height:0}.catalog-page .lesson-catalog{margin:0;max-width:none;padding:0}.catalog-page h1{margin:12px 0}.entry-navigation{display:flex;gap:10px;flex-wrap:wrap}.topbar{flex-wrap:wrap;gap:12px}.topbar .brand{margin-inline-end:auto}.cover{min-height:0;padding-block:clamp(24px,5vw,64px)}
+@media(max-width:600px){.topbar{padding:16px}.topbar .brand{width:100%}.topbar>button,.entry-navigation button{flex:1}.entry-navigation{width:100%}.catalog-page{padding-top:20px}.catalog-page .lesson-cards{gap:16px}}
