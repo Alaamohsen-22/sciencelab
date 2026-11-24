@@ -25,3 +25,7 @@ body :is(span,em,strong,caption,summary,footer,.eyebrow,.portrait-note){font-siz
 /* One unobtrusive teacher and listen action; no audio control panel. */
 .lab-guide{flex-wrap:nowrap;background:none;border:0;box-shadow:none;padding:0;gap:14px;margin-block:12px}.lab-guide [data-guide-play]{max-width:calc(100% - 98px)}
 @media(max-width:700px){.lab-guide{flex-wrap:nowrap;padding:0;gap:12px}.lab-guide-art{width:72px}.lab-guide [data-guide-play]{max-width:calc(100% - 84px)}}
+
+/* Shared speaker action; original recording handlers remain attached. */
+body .audio-listen{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:10px 16px!important;margin:0;border:1px solid #d7d8ec;border-radius:18px;background:linear-gradient(120deg,#edfaff,#f1eafd);color:#60418f;font-size:18px!important;line-height:1.8;box-shadow:0 4px 14px #7049b50b;max-width:100%}.audio-listen svg{width:27px;height:27px;flex-shrink:0}.lab-guide .slide-audio{margin:0;min-width:0}.lab-guide>.audio-listen,.lab-guide>.slide-audio{max-width:calc(100% - 98px)}
+@media(max-width:700px){.lab-guide>.audio-listen,.lab-guide>.slide-audio{max-width:calc(100% - 84px)}}
