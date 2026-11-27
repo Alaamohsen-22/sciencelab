@@ -113,6 +113,6 @@ const LabAchievements = (() => {
   document.addEventListener('submit',e=>{if(e.target.id==='entry-form'){try{localStorage.setItem('lab-last-student',e.target.querySelector('input').value.trim().slice(0,70));}catch{}schedule();}},{capture:true});
   window.addEventListener('storage',e=>{if(e.key===storageKey){ledger=read();schedule();}});
   new MutationObserver(schedule).observe(document.querySelector('#app'),{childList:true,subtree:true});
-  document.addEventListener('lab-reward-earned',e=>{const quiet=document.body.classList.contains('phase1-reduced')||matchMedia('(prefers-reduced-motion:reduce)').matches;if(!quiet){displayedTotal=e.detail.before;deferHUDUntil=performance.now()+1600;setTimeout(schedule,1620);}});document.addEventListener('lab-star-arrived',()=>{deferHUDUntil=0;schedule();});document.addEventListener('lab-achievements-change',schedule);refresh();
+  document.addEventListener('lab-reward-earned',e=>{const quiet=document.body.classList.contains('phase1-reduced')||matchMedia('(prefers-reduced-motion:reduce)').matches;if(!quiet){displayedTotal=e.detail.before;deferHUDUntil=performance.now()+3800;setTimeout(schedule,3820);}});document.addEventListener('lab-star-arrived',()=>{deferHUDUntil=0;schedule();});document.addEventListener('lab-achievements-change',schedule);refresh();
   return {CONFIG,LEVELS,badgeArt:badgeSVG,openBag,refresh:schedule,snapshot(){load();return JSON.parse(JSON.stringify({...ledger,total:total(),progress:Object.fromEntries(Object.keys(LESSONS).map(id=>[id,progress(id)])),badges:[...badges()]}));}};
 })();
