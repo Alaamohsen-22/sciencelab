@@ -61,6 +61,7 @@ const Effects=(()=>{
   }finally{if(token===epoch){running=false;queue=[];resumeTeacher();}}
  }
  async function play(kind,preferredReward=null){
+  unlock();if(kind==='click'&&LabAudio.speaking)return;
   /* P2:start */if(kind!=='success'&&LabAudio.effectsMuted)return;/* P2:end */if(!enabled||!context||LabAudio.volume===0)return;
   if(kind==='success'){queue.push({root:root(),preferredReward});drain();return;}
   if(running||queue.length)return;
@@ -103,7 +104,7 @@ const Effects=(()=>{
  function reset(scope){seen.delete(scope);}
  document.addEventListener('lab-audio-settings',()=>{const next=!LabAudio.muted;if(next!==enabled){enabled=next;if(!enabled)stop(false);}});
  document.addEventListener('click',e=>{unlock();if(e.target.closest('.teacher-audio-toggle,.welcome-toggle,.listen,.replay,.pause,.reset-experiment,#reset-lab,#rust-reset,#atoms-replay,#ammonia-reset'))stop(false);},{capture:true});document.addEventListener('pointerdown',unlock,{capture:true});document.addEventListener('keydown',unlock,{capture:true});
- document.addEventListener('click',e=>{if(e.target.closest('#effects-toggle'))return;const el=e.target.closest('button,input[type=radio],select');if(!el||el.disabled||el.hasAttribute('data-effect-silent')||el.matches('.lab-item,#atoms-replay,#atoms-manual,.reset-experiment,#reset-lab,#rust-reset'))return;const skip=suppressClick;suppressClick=false;if(!skip)play('click');});
+ document.addEventListener('click',e=>{if(e.target.closest('#effects-toggle'))return;const el=e.target.closest('button,input[type=radio],select');if(!el||el.disabled||(el.hasAttribute('data-effect-silent')&&!el.matches('.steps button,[data-lesson],#begin,#home,#catalog-home,.teacher-help,.p2-bag-button'))||el.matches('.lab-item,#atoms-replay,#atoms-manual,.reset-experiment,#reset-lab,#rust-reset'))return;const skip=suppressClick;suppressClick=false;if(!skip)play('click');});
  // Drag-and-drop and change/submit handlers also use result(); clear only the click suppression flag.
  document.addEventListener('pointerdown',()=>{suppressClick=false;},{capture:true});document.addEventListener('keydown',()=>{suppressClick=false;},{capture:true});
  document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
