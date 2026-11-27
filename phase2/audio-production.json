@@ -1,0 +1,1700 @@
+{
+  "voice": "Razan – Academic & Cultural Narration",
+  "voice_id": "EUojVLG1QfxaqqH4ce6s",
+  "model": "eleven_multilingual_v2",
+  "script_count": 311,
+  "script_characters": 32340,
+  "published_mp3_count": 103,
+  "pending_count": 208,
+  "page_narration": {
+    "reaction": "12/15",
+    "bonds": "8/10",
+    "compounds": "5/7",
+    "combined": "25/32 (78.125%)"
+  },
+  "facts_text": 12,
+  "facts_audio": 0,
+  "sample_tts_reported_credits": 113,
+  "main_production_reported_credits": {
+    "cover": 256,
+    "batch-1": 4238,
+    "batch-2": 4179,
+    "batch-final": 1323
+  },
+  "main_production_total": 9996,
+  "scribe_reported_credits": 0,
+  "last_service_confirmed_remaining": 1327,
+  "last_successful_batch": 1323,
+  "derived_remaining": 4,
+  "balance_note": "The connector does not expose the account statement. The 1327 balance came from a provider quota error. The final 1323-character batch succeeded; remaining 4 is arithmetic. The earlier sample reports 113 credits separately; exact subscription accounting cannot be read.",
+  "quota_error": "This request exceeds your quota of 10000. You have 1327 credits remaining, while 1919 credits are required for this request.",
+  "billing_policy": "No purchases, subscriptions or visitor-time API calls. Failed busy requests explicitly reported no start and no charge. No further TTS after the final batch.",
+  "audio_policy": "Generated assets replace corresponding recordings; originals are retained as fallback. Two short rewards and the complete six-goal narration reuse approved generated audio without further synthesis.",
+  "qa": "Real Scribe word timestamps, 100% token alignment for the three split batches; MP3 hash/decode/waveform tests; no claim of human listening to every clip.",
+  "pending": [
+    {
+      "id": "lab-oxide",
+      "priority": 2,
+      "lesson": "compounds",
+      "kind": "procedure",
+      "characters": 104,
+      "sha256": "af4b21c06bdca2daab08d26e0b9b4d06c19055efa448ff3e00da5b1abe260cef"
+    },
+    {
+      "id": "reaction-step-balloon-0",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 75,
+      "sha256": "640f7be29d6575f54da5db6898ed476b7836b04d8d10d7865d8d818286b875cc"
+    },
+    {
+      "id": "reaction-step-balloon-1",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 86,
+      "sha256": "b163c7db01eb6fe9bb4ec3e82613e8a43ace4b6e1e7edcc87adb3d5700847066"
+    },
+    {
+      "id": "reaction-step-balloon-2",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 69,
+      "sha256": "3dc9c0ad70918b9323c6c03ba203d8a34661f2086d80bb3f1fabe9aab006b14c"
+    },
+    {
+      "id": "reaction-step-heat-0",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 74,
+      "sha256": "baab08d9885197ca02b7b6e32be6696f16144cf17d9ad7b94d5c95bd59e9e2d5"
+    },
+    {
+      "id": "reaction-step-heat-1",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 71,
+      "sha256": "737ae9a22ef978b720743660b1ab055841b3f0d6938fb1b7bb049bd9d226c167"
+    },
+    {
+      "id": "reaction-step-heat-2",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 82,
+      "sha256": "e5890575035261d0b8492d68bae6a5cee7df98ce2a25ff6021badc21bb4239fd"
+    },
+    {
+      "id": "reaction-step-iodine-0",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 70,
+      "sha256": "55b40d6e5894804a226dc3ed903d791a8fd6bfc9bd908f3e0df31efcc0622825"
+    },
+    {
+      "id": "reaction-step-iodine-1",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 73,
+      "sha256": "b22cb1947655a610e73524e2d23b88aac08a55d57cf66afa520ab51a7b780cc7"
+    },
+    {
+      "id": "reaction-step-precipitate-0",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 72,
+      "sha256": "10013c4f9554bf7267b977eeee73b3548ee0b4318a22b9d12d0e224a6bda8c47"
+    },
+    {
+      "id": "reaction-step-precipitate-1",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 70,
+      "sha256": "59675080a98248e1d8cab4c5527c3e0793e11031c1ebd04d24a5c8848c114c3d"
+    },
+    {
+      "id": "reaction-step-precipitate-2",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 75,
+      "sha256": "68b385eb289ad4c05aa74a2cad6be7a6d82c163d84c19484444c9c543e103d7f"
+    },
+    {
+      "id": "reaction-step-precipitate-3",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 79,
+      "sha256": "b3225f14a871128f326c1f5e0ba4fcd89fa56f6799c7ccb8ccdc816cfcddb18f"
+    },
+    {
+      "id": "reaction-step-cabbage-0",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 86,
+      "sha256": "b163c7db01eb6fe9bb4ec3e82613e8a43ace4b6e1e7edcc87adb3d5700847066"
+    },
+    {
+      "id": "reaction-step-cabbage-1",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 89,
+      "sha256": "ed65a6a36aa750494723043fc7d4b8309e4af946673a5a6551901c6e19cdf872"
+    },
+    {
+      "id": "reaction-result-flash",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "result",
+      "characters": 209,
+      "sha256": "208c63efdad8ee3057faad86fa3b43f94532d74a2aec6f691d019a0c2e66cdeb"
+    },
+    {
+      "id": "reaction-step-flash-0",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 75,
+      "sha256": "b623d570fe7cbc010c9dabbef0b007a659e6bdec7e9b3eb1b6c4f438ea477134"
+    },
+    {
+      "id": "reaction-step-flash-1",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 66,
+      "sha256": "712ec1ebe333555d7143bdecd7be7063eeb6b63233eb3c09dd9fd8fb723067c5"
+    },
+    {
+      "id": "reaction-step-flash-2",
+      "priority": 2,
+      "lesson": "reaction",
+      "kind": "step",
+      "characters": 75,
+      "sha256": "77b602ca08bc91184a9cd33ac51114ae1019c839060a5557ce8e322342a21d47"
+    },
+    {
+      "id": "bonds-page-8",
+      "priority": 4,
+      "lesson": "bonds",
+      "kind": "page",
+      "characters": 185,
+      "sha256": "469fab8a1478e68c70a30b7dfe75ee7a798161e40b42464874892135950ff20d"
+    },
+    {
+      "id": "bonds-page-9",
+      "priority": 4,
+      "lesson": "bonds",
+      "kind": "page",
+      "characters": 165,
+      "sha256": "964181661d0556ae26c06af831125054521e11ba7b28036821b386e733d48dd7"
+    },
+    {
+      "id": "compounds-page-0",
+      "priority": 4,
+      "lesson": "compounds",
+      "kind": "page",
+      "characters": 203,
+      "sha256": "e2837e9b461c4af9095eb32a6317138d6e58bf56b75266acfe8d25bb0ef56bf3"
+    },
+    {
+      "id": "compounds-page-6",
+      "priority": 4,
+      "lesson": "compounds",
+      "kind": "page",
+      "characters": 161,
+      "sha256": "be20687161cad5dd020402a733e788e65e35863068491dd14320bac1aade1242"
+    },
+    {
+      "id": "reaction-page-0",
+      "priority": 4,
+      "lesson": "reaction",
+      "kind": "page",
+      "characters": 125,
+      "sha256": "465d9ab8b84b3f6e1321582830692e5af9214a03fc32896310bfda116bb2cd1e"
+    },
+    {
+      "id": "reaction-page-13",
+      "priority": 4,
+      "lesson": "reaction",
+      "kind": "page",
+      "characters": 147,
+      "sha256": "2f379e834bc679c79fdd8125fe8312be82852c89bfe77ce62c14ce3dd30cd80a"
+    },
+    {
+      "id": "reaction-page-14",
+      "priority": 4,
+      "lesson": "reaction",
+      "kind": "page",
+      "characters": 151,
+      "sha256": "23232f4d33ba9ebc5b5f7ba02bae280210717a26c61c78688134a84c522c67cf"
+    },
+    {
+      "id": "shared-lab-welcome",
+      "priority": 4,
+      "lesson": "shared",
+      "kind": "event",
+      "characters": 138,
+      "sha256": "b21d0cad9d00c25cc26ae833f655cdecfa4b870730c177f1c1a5d072099db990"
+    },
+    {
+      "id": "shared-transition",
+      "priority": 4,
+      "lesson": "shared",
+      "kind": "event",
+      "characters": 68,
+      "sha256": "eb662b0f8e4bfe87f54cc707d945358af7b632d122b3ae7234dfa8aca5a6f9f5"
+    },
+    {
+      "id": "bond-check-lif-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 62,
+      "sha256": "30882e08d64ea33417ee9c0ce1b327a673771a1bcc8f5f94df91bd07af6f67de"
+    },
+    {
+      "id": "bond-check-lif-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 98,
+      "sha256": "5fee4c56690ec0bc200da971a9021e6f989a461520e0a1606e527c31f10d7fe0"
+    },
+    {
+      "id": "bond-check-mgcl2-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 100,
+      "sha256": "e0543e86b84bc2d231c4de80cc4caaba3be9beb446f187f31b54c7a11e66b83e"
+    },
+    {
+      "id": "bond-check-mgcl2-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 201,
+      "sha256": "9180f608b9a982f63023bdf477925e269bb91bdd214673cc821594f20e8044c9"
+    },
+    {
+      "id": "bond-extra-ionic-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 107,
+      "sha256": "4a7042bb798736c308614d8fad897663279818719a1a7efecd003d97cd1debb5"
+    },
+    {
+      "id": "bond-extra-ionic-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 234,
+      "sha256": "7f962a6c6237b999c9e3a6248b9448b267ab688c7f2b74cc9ed622afb138b949"
+    },
+    {
+      "id": "bond-check-h2-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 69,
+      "sha256": "53545a8358d614b64f9690369e749b6048edba88458bee74600a0098528036c8"
+    },
+    {
+      "id": "bond-check-h2-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 104,
+      "sha256": "6d6d3f8457f31a5d17ed58232cdfbb582a895b00be219d4956d2a32ea0edc293"
+    },
+    {
+      "id": "bond-check-o2-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 80,
+      "sha256": "0723dd61c341a79e10856a0f3ddf618acf54a0976abab395771e782f7895ab98"
+    },
+    {
+      "id": "bond-check-o2-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 137,
+      "sha256": "98532c4d1ed4b9d5c5c60ee998d32af39d3dc66d5f6216c2b6884481e39e561a"
+    },
+    {
+      "id": "bond-check-ch4-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 81,
+      "sha256": "9596418a1dcefdfe5db74d73ad8e489620ef691cded31c8482e7b2bf50a36ca1"
+    },
+    {
+      "id": "bond-check-ch4-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 139,
+      "sha256": "55a0e7a6483eb3caa2e635c73cf78c33e2e90a9d1ff384454a8617808a15d683"
+    },
+    {
+      "id": "bond-extra-covalent-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 115,
+      "sha256": "bedfb85968bc13fb8694f060012aa127483a0e159d2d052be0dd393454fb2e46"
+    },
+    {
+      "id": "bond-extra-covalent-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 200,
+      "sha256": "b8802b38cc0f6c37808464469cb7fc4f96d4c1099799816fe8a0ca61a8d80122"
+    },
+    {
+      "id": "bond-quiz-0-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 70,
+      "sha256": "e01448f8b257bffaacc465b60bb1ce1c947d58f84e02c93ea9cf400c4e01775a"
+    },
+    {
+      "id": "bond-quiz-0-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 141,
+      "sha256": "f69819e2dbda2f369fb909895a3aa3a24cd815b647a3ecc0c39c04287cb0ab64"
+    },
+    {
+      "id": "bond-quiz-1-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 82,
+      "sha256": "a4e7c30947b156078866dc3f3e2a3240eab1d6cced46711bbdf73ca5c7b9539d"
+    },
+    {
+      "id": "bond-quiz-1-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 152,
+      "sha256": "a74d70e37a0fbf54276748a3175513055396315bc080ca928ce95cb0671ae0c0"
+    },
+    {
+      "id": "bond-quiz-2-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 71,
+      "sha256": "f623f44dee42c05edc8539dde33536ae5d83b07189d4dba3da2a9fe7544bbde1"
+    },
+    {
+      "id": "bond-quiz-2-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 123,
+      "sha256": "6466772c87d8a85f4b0bdaad111394124146eeb3bf8c031772cc4eb93d07d4db"
+    },
+    {
+      "id": "bond-quiz-3-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 77,
+      "sha256": "25f85f9cf1a70ce7a8fe04124243096970716b9ecdd6005819372d9e083ed23a"
+    },
+    {
+      "id": "bond-quiz-3-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 145,
+      "sha256": "3c029ac30afc0f1af9ac1b8c3162f45a00fb0c7e74406a298f13b1e89df2c51a"
+    },
+    {
+      "id": "bond-quiz-4-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 77,
+      "sha256": "2e52132a933f1ea027efdc308df254d9ba45d6f6d02543e4a6dbb1b081ac25bc"
+    },
+    {
+      "id": "bond-quiz-4-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 94,
+      "sha256": "fd40cf0df327b2ea8e69fdfc0d806b731c3fdb6a55edccc78e205034a15e7350"
+    },
+    {
+      "id": "bond-quiz-5-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 90,
+      "sha256": "962298019a0b3612d045e79403f42491f21a2707bd4661234d262d488ffeb369"
+    },
+    {
+      "id": "bond-quiz-5-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 151,
+      "sha256": "bdbe83673e2b3f815cca70660001d0c07cf5295ad54355aab5ef04aeb077aea3"
+    },
+    {
+      "id": "compound-pre1-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 45,
+      "sha256": "d61bec90a2f8f7d3c20f4d2e574413e7a0e9992d5959842fd8cf5b4d3a68461b"
+    },
+    {
+      "id": "compound-pre1-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 105,
+      "sha256": "22784555fdf4a97631c87750fc38478f9d1dfc32684fab769c48cf4135c29c97"
+    },
+    {
+      "id": "compound-pre2-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 46,
+      "sha256": "1a9ccadd988ac2e1802e3f7be74eb7abaa67a9a79bcab9ae4837c11c9716b46b"
+    },
+    {
+      "id": "compound-pre2-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 114,
+      "sha256": "3bf6d67b9795cb5bbbfc1328a1ffadef1b127857a15b3fb01b4be2def045bc26"
+    },
+    {
+      "id": "compound-pre3-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 35,
+      "sha256": "973f3b32a0ded5facfec6a3cf4415404d8f713e751bc71de213d01c86bfb2ae6"
+    },
+    {
+      "id": "compound-pre3-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 71,
+      "sha256": "9cd43df223e8053c47b4eb5bcb71e89c6d7be6cb2267434681ee441592bcf298"
+    },
+    {
+      "id": "compound-pre4-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 50,
+      "sha256": "5998ecc3a28c999e9d87beb4ec51edcdf76031ccada84f3965b42a2629facac2"
+    },
+    {
+      "id": "compound-pre4-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 92,
+      "sha256": "832eadf484e373f174f4cfe98bc3d3f2ce1abd1303aa42947cc04a201e574e15"
+    },
+    {
+      "id": "compound-acid-current-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 62,
+      "sha256": "fc978a91ab29002c09eed22bbbe1f4f71393376366c6cb917293dcd0840b0b81"
+    },
+    {
+      "id": "compound-acid-current-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 159,
+      "sha256": "c266dfbde6ff77059b7d34a31df7d16abe81be71b910d8d51057f82f4e340fd4"
+    },
+    {
+      "id": "compound-acid-gas-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 66,
+      "sha256": "976fcd8eee2005324297a3f78aaad18746701db4e844730c924fdc790bcf8eb8"
+    },
+    {
+      "id": "compound-acid-gas-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 146,
+      "sha256": "8bbb72d68a4f5074f3125b9aa014a7b39fa45737566fada3d86a74d9b7484981"
+    },
+    {
+      "id": "compound-acid-litmus-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 64,
+      "sha256": "93618ad301962f3d1cd0e26e0e77635d03c8d8d10a81b9d0b4a471d2a1010308"
+    },
+    {
+      "id": "compound-acid-litmus-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 105,
+      "sha256": "095d024a4d841664eeae045a9832fb32155fd5004716b15544fc4dc71d575d78"
+    },
+    {
+      "id": "compound-base-litmus-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 64,
+      "sha256": "ee9751ed611b93a6063217ba8f4c56dfac7e5bbdaee58134b075ba7d6222b74b"
+    },
+    {
+      "id": "compound-base-litmus-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 126,
+      "sha256": "a85e273f19b42e25baf6053a7c3969ae6eeafcca842638e4148b1a99bed87cc9"
+    },
+    {
+      "id": "compound-base-safe-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 75,
+      "sha256": "f475ea373bba6d8845f57ef01dd6550a0fbbde14e4d22d04e64da8ceb0499470"
+    },
+    {
+      "id": "compound-base-safe-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 129,
+      "sha256": "be7e5c940461bcb5357e56f34ba4f2d3eef2b1bdef01411d7a23d26f58e093e0"
+    },
+    {
+      "id": "compound-base-use-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 68,
+      "sha256": "c82ad73f5b5c0b8c971d8a218cdcc7b5d44ce0b72d54d07a55a9c06589f89d3c"
+    },
+    {
+      "id": "compound-base-use-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 117,
+      "sha256": "5667d32527cd311ce0c704f8a01115682ba08c7661d1459331cf5ecfaada9c0c"
+    },
+    {
+      "id": "compound-salt-ions-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 114,
+      "sha256": "95ff32ce52a2743832c154be30745d20784828e988f25fd8ed31308859ff87c1"
+    },
+    {
+      "id": "compound-salt-ions-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 198,
+      "sha256": "81913c8fc9df7f5ad29c807c0fd3f991eb9b37383d6f308f8ee44cccd7893135"
+    },
+    {
+      "id": "compound-salt-neutral-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 46,
+      "sha256": "365893250355b65105b724f08acae695150dbc5243b2381da73fd2c8cda9fc5a"
+    },
+    {
+      "id": "compound-salt-neutral-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 135,
+      "sha256": "f2b604cfea844c4ac59db6ebc97e6f6a20f3af36d992b2587c92dc4f12e83dd5"
+    },
+    {
+      "id": "compound-salt-use-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 64,
+      "sha256": "a5fb9aa5007ae05c2b43942a9892eead173599e051c9797682792be9780e8c61"
+    },
+    {
+      "id": "compound-salt-use-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 117,
+      "sha256": "e82d9cee4b6799f498841f4e56df0c29fdfc3a92d823ecc5671247b4aa99a6bd"
+    },
+    {
+      "id": "compound-oxide-exception-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 92,
+      "sha256": "0e7eeb1cd6cfc9120c148753c7116ae1b48322a6f3286ec99987c003ee734cff"
+    },
+    {
+      "id": "compound-oxide-exception-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 137,
+      "sha256": "cc2353e660245e1e46cb18ed218920dcca26407861e26bc1bd8bb3bdf9ccc462"
+    },
+    {
+      "id": "compound-oxide-gas-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 83,
+      "sha256": "4d1fca697d8a171c022dbc6098287350c3c95505d222394d7f50a26c3c7a2405"
+    },
+    {
+      "id": "compound-oxide-gas-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 88,
+      "sha256": "09c2c072eee37167266d80ae88c32a551dde3a82e55abcc70be0bf41641fb5af"
+    },
+    {
+      "id": "compound-oxide-paper-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 67,
+      "sha256": "c68fa2c4f7ef094298108721d785abbedb3381c7ae2b9d8667d177aa715c18d3"
+    },
+    {
+      "id": "compound-oxide-paper-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 167,
+      "sha256": "f7007345fb49142cf274b62eaade08b1fc8f3f6794c60d378dd2cc6cd98b7b15"
+    },
+    {
+      "id": "compound-post1-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 77,
+      "sha256": "ae82adc9a5acfefde19f4b72e941e5f865c1f6ce014a9b2887d440a7753df6c5"
+    },
+    {
+      "id": "compound-post1-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 85,
+      "sha256": "46751fcb82184dedcbf5c3b824e39202375e1499d15b243be57e293507910905"
+    },
+    {
+      "id": "compound-post10-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 54,
+      "sha256": "2543c7aa24b7d5a0f65234e4e7ff882f0cc621d1026315b20aed80793566a5da"
+    },
+    {
+      "id": "compound-post10-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 134,
+      "sha256": "a113d5b07d5eb05a954516a64b69b76964f29ee4e7904efd0439e04dc0ce1784"
+    },
+    {
+      "id": "compound-post11-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 79,
+      "sha256": "9b677927ea4bfce90a72bab20df3a1eb2ac4acb583bcabe11ce4972290fe327a"
+    },
+    {
+      "id": "compound-post11-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 277,
+      "sha256": "11060971c719acbfa582d33d59ef8141c22cbb99505abdd9bed5f01932668518"
+    },
+    {
+      "id": "compound-post12-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 46,
+      "sha256": "365893250355b65105b724f08acae695150dbc5243b2381da73fd2c8cda9fc5a"
+    },
+    {
+      "id": "compound-post12-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 154,
+      "sha256": "33674901563dca5bbf35a9026d2de565c0674767a68314fd05cd44365d650078"
+    },
+    {
+      "id": "compound-post13-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 80,
+      "sha256": "afb137abd7c13823101763fb0df42d508dfe66c16eb80c662d84ee40e486f198"
+    },
+    {
+      "id": "compound-post13-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 161,
+      "sha256": "d52b6d001f6ff64e38e0391529777d2ea585ec45c86d16b9fb8ca5ab81179228"
+    },
+    {
+      "id": "compound-post14-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 55,
+      "sha256": "da7043885938b5f2cf74b60936b3890628fa794145ea59f6bb8ead576859c22c"
+    },
+    {
+      "id": "compound-post14-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 94,
+      "sha256": "d55ffbfa985fc5a416b112f1024ad355010586dd011819d274fdb468dc74cf65"
+    },
+    {
+      "id": "compound-post15-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 79,
+      "sha256": "9fb0dc41e33e60891a41b8c61451190071579b2636ed88260fdcae06fc5f2496"
+    },
+    {
+      "id": "compound-post15-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 141,
+      "sha256": "667f3af39a90588bd1368353419d69720681a620315191906dd77cf4ffb07284"
+    },
+    {
+      "id": "compound-post16-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 70,
+      "sha256": "3e3b9143a905540eebe546f48fda6d92258c7f531df0457b82938618c779e0a4"
+    },
+    {
+      "id": "compound-post16-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 93,
+      "sha256": "14d39ee6dd0f1629e766e6857fc096b6958c33eb9ed8933638923c0f634e94f8"
+    },
+    {
+      "id": "compound-post2-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 80,
+      "sha256": "47c44eacc30ba114782b9de7be4cd4cf5a819c38f7a9031c52b37fb102c5d922"
+    },
+    {
+      "id": "compound-post2-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 79,
+      "sha256": "4a87fe7a53011cf1a343c70d3da79ac0f2db658d3861cf51a28c0c21aca6f8b0"
+    },
+    {
+      "id": "compound-post3-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 84,
+      "sha256": "79ceb38aeadd518e5219e5f068c0108ee363efb3766615526be3fcba8a8918bd"
+    },
+    {
+      "id": "compound-post3-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 74,
+      "sha256": "3caae6b737494d6da46e92cb4a1d04738398f03e8b16fdd42070cf0e6f5e4bfd"
+    },
+    {
+      "id": "compound-post4-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 69,
+      "sha256": "97e9f3a4b3192a3ed2f424e6f512d247d199739a1477b15c1a7c8ffee214022b"
+    },
+    {
+      "id": "compound-post4-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 92,
+      "sha256": "4c74818d9906444841ddfd858f81a555e8d141e2973a2e23323ac4beeca80029"
+    },
+    {
+      "id": "compound-post5-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 45,
+      "sha256": "b9be3b3ff8d674a28d01d6becd01c9c38fab6728790f1fcc226e88c4a528ac89"
+    },
+    {
+      "id": "compound-post5-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 88,
+      "sha256": "12ed24b73e078380fa492e7f65511499e217540687f29f0cc94c036bce97291f"
+    },
+    {
+      "id": "compound-post6-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 67,
+      "sha256": "a53250e5ffb963fdee46d14a8440334978b498c600412495ffc090453beb4d8e"
+    },
+    {
+      "id": "compound-post6-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 117,
+      "sha256": "59f9ec0236138da2c4b84523592787f7609f517295926954e4dba1ae30a6a537"
+    },
+    {
+      "id": "compound-post7-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 56,
+      "sha256": "19471191f6052f1258f61a7426e86a7b314a2e2d9ea0b9e0d2e327811fafa751"
+    },
+    {
+      "id": "compound-post7-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 173,
+      "sha256": "d3967bebc14063b1a12ebc8d83c2a505aae96fb1bb1861e27efbefdd75054719"
+    },
+    {
+      "id": "compound-post8-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 56,
+      "sha256": "90fad6b0265827fda2999b2351d2a556f11d39f39cca5ed9da35172b733bb265"
+    },
+    {
+      "id": "compound-post8-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 106,
+      "sha256": "cca6448548c02b3bd8d10e3c19c07b8890ea88521528ad8b7796c41aba88d99a"
+    },
+    {
+      "id": "compound-post9-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 53,
+      "sha256": "5a4ea0f56ff278d8e75d2a17abdeec76e7651a902051c7978cd99f3cda3dca4c"
+    },
+    {
+      "id": "compound-post9-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 99,
+      "sha256": "a81d13515d3a9de2f091677530e58fde42c36e0535a780f3d13b9e2c8ede58c0"
+    },
+    {
+      "id": "compound-aluminium-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 81,
+      "sha256": "7bddd7f30c38ab0329164e98c38e7025de568aa997f5e9554446891e86809170"
+    },
+    {
+      "id": "compound-aluminium-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 201,
+      "sha256": "0a6ebd12c8089f858d6927841c2ceda38105ba9eaa4cd40cf81cf38ef1e6ebcf"
+    },
+    {
+      "id": "compound-calcium-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 78,
+      "sha256": "4e907b46190e613ee141a3f77690f7e3dc7b36806c4ac0bb32244ce7b2d9375b"
+    },
+    {
+      "id": "compound-calcium-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 203,
+      "sha256": "2e699d6db56ea8e09bdd98dea0af2c3e8e8a96ad7b97df68de0b53a74b268cfd"
+    },
+    {
+      "id": "compound-carbon-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 86,
+      "sha256": "f092dd28eb9a8cf2fb5c7406a4f682f186c4d84c265d5080ee65f785b2997bcd"
+    },
+    {
+      "id": "compound-carbon-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 201,
+      "sha256": "fbb29c943f8f33c18181d4c6d59c7db2157636b0c45966e39e4af17622f440cd"
+    },
+    {
+      "id": "compound-neutral-eq-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 111,
+      "sha256": "dab6b3dff4dbb6cdc8f10870b3cec0f6141df6fce21b42dba5bc09836e0ad5e9"
+    },
+    {
+      "id": "compound-neutral-eq-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 174,
+      "sha256": "4faf95b2dc17c7db65fecdac734b04596518f07f7bcb307df992608187c8c022"
+    },
+    {
+      "id": "compound-nitrogen-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 138,
+      "sha256": "844797a717551cc967a8c5c9d146006b4b9823e5e7956e89d1bb9c18437649d5"
+    },
+    {
+      "id": "compound-nitrogen-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 224,
+      "sha256": "9431ccdf6e97aa9677d003cb20e1f7c840fb6c07df21c3840728b5241d36b9f0"
+    },
+    {
+      "id": "compound-sodium-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 99,
+      "sha256": "a56f452f2c348c57dc46bb668d1ba207f1e08279001423f2219078c28bfae573"
+    },
+    {
+      "id": "compound-sodium-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 155,
+      "sha256": "dddf747d6ab44f05394c24b957f4e9bf5a07c52e4aa81c088405839d6f881a1e"
+    },
+    {
+      "id": "compound-sulfate-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 118,
+      "sha256": "b94250e51a9a92d85356bc56587283c5d68e00e84da0a2dee76ce740cf998a8a"
+    },
+    {
+      "id": "compound-sulfate-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 225,
+      "sha256": "f577d1eb6d1c86925b6970b32b40bdfb35f6b6b6e7d7f5ff2ce2a60d0e00ab1d"
+    },
+    {
+      "id": "reaction-pre-0-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 62,
+      "sha256": "fb1d8f87bd59e1694e24b6d314b4c0d8d3d127ef79464c40efece86c1d5058bd"
+    },
+    {
+      "id": "reaction-pre-0-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 109,
+      "sha256": "dead900d5b1e70db8c943b2118cdb0e62c7c2bdb402a44ac20219c70a6c5ad94"
+    },
+    {
+      "id": "reaction-pre-1-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 64,
+      "sha256": "edc5ce5cdb63c8466cbe0da20921ceafe318f6756189ab8044342c9f07ae8b6a"
+    },
+    {
+      "id": "reaction-pre-1-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 137,
+      "sha256": "c37d5bcffd0a9cc3c4808275b1250f2cdb5a7cf14a8bcfe1f74d8df74ae41cca"
+    },
+    {
+      "id": "reaction-pre-2-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 126,
+      "sha256": "998b2d187d6c94f63243b04ee56544513cf26f952698168fbec853ea36411fdd"
+    },
+    {
+      "id": "reaction-pre-2-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 138,
+      "sha256": "5b44d2b8757f644a2f5c96daaa6901682ef6c28d1d8f52169e8b75a5eb54eaee"
+    },
+    {
+      "id": "reaction-pre-3-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 63,
+      "sha256": "301a8bfcb669da623601ca4fe670d1b0865a02a1e1b28d243dc47e43f0418599"
+    },
+    {
+      "id": "reaction-pre-3-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 166,
+      "sha256": "46d566acf5f1f3bf4026380590418062fe809d65d4ab0f46381d1c94274f6beb"
+    },
+    {
+      "id": "reaction-post-0-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 62,
+      "sha256": "d60e5bc3181b108af14a02138f8bde14a93dfa3b9d90f3f55b3fded7fa3b24df"
+    },
+    {
+      "id": "reaction-post-0-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 92,
+      "sha256": "f2764a5740d0d3ba98597a56dcae5f79deabbe5c0b753a4fde21615aae4fb0f9"
+    },
+    {
+      "id": "reaction-post-1-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 71,
+      "sha256": "171064e194ecb77e60f8d4c488f3c51c22e51a2958e6fc1bc00b96b7a4747a9d"
+    },
+    {
+      "id": "reaction-post-1-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 98,
+      "sha256": "94de19c992bdaf4156d4bb6323c6308ffbb3358b9f95acae91ba4e622e4c5f6d"
+    },
+    {
+      "id": "reaction-post-2-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 63,
+      "sha256": "4af1311dbc7291c4edcfd46d52430a8e58da4e29e850e2abc0bcfae90f0f2822"
+    },
+    {
+      "id": "reaction-post-2-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 100,
+      "sha256": "1441384ba2bd13df47c4e646dc8bea930ac9c1e4d750b650464061db1c3eb9ac"
+    },
+    {
+      "id": "reaction-post-3-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 81,
+      "sha256": "ca3eb994ff43dab92998dc63856abed47c511b1b7426b48f015b01288161da3b"
+    },
+    {
+      "id": "reaction-post-3-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 93,
+      "sha256": "819df1e0270bcdb33d57ed256bb90410f219302a6fc8a303cc0c63cfc0d9e3c3"
+    },
+    {
+      "id": "reaction-post-4-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 46,
+      "sha256": "8340073d7d360e58b816a2471cf58c386287cda8f0f8ed7628c664dfeb408a4b"
+    },
+    {
+      "id": "reaction-post-4-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 124,
+      "sha256": "1703dccc36aec03fdfa6e1fad2f865bf30512ce4865516406b9be0310900b79a"
+    },
+    {
+      "id": "reaction-post-5-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 64,
+      "sha256": "9b1ed61859afabffcbf85f543878ae0fc42eaa2b91f9af1edd849edc4a6ae8ce"
+    },
+    {
+      "id": "reaction-post-5-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 83,
+      "sha256": "1ba74d21e42dba2f4537265186d6ad5ac6ae56ff739d6e7919a38cffb0a5b5cb"
+    },
+    {
+      "id": "reaction-post-6-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 74,
+      "sha256": "bde6d3d1a7f65428242128d31c994f8b828a501b324a871b01611215d765a7e5"
+    },
+    {
+      "id": "reaction-post-6-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 105,
+      "sha256": "08acc77bed76c239c75289cc012486f4b2208dac967e1ca25bc1e5c319afe19a"
+    },
+    {
+      "id": "shared-correct",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "event",
+      "characters": 67,
+      "sha256": "7166236b165029a209eac0a139e9ee3eca016d01cd353cf594fcdaf234f090fc"
+    },
+    {
+      "id": "shared-hint",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "event",
+      "characters": 83,
+      "sha256": "61f4e1e2028f3f76d16ffe093429be5d7430877368bd662b5003d1c4ae4baffc"
+    },
+    {
+      "id": "shared-lesson",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "event",
+      "characters": 63,
+      "sha256": "82ae99dcb7f8d7ca055dc459132704f5e1d09b7d444db1882ad595a4e6c4ce21"
+    },
+    {
+      "id": "shared-medal",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "event",
+      "characters": 49,
+      "sha256": "367eda8f9000e55b8743bece12a6c17db4c329e3dfd67a2684148722d2e97db6"
+    },
+    {
+      "id": "shared-retry",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "event",
+      "characters": 89,
+      "sha256": "4ca53c7689e3fc1a3010bb9fcc4213bcfb9697432d40c322ba8ceb09a90b133e"
+    },
+    {
+      "id": "shared-stars",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "event",
+      "characters": 50,
+      "sha256": "173d9a91144192caf952e9b7a908fae7ccf014a971f38d7793971a444f27ac18"
+    },
+    {
+      "id": "fact-battir",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 178,
+      "sha256": "980bf5ecd8b7f8b91e087a4686fe90088d289dd36df6d176614c50d33e8de584"
+    },
+    {
+      "id": "fact-battir-water",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 180,
+      "sha256": "a3dc76441cb76c1e249985bbd3413b79353269ca412aac61482a38856de5e443"
+    },
+    {
+      "id": "fact-curie",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 160,
+      "sha256": "9dacc76a3f5754dcc54f26a1a7a22eb751d0f72e6f865b2fcf0ff39d6ad08e13"
+    },
+    {
+      "id": "fact-dead-sea",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 175,
+      "sha256": "ade662bebc1ab6e57faee23d2d81d882fe95ed4605f8c9a1e2e4442559500167"
+    },
+    {
+      "id": "fact-haytham",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 160,
+      "sha256": "27718931fd0b52f0c0ed8e894310043c3134ff50f2e9213496746f9f78349a21"
+    },
+    {
+      "id": "fact-nanoscale",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 186,
+      "sha256": "bdce9afbb9a23fa3b7b998dbbd34736325e98767508847a10b35bd6857a0c593"
+    },
+    {
+      "id": "fact-nayfeh",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 176,
+      "sha256": "0c4bb00f18e07d15a89bb8dbd50cd1f25d9639c119fc354aa6a82e522acc876d"
+    },
+    {
+      "id": "fact-si",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 162,
+      "sha256": "c8707a79039ff5353cde49a359f251f71087b8630d09b6df26c1946ce8288d4c"
+    },
+    {
+      "id": "fact-space-water",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 192,
+      "sha256": "2672901d5294de12ca7a55387d7aa0c9ca6b7a078f02440f1b8a3dabee7bf504"
+    },
+    {
+      "id": "fact-terraces",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 192,
+      "sha256": "f61cfa444f4bf10d4ff8dbc0505255c7448b8519b52b14bd95cea33d4c873e48"
+    },
+    {
+      "id": "fact-wadi-gaza",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 184,
+      "sha256": "8a5b65adda7a4e35e0a1531a384e3cc7b74d72d2acf16731d28c012782bfcbd9"
+    },
+    {
+      "id": "fact-zewail",
+      "priority": 7,
+      "lesson": "shared",
+      "kind": "fact",
+      "characters": 187,
+      "sha256": "7cee55a304202ea01f1ec052f3dc8cc007fc03ee2a2165a872f1c510d6e281f9"
+    },
+    {
+      "id": "reward-excellent",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "reward",
+      "characters": 12,
+      "sha256": "c183fbc464832e8b4dfee8861786f775c30834e456b0f15d060919fa6489f510"
+    },
+    {
+      "id": "reward-wonderful",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "reward",
+      "characters": 16,
+      "sha256": "5ecee4d965ef95087f4652e2b3ef686fddf4b946e2905761797815d1f5262bc8"
+    },
+    {
+      "id": "reward-well-done",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "reward",
+      "characters": 20,
+      "sha256": "c67ca85b0218c9db5e261713f92b31e9bc2770273198082ced3d7df6943260ac"
+    },
+    {
+      "id": "reward-bravo",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "reward",
+      "characters": 24,
+      "sha256": "7acb1c622d1fdca421d9681efc43aec94b29aa5ee8e2fb51a8e167e35bf2e543"
+    },
+    {
+      "id": "reward-creative",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "reward",
+      "characters": 10,
+      "sha256": "55d227f07d940f535797cbc9ec4795407500fa0d4f2713f13541983ec5c90514"
+    },
+    {
+      "id": "reward-wow",
+      "priority": 6,
+      "lesson": "shared",
+      "kind": "reward",
+      "characters": 32,
+      "sha256": "f4957599a2d9df96d4f7544498144e219f7a4173241138c0d36cb44a31f49119"
+    },
+    {
+      "id": "reaction-observation-balloon-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 107,
+      "sha256": "b380ff5e25362c34287820aa20e32701289b9c71326266331097d586aa4c7380"
+    },
+    {
+      "id": "reaction-observation-balloon-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 121,
+      "sha256": "b199640cde6167e5120b25aa0919db373dc81bdb528b1938f473d9d70b9ad2ca"
+    },
+    {
+      "id": "reaction-observation-heat-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 90,
+      "sha256": "ec3efe01f6cd8e8cd9a922d27b89122e707911bb491b3d3e067f7409a7c6a10a"
+    },
+    {
+      "id": "reaction-observation-heat-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 122,
+      "sha256": "613d4eb9ba13fff3552e7b9db83f2e23ebf99d2bafa65c7cf3634589eb60d042"
+    },
+    {
+      "id": "reaction-observation-iodine-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 131,
+      "sha256": "563bae0ffd7054e2c004c261bdae081aecd5e1bfae618e417234bd1f194b08f8"
+    },
+    {
+      "id": "reaction-observation-iodine-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 149,
+      "sha256": "6a7615b65b503ed041c05af5f965690a23c8faa4d2da5ef1509426d30291f84a"
+    },
+    {
+      "id": "reaction-observation-precipitate-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 103,
+      "sha256": "717ebe6a6ec076a701a95cd1c557eff90ae3c8af8c0c25f89257386d8d9e1d98"
+    },
+    {
+      "id": "reaction-observation-precipitate-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 158,
+      "sha256": "7ca6a50e48274807cc19b26ff834b78b9183383e7d6ad78f53dd6919c8f82690"
+    },
+    {
+      "id": "reaction-observation-cabbage-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 130,
+      "sha256": "0bd79c9f8a7b03a25fa817fa48580676e3a8aaa6bc1d2c64d8267ae64e9029d6"
+    },
+    {
+      "id": "reaction-observation-cabbage-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 157,
+      "sha256": "80c8e737a4de524d138458f78a40987ed3a0330f9dd693e8f6be174a00b7af06"
+    },
+    {
+      "id": "reaction-observation-flash-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 123,
+      "sha256": "3910a4c4204006286eea232713de40601b408eb6234a344ea4887fccbc1cfe5c"
+    },
+    {
+      "id": "reaction-observation-flash-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 199,
+      "sha256": "bde17cf3f4dcdfb3f04bf7222ab6cafa4f38eb68b0f2dd4daf07071cfd4eeae7"
+    },
+    {
+      "id": "runtime-rust-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 115,
+      "sha256": "9f57b80b94134e5a13262217d590dd949099aec54de693510f369f1a551846cc"
+    },
+    {
+      "id": "runtime-rust-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 79,
+      "sha256": "a17c65fda1da98be3dab3f68f5423145cd3db467007b4a73ec383be8936212c2"
+    },
+    {
+      "id": "runtime-atom-inference-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 121,
+      "sha256": "e817218b396dad5b1e2e7f369f0091213d285dfbd795d998cfe0bc4592f57508"
+    },
+    {
+      "id": "runtime-atom-inference-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 48,
+      "sha256": "44f3c7af061fe0edfb4cd2acf850350b334ed0e4a4f80aca2f9e394ff155a293"
+    },
+    {
+      "id": "runtime-balance-inference-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 138,
+      "sha256": "067ddc9fbd707e76ce38f17dd51984e0c04d782e69eece17b29570330d15ba75"
+    },
+    {
+      "id": "runtime-balance-inference-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 56,
+      "sha256": "2bea040e221e7a4e86584ee188d4067bb6b85f003011eb20d6ca6b935ba5291d"
+    },
+    {
+      "id": "runtime-equation-inference-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 150,
+      "sha256": "6c2d3b6158f40114eb663d1986122856f94b3db980b2a669dcdb42ec0935ae39"
+    },
+    {
+      "id": "runtime-equation-inference-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 73,
+      "sha256": "b26de87e9244513b774894079ad993b478cc9c5d18d918631a5fb90bf1d659f3"
+    },
+    {
+      "id": "runtime-ammonia-inference-question",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "question",
+      "characters": 163,
+      "sha256": "ee4569216619e61480ebe341e50a695ca5117cb95ec81bf46ad5f5eed5daa3e9"
+    },
+    {
+      "id": "runtime-ammonia-inference-feedback",
+      "priority": 5,
+      "lesson": "reaction",
+      "kind": "feedback",
+      "characters": 56,
+      "sha256": "59d194d837a0641f804d0a27671722ce3044d455cab61e87e368ca9ebf7119c2"
+    },
+    {
+      "id": "runtime-hcl-check-question",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "question",
+      "characters": 193,
+      "sha256": "37d1cd8cd83af0b48a4a24a87c3c591ab2fdb1768dd85be97c5548332f15ff58"
+    },
+    {
+      "id": "runtime-hcl-check-feedback",
+      "priority": 5,
+      "lesson": "bonds",
+      "kind": "feedback",
+      "characters": 80,
+      "sha256": "fe0b7c943eabbf909afbf705a5d2f75c54586749aee4549cef275df91d729e27"
+    },
+    {
+      "id": "runtime-base-conductivity-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 151,
+      "sha256": "542615960da016cb17076cb5b3059dfefed915afab1cbf2575e7d2d4d7634194"
+    },
+    {
+      "id": "runtime-base-conductivity-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 78,
+      "sha256": "c30bee788a556ae14c9da29fc753414e91320f6a27d2f49d54b6710ac6279974"
+    },
+    {
+      "id": "runtime-oxide-calcium-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 142,
+      "sha256": "d75d14e2644e95811b460dc8cef679bf1911d0c41f3b75924b10a25499e34b1d"
+    },
+    {
+      "id": "runtime-oxide-calcium-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 93,
+      "sha256": "867c5d1bbcdd03688cc1ae18e8d5b3e75df7aa3af55fbc4f6f7b8750b118fe9d"
+    },
+    {
+      "id": "runtime-salt-classify-question",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "question",
+      "characters": 164,
+      "sha256": "4b30950bde8f7db7956564631ebf4cc7bd7ab5cc2e5176aafb4fbbe987ae67e9"
+    },
+    {
+      "id": "runtime-salt-classify-feedback",
+      "priority": 5,
+      "lesson": "compounds",
+      "kind": "feedback",
+      "characters": 65,
+      "sha256": "bb3763717e9b7f077c6c61095adc27833ea598aa733c78bbdc90adbd94a9a4e9"
+    }
+  ]
+}
