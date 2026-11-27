@@ -1,0 +1,19 @@
+{
+  "voice_name": "Razan – Academic & Cultural Narration",
+  "voice_id": "EUojVLG1QfxaqqH4ce6s",
+  "model": "eleven_multilingual_v2",
+  "scripts": 272,
+  "characters": 28405,
+  "estimated_credits": 28405,
+  "estimate_basis": "Connected ElevenLabs estimate: 113 credits for 113 characters; one generation per clip. Estimate, not a read of remaining balance.",
+  "balance": "unavailable via connector; user explicitly authorized generation without reading balance",
+  "priority_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}

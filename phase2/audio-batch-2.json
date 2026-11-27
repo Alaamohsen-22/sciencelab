@@ -1,0 +1,1224 @@
+{
+  "reaction-page-4": {
+    "file": "assets/audio/phase2/reaction-page-4.mp3",
+    "text_sha256": "7595cef96599dc3b359dc22ff991186e6dd05eaf241a440e0201c73eab7d76de",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 10.652,
+    "bytes": 85724,
+    "sha256": "54a6c8eff1d16908b2e45f1282b880ad2b721d92c6d21597870dc61096eb6d4c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0,
+        "end": 3.843,
+        "text": "هل تتساوى أعداد الذرات في الطرفين؟ غيّر معامل الماء،"
+      },
+      {
+        "start": 4.017,
+        "end": 8.533,
+        "text": "ثم عُدّ ذرات الهيدروجين والأكسجين. المعامل يقع أمام الصيغة،"
+      },
+      {
+        "start": 8.707,
+        "end": 10.565,
+        "text": "ولا يغيّر هوية المادة."
+      }
+    ]
+  },
+  "reaction-page-5": {
+    "file": "assets/audio/phase2/reaction-page-5.mp3",
+    "text_sha256": "559b58e11b7681898f48c7e6644f1cb76d503bd49dcb7d231e42937ff8a6a383",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 16.004,
+    "bytes": 128565,
+    "sha256": "dbb4ab3a65f5294c9f928f9eba9c4866f9e2bc4816299d880384e65362cdf3fa",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.087,
+        "end": 4.778,
+        "text": "تختصر المعادلة الكيميائية أسماء المواد برموز وصيغ. السهم يربط"
+      },
+      {
+        "start": 4.812,
+        "end": 10.141,
+        "text": "المتفاعلات بالنواتج، وقد تُكتب عليه ظروف التفاعل. غيّر المعاملات،"
+      },
+      {
+        "start": 10.385,
+        "end": 14.82,
+        "text": "لا الأرقام داخل الصيغ. جرّب موازنة الكالسيوم، ثم أنجز"
+      },
+      {
+        "start": 14.89,
+        "end": 15.911,
+        "text": "نشاط الأمونيا."
+      }
+    ]
+  },
+  "reaction-page-6": {
+    "file": "assets/audio/phase2/reaction-page-6.mp3",
+    "text_sha256": "a01b4e3b587c34b4c3a6f569470812d44eb50cabb03ae4003ea6e5544ca06e5c",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 11.819,
+    "bytes": 95128,
+    "sha256": "f2ef9b392cb760cad96bbe813bfa77d328f2af5aa52e779e4b88556b25c6596b",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.093,
+        "end": 4.586,
+        "text": "جهز الدورق والخارصين والحمض المخفف والبالون في المختبر الرقمي."
+      },
+      {
+        "start": 4.911,
+        "end": 9.358,
+        "text": "اتبع ترتيب الأدوات، وراقب البالون وما يحدث داخل الدورق."
+      },
+      {
+        "start": 9.532,
+        "end": 11.714,
+        "text": "لا نستنتج قبل تنفيذ التفاعل."
+      }
+    ]
+  },
+  "reaction-page-7": {
+    "file": "assets/audio/phase2/reaction-page-7.mp3",
+    "text_sha256": "f6e2cfe2c815d313994c0c7ae2958a0a30b4a45061ba8afd1e421fbd44531375",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 11.715,
+    "bytes": 94292,
+    "sha256": "bb6e2ac20d1122f6c64733081514b8deb822f35104a9dad3522547dca38eed2e",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.105,
+        "end": 5.352,
+        "text": "افحص الأنبوب الافتراضي والفلز والحمض المخفف. نفّذ الإضافة، ثم"
+      },
+      {
+        "start": 5.48,
+        "end": 9.694,
+        "text": "قارن مؤشر الحرارة وحركة الفقاعات قبل التفاعل وبعده. أي"
+      },
+      {
+        "start": 9.741,
+        "end": 11.633,
+        "text": "دليلين تستطيع ملاحظتهما؟"
+      }
+    ]
+  },
+  "reaction-page-8": {
+    "file": "assets/audio/phase2/reaction-page-8.mp3",
+    "text_sha256": "7b033e9253d7a81ffaadb9ba177c463ea602f724e7e7760f83a44ae1cfe79790",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 10.548,
+    "bytes": 84888,
+    "sha256": "a0c0ef2b80629d3a0aedf55606b1cac38de3c474e927398304142d29c66dbe63",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.081,
+        "end": 4.191,
+        "text": "اختر الخبز أو الحليب، ثم أضف اليود افتراضيًا. قارن"
+      },
+      {
+        "start": 4.238,
+        "end": 8.627,
+        "text": "لون العينة قبل الإضافة وبعدها، وأعد التجربة بالعينة الأخرى"
+      },
+      {
+        "start": 8.836,
+        "end": 10.392,
+        "text": "قبل أن تفسر النتيجة."
+      }
+    ]
+  },
+  "reaction-page-9": {
+    "file": "assets/audio/phase2/reaction-page-9.mp3",
+    "text_sha256": "0e8706ecd5e4cfec807a6a1f1a3fccd3db9ba9b56d5042b33a69a4e99756e182",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 10.739,
+    "bytes": 86560,
+    "sha256": "e9223889d0ae7ff078942335444ea23cf7be6a214518c332502516b45e2d2600",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.157,
+        "end": 4.534,
+        "text": "أمامك الماء المقطر وملح الطعام ومحلول نترات الفضة. رتب"
+      },
+      {
+        "start": 4.579,
+        "end": 8.632,
+        "text": "الإضافات، ثم حرّك المحلول وراقب قاع الكأس. هل ترى"
+      },
+      {
+        "start": 8.69,
+        "end": 10.651,
+        "text": "مادة جديدة تختلف عن المحلول؟"
+      }
+    ]
+  },
+  "reaction-page-10": {
+    "file": "assets/audio/phase2/reaction-page-10.mp3",
+    "text_sha256": "5416f8e97f174605803c565b69a4d67e5632fad08fcb7b4a8b4a4a7fd11564b7",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 10.589,
+    "bytes": 85306,
+    "sha256": "2ae0f42a4483bb60fcad27d6945b4aaa5c3e4985859fa1b6e38d1d043ca3d07d",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.088,
+        "end": 4.58,
+        "text": "الكاشف الطبيعي محضّر ومبرّد في هذه المحاكاة. قارن أثر"
+      },
+      {
+        "start": 4.627,
+        "end": 8.609,
+        "text": "الحمض وأثر محلول بيكربونات الصوديوم في ماء الملفوف. غيّر"
+      },
+      {
+        "start": 8.702,
+        "end": 10.502,
+        "text": "عاملًا واحدًا ولاحظ اللون."
+      }
+    ]
+  },
+  "reaction-page-11": {
+    "file": "assets/audio/phase2/reaction-page-11.mp3",
+    "text_sha256": "ca3b1fb8aac0b69c6d6f1af1f4badf14ef9d8e2600d32b7ae6c3f1bd83f52ecc",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 11.035,
+    "bytes": 88859,
+    "sha256": "d4d5592837226628e8393e9d6dc7543d21bf41ef75e240b812783f1c9f31eb02",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.087,
+        "end": 5.242,
+        "text": "تجربة المغنيسيوم هنا رقمية بالكامل. استخدم أدوات المحاكاة وتابع"
+      },
+      {
+        "start": 5.276,
+        "end": 9.537,
+        "text": "التغير البصري منخفض الشدة. لاحظ المادة قبل التسخين وبعده،"
+      },
+      {
+        "start": 9.711,
+        "end": 10.919,
+        "text": "ثم فسّر الدليل."
+      }
+    ]
+  },
+  "reaction-page-12": {
+    "file": "assets/audio/phase2/reaction-page-12.mp3",
+    "text_sha256": "df31e84e7106da3172bce0616c1b5aa451ebd4110c604d3665abff60ee3c0a3a",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 13.81,
+    "bytes": 111011,
+    "sha256": "1eef5b1204573ae15c99c66593a8d10b060e04931ccf282c3a69ceaef278c723",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.116,
+        "end": 4.284,
+        "text": "اجمع أدلتك في خريطة الدرس. افتح مفهوم التفاعل، ثم"
+      },
+      {
+        "start": 4.377,
+        "end": 8.788,
+        "text": "ميزان الذرات، ثم دلالات حدوث التفاعل. كبّر الرسوم واربط"
+      },
+      {
+        "start": 8.858,
+        "end": 12.98,
+        "text": "كل ملاحظة بتفسيرها، دون الاعتماد على علامة واحدة خارج"
+      },
+      {
+        "start": 13.096,
+        "end": 13.711,
+        "text": "سياقها."
+      }
+    ]
+  },
+  "bond-result-lif": {
+    "file": "assets/audio/phase2/bond-result-lif.mp3",
+    "text_sha256": "cfe3b9ed47a21240c80307149a8e3d8631dd133cdbbad862a300f007615c27d2",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 11.122,
+    "bytes": 89486,
+    "sha256": "a6b9620a46f47069506a28706114b869ab8b4c6eef013ca2ecb26f75638dd96b",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.098,
+        "end": 4.185,
+        "text": "ماذا شاهدنا؟ انتقل إلكترون من Li إلى F؛ فأصبح"
+      },
+      {
+        "start": 4.266,
+        "end": 9.851,
+        "text": "Li⁺ موجبًا وF⁻ سالبًا. التجاذب بين الشحنتين المختلفتين هو"
+      },
+      {
+        "start": 9.897,
+        "end": 11.035,
+        "text": "الرابطة الأيونية."
+      }
+    ]
+  },
+  "bond-stage-lif-0": {
+    "file": "assets/audio/phase2/bond-stage-lif-0.mp3",
+    "text_sha256": "4b2b8b6f9274810d1257bd1a54853e5550a42211bb4a5334c4714eba810b02f5",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 6.409,
+    "bytes": 51869,
+    "sha256": "478f72bb8237d2c932d059161c45a87885a28a8a370c71de4fad2cefce23cf14",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.087,
+        "end": 5.671,
+        "text": "ذرتان منفصلتان: Li بتوزيع ⁦2، 1⁩ وF بتوزيع ⁦2،"
+      },
+      {
+        "start": 5.834,
+        "end": 6.321,
+        "text": "7⁩."
+      }
+    ]
+  },
+  "bond-stage-lif-1": {
+    "file": "assets/audio/phase2/bond-stage-lif-1.mp3",
+    "text_sha256": "f611ecddf9cb5c5d90d6dbfd9d6ec12bd56d85ca47f1476dbf986fb0284753d6",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.229,
+    "bytes": 18433,
+    "sha256": "6f869dd498a1d53f57b894a4ee08125a0fca01dd124661c473e1c108ae31ac0a",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.088,
+        "end": 2.073,
+        "text": "هذا إلكترون التكافؤ في الليثيوم."
+      }
+    ]
+  },
+  "bond-stage-lif-2": {
+    "file": "assets/audio/phase2/bond-stage-lif-2.mp3",
+    "text_sha256": "ffe2bfedefe0327137c013928971e67000a810c0ac686649f28c6558e98e00e6",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.27,
+    "bytes": 18642,
+    "sha256": "3090b5d4fe13db316cc154f6ca2bb1e9b777d21ce344641934682c9b6f3a180c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.156,
+        "end": 2.178,
+        "text": "ينتقل إلكترون الليثيوم إلى الفلور."
+      }
+    ]
+  },
+  "bond-stage-lif-3": {
+    "file": "assets/audio/phase2/bond-stage-lif-3.mp3",
+    "text_sha256": "f020870816c7f7d7a95c61207b9e93fc6993625d181da1572ace0f6262d6dde4",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.135,
+    "bytes": 25747,
+    "sha256": "134b499a0e189b90c5f4752ce67a68557ff1ac9fbdabfe5916edc83eb74046f9",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.093,
+        "end": 3.03,
+        "text": "يتكوّن أيون Li⁺ وأيون F⁻."
+      }
+    ]
+  },
+  "bond-stage-lif-4": {
+    "file": "assets/audio/phase2/bond-stage-lif-4.mp3",
+    "text_sha256": "1295bbd43168eaea0577e94a4d4a19c2d98ec2d84725e3e816b4123bd321eda9",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 4.098,
+    "bytes": 33270,
+    "sha256": "bb3096eefd087600664858d93cf4d7c48f4f18fdf6a801d97832fd8b931846db",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.105,
+        "end": 3.935,
+        "text": "تتجاذب الشحنتان المختلفتان؛ الصيغة فلوريد الليثيوم."
+      }
+    ]
+  },
+  "bond-result-mgcl2": {
+    "file": "assets/audio/phase2/bond-result-mgcl2.mp3",
+    "text_sha256": "5bd12b617cf291cea27b52f3db8e1bce1aec52288f0a4f6cfb6b9fe7456758f4",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 15.47,
+    "bytes": 124385,
+    "sha256": "8a89c21aebf70bad9815bce581e50bbbe229a351464ff4fc0aa9d9d1d64412b8",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.162,
+        "end": 5.793,
+        "text": "ماذا شاهدنا؟ يفقد Mg إلكترونين فيصبح Mg²⁺، وتكتسب كل"
+      },
+      {
+        "start": 5.909,
+        "end": 11.18,
+        "text": "ذرة Cl إلكترونًا فتصبح أيون الكلوريد السالب. تتعادل الشحنات"
+      },
+      {
+        "start": 11.238,
+        "end": 15.302,
+        "text": "بنسبة أيون مغنيسيوم إلى أيونَي كلور: كلوريد المغنيسيوم."
+      }
+    ]
+  },
+  "bond-stage-mgcl2-0": {
+    "file": "assets/audio/phase2/bond-stage-mgcl2-0.mp3",
+    "text_sha256": "938f3d8a30508868238a404af55e6f621fba4ce6a9ffbc519441ad474a303ac2",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.994,
+    "bytes": 32434,
+    "sha256": "6738ba3b9cf282a9fd7d93bab58bbfa2aefe43b7ddcea28b157a586a2bc0e9cb",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.168,
+        "end": 3.802,
+        "text": "ذرة Mg وذرتا Cl قبل انتقال الإلكترونات."
+      }
+    ]
+  },
+  "bond-stage-mgcl2-1": {
+    "file": "assets/audio/phase2/bond-stage-mgcl2-1.mp3",
+    "text_sha256": "fc65e448d199a09e3ca4d8e63fd75e20df0d7f2b92f91aff0afb27e94b9d3131",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.526,
+    "bytes": 20732,
+    "sha256": "4211f3ea372b6992ea9f59be8f98d815d22e687db55b411cf604e289ee1d84d3",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.191,
+        "end": 2.421,
+        "text": "نحدد إلكترونَي التكافؤ في Mg."
+      }
+    ]
+  },
+  "bond-stage-mgcl2-2": {
+    "file": "assets/audio/phase2/bond-stage-mgcl2-2.mp3",
+    "text_sha256": "afff348e937f1275e2a6c9c7bc18ce0c3d0d670b29478b6762b2ad1c31cd8c72",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.315,
+    "bytes": 27001,
+    "sha256": "b46070ad3026392c035f023817581fa5e1648497bc913ad9485dc8c00493d2a0",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.105,
+        "end": 3.169,
+        "text": "ينتقل الإلكترون الأول إلى ذرة الكلور الأولى."
+      }
+    ]
+  },
+  "bond-stage-mgcl2-3": {
+    "file": "assets/audio/phase2/bond-stage-mgcl2-3.mp3",
+    "text_sha256": "a2fcd17a2c7ae00a7efc0b736ba467e176981544d6fe96840bcad7e247391e63",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.338,
+    "bytes": 27210,
+    "sha256": "6173327c235d7478b5bc87df13a8f93db98665840863aa0ef6ebdf2e30d2a071",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.145,
+        "end": 3.199,
+        "text": "ينتقل الإلكترون الثاني إلى ذرة الكلور الثانية."
+      }
+    ]
+  },
+  "bond-stage-mgcl2-4": {
+    "file": "assets/audio/phase2/bond-stage-mgcl2-4.mp3",
+    "text_sha256": "9a143fe5ee952bec14ab52011877557ec693aa89295ca1e05da5c578b1adbfd6",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 4.487,
+    "bytes": 36405,
+    "sha256": "414f8b0ddc6af0bc0c5f1f5c08c61e468e55a378a70b809c225fe757192c8b53",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.139,
+        "end": 4.33,
+        "text": "تظهر الشحنات: Mg²⁺ وأيونان أيون الكلوريد السالب."
+      }
+    ]
+  },
+  "bond-stage-mgcl2-5": {
+    "file": "assets/audio/phase2/bond-stage-mgcl2-5.mp3",
+    "text_sha256": "f9c309b5d9fad44d590f692c918cae06a99f0393d500528d227828fa4532cc4f",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.32,
+    "bytes": 27210,
+    "sha256": "9f8a9e08dbab3e898bc985544ff093b76c91061a351d3639e6a54b551e579817",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.157,
+        "end": 3.268,
+        "text": "تتجاذب الأيونات؛ الصيغة كلوريد المغنيسيوم."
+      }
+    ]
+  },
+  "bond-result-h2": {
+    "file": "assets/audio/phase2/bond-result-h2.mp3",
+    "text_sha256": "38f5a89147a3bebcfe896f7a3bbaa782aec896c509430f1242e144d843fa2da6",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 10.757,
+    "bytes": 86560,
+    "sha256": "f17511033cd794340996406f5a99a041e3b1a16aab82b1d22594159b853e1ecf",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.053,
+        "end": 3.571,
+        "text": "ماذا شاهدنا؟ يساهم كل H بإلكترون في زوج مشترك."
+      },
+      {
+        "start": 3.93,
+        "end": 8.76,
+        "text": "يمثّل الخط في H–H رابطة تساهمية أحادية، أي زوجًا"
+      },
+      {
+        "start": 8.794,
+        "end": 10.675,
+        "text": "إلكترونيًا مشتركًا واحدًا."
+      }
+    ]
+  },
+  "bond-stage-h2-0": {
+    "file": "assets/audio/phase2/bond-stage-h2-0.mp3",
+    "text_sha256": "64877ef5cb765a125ddb61d6689a53ae551a72c92af4bb8cadc3da0078f8ad71",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.575,
+    "bytes": 29091,
+    "sha256": "42f7a00a2f1e16fc726bfd22fe60b265fa1f502697ad31c5c8060f4502ca6b80",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.082,
+        "end": 3.447,
+        "text": "ذرتا هيدروجين منفصلتان، لكل منهما إلكترون."
+      }
+    ]
+  },
+  "bond-stage-h2-1": {
+    "file": "assets/audio/phase2/bond-stage-h2-1.mp3",
+    "text_sha256": "cf03cbe070a4598b9ede952039450c3ca9716957b562de9eccf68624565cb4c5",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 1.986,
+    "bytes": 16552,
+    "sha256": "6bc7566a3bfbaccd63987335019b4929f909af25514b89caa01fa3888a3545a6",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.128,
+        "end": 1.893,
+        "text": "تقترب الذرتان من بعضهما."
+      }
+    ]
+  },
+  "bond-stage-h2-2": {
+    "file": "assets/audio/phase2/bond-stage-h2-2.mp3",
+    "text_sha256": "4d79abdc81f4cc9514f8a0e9d870067050e602d875e6cf45bb2069aab0f11ded",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.369,
+    "bytes": 19478,
+    "sha256": "1fbb40f6e921787bfc58212028bd458c1275483226b2dcc28019a067ecdcacc4",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.093,
+        "end": 2.253,
+        "text": "تتشاركان بزوج إلكتروني واحد."
+      }
+    ]
+  },
+  "bond-stage-h2-3": {
+    "file": "assets/audio/phase2/bond-stage-h2-3.mp3",
+    "text_sha256": "2fa621f56ef3cc22fa67008ce80456e18e93382704e7a24ef8714cc400ff45e4",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.877,
+    "bytes": 31598,
+    "sha256": "f523386c7abc65007a1d7439659f52a31d92c1ef8c8fe7bdb7bd50991db83e44",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.116,
+        "end": 3.785,
+        "text": "تتكوّن رابطة تساهمية أحادية: H–H."
+      }
+    ]
+  },
+  "bond-result-o2": {
+    "file": "assets/audio/phase2/bond-result-o2.mp3",
+    "text_sha256": "695ca49272bebb5846aee7d92663b4542568bac43abcfd2bc34277c807af81a1",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 10.971,
+    "bytes": 88232,
+    "sha256": "f99bb89a003c12aae0b2f1601c655c503b7a2384cac06eeaf4d46297ff00df6c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.093,
+        "end": 4.215,
+        "text": "ماذا شاهدنا؟ تساهم كل ذرة O بإلكترونين. الزوجان المشتركان"
+      },
+      {
+        "start": 4.249,
+        "end": 9.404,
+        "text": "يصنعان رابطة تساهمية ثنائية O=O، ويبقى على كل ذرة"
+      },
+      {
+        "start": 9.508,
+        "end": 10.901,
+        "text": "زوجان غير مشتركين."
+      }
+    ]
+  },
+  "bond-stage-o2-0": {
+    "file": "assets/audio/phase2/bond-stage-o2-0.mp3",
+    "text_sha256": "4812e9ac0c76406d11faa835baf336aebfaa8db2574d941b13aa6db4c438abcf",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.512,
+    "bytes": 28673,
+    "sha256": "7b743a050d257a36fb7f49b02c9625734a5adcc3da5ad92621cd8e78765ed954",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.07,
+        "end": 3.379,
+        "text": "ذرتا O، لكل منهما ستة إلكترونات تكافؤ."
+      }
+    ]
+  },
+  "bond-stage-o2-1": {
+    "file": "assets/audio/phase2/bond-stage-o2-1.mp3",
+    "text_sha256": "ddddc51caf51d179da6cf4ad1c5e3fea72cb271967733e6df3fe6c504009a166",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.895,
+    "bytes": 31807,
+    "sha256": "d5d275df761feb73d286dc5d129c25aa517451880567c232ff1fc1c05f71ebba",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.133,
+        "end": 3.709,
+        "text": "تقترب الذرتان وتتجه إلكترونات المشاركة نحو الوسط."
+      }
+    ]
+  },
+  "bond-stage-o2-2": {
+    "file": "assets/audio/phase2/bond-stage-o2-2.mp3",
+    "text_sha256": "f92fc6acb8986b91f676908f810ba559133cabd75d51ddc14987f992763e560d",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.746,
+    "bytes": 22612,
+    "sha256": "0600edc7a4125180ecaa86a1683d67c6f45e322b97c200739a329e77ddb66260",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.185,
+        "end": 2.624,
+        "text": "يتكوّن الزوج الإلكتروني المشترك الأول."
+      }
+    ]
+  },
+  "bond-stage-o2-3": {
+    "file": "assets/audio/phase2/bond-stage-o2-3.mp3",
+    "text_sha256": "129301f5d344c9f544d0ae6df9627e1029bde13aad4c02c5a4413dd8c17c2fc7",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.716,
+    "bytes": 22194,
+    "sha256": "f91f27f19ae98120f9b99723562697bdc72578d6e85877c46c501c00c547568a",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.121,
+        "end": 2.56,
+        "text": "يتكوّن الزوج الإلكتروني المشترك الثاني."
+      }
+    ]
+  },
+  "bond-stage-o2-4": {
+    "file": "assets/audio/phase2/bond-stage-o2-4.mp3",
+    "text_sha256": "d21f3e070834cf1a1dac82695859403b9fdd48ebd96196b223ad79ab8dac3112",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.861,
+    "bytes": 31389,
+    "sha256": "00a42c0476f976a3e77ff865efdb79a39aa087c3442772500794c66c69a5edef",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.156,
+        "end": 3.826,
+        "text": "تكتمل الرابطة التساهمية الثنائية: O=O."
+      }
+    ]
+  },
+  "bond-result-ch4": {
+    "file": "assets/audio/phase2/bond-result-ch4.mp3",
+    "text_sha256": "ba0c0f8a957a8d2c0acd57ea0442dcac85c61375d13761ccd91ec812ea395eba",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 9.654,
+    "bytes": 77783,
+    "sha256": "42c97cd044661caa57779b6fd0eb92bfbc8a879db88d4d43e0b28ff3d4fe7acc",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.035,
+        "end": 3.657,
+        "text": "ماذا شاهدنا؟ تساهم ذرة C بإلكترون في كل رابطة،"
+      },
+      {
+        "start": 3.831,
+        "end": 8.22,
+        "text": "وتساهم كل ذرة H بإلكترون. تتكوّن أربع روابط تساهمية"
+      },
+      {
+        "start": 8.255,
+        "end": 9.532,
+        "text": "أحادية في الميثان."
+      }
+    ]
+  },
+  "bond-stage-ch4-0": {
+    "file": "assets/audio/phase2/bond-stage-ch4-0.mp3",
+    "text_sha256": "d01f47c94dff872b4a181b63a8e26116b2a8e21afd44f456eac8539ea6cd08b4",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.111,
+    "bytes": 25538,
+    "sha256": "8c66adfb7e72a9a26b08ee95e627c9f94537662d910fe7d34b584923e04fb24c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.122,
+        "end": 3.024,
+        "text": "ذرة كربون وأربع ذرات هيدروجين."
+      }
+    ]
+  },
+  "bond-stage-ch4-1": {
+    "file": "assets/audio/phase2/bond-stage-ch4-1.mp3",
+    "text_sha256": "c6ba8a3452a624ea966b41c425266eb1b2e871dd9e9f53610218c61b79eda7de",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 3.123,
+    "bytes": 25538,
+    "sha256": "a7ea9a652da41282722c89d6f9e0a5ebcbe6f06f7d9b72dc0f227286cc20480c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.087,
+        "end": 2.966,
+        "text": "نحدد إلكترونات التكافؤ الأربعة في الكربون."
+      }
+    ]
+  },
+  "bond-stage-ch4-2": {
+    "file": "assets/audio/phase2/bond-stage-ch4-2.mp3",
+    "text_sha256": "260058ba4a5a9e49269db92cfeaaf359fa39d2c32487c0b228edcdfef0051ab7",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.613,
+    "bytes": 21567,
+    "sha256": "54b99a5f2734577ea6611f55c19156c999b56a8d06bb593cd0a8f4e0b9978e96",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.157,
+        "end": 2.456,
+        "text": "تقترب ذرات الهيدروجين من الكربون."
+      }
+    ]
+  },
+  "bond-stage-ch4-3": {
+    "file": "assets/audio/phase2/bond-stage-ch4-3.mp3",
+    "text_sha256": "7cc1480dc06d3cc3fba3341912946e2bc005560808cdf52cb55fd1db1eb2b9ee",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.781,
+    "bytes": 22821,
+    "sha256": "5e09c758fbfbc82dcc12422779b245d4de0581e1a9759b59e18e9fb97e05f818",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.157,
+        "end": 2.7,
+        "text": "تتكوّن الرابطة الأولى بزوج مشترك."
+      }
+    ]
+  },
+  "bond-stage-ch4-4": {
+    "file": "assets/audio/phase2/bond-stage-ch4-4.mp3",
+    "text_sha256": "163388c1d16066cf48d53b333c94658c6ee1d2ee15a2dfae014e35a9f1ce381a",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.71,
+    "bytes": 22194,
+    "sha256": "e157373767bdbb64993f9dde6401d43d0c4383860d3aef30a9563a3f6794b04c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.081,
+        "end": 2.612,
+        "text": "تتكوّن الرابطة الثانية بزوج مشترك."
+      }
+    ]
+  },
+  "bond-stage-ch4-5": {
+    "file": "assets/audio/phase2/bond-stage-ch4-5.mp3",
+    "text_sha256": "8c5537e96986ee2d3ff07bb65437fe65dc23f3d96423ab08fb477caabe140666",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.694,
+    "bytes": 22194,
+    "sha256": "0a987725739b30cee5f773f8fa3fb104423fea98d80b344593cd726ddcf5e308",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.099,
+        "end": 2.595,
+        "text": "تتكوّن الرابطة الثالثة بزوج مشترك."
+      }
+    ]
+  },
+  "bond-stage-ch4-6": {
+    "file": "assets/audio/phase2/bond-stage-ch4-6.mp3",
+    "text_sha256": "8c1af53fb45653613302ab9009eca63487c464e4a4c9598d875e4b4f694963fa",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.63,
+    "bytes": 21567,
+    "sha256": "f10390c40a19a38636ed8e2faeeb21223afd7606e314677a22c6c7695488a229",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.099,
+        "end": 2.514,
+        "text": "تتكوّن الرابطة الرابعة بزوج مشترك."
+      }
+    ]
+  },
+  "bond-stage-ch4-7": {
+    "file": "assets/audio/phase2/bond-stage-ch4-7.mp3",
+    "text_sha256": "6fb369920e26025617a69849092c5297d3def394d8b8260052df063e2bc86e55",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 2.944,
+    "bytes": 24075,
+    "sha256": "4014e0480838b7e3cca96c3896819dd95bb751258603365b4196a993475e580e",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.116,
+        "end": 2.845,
+        "text": "اكتمل نموذج جزيء الميثان الميثان."
+      }
+    ]
+  },
+  "lab-acid-current": {
+    "file": "assets/audio/phase2/lab-acid-current.mp3",
+    "text_sha256": "0c9d3c203d6d74928dc2d898d6a1c6abad9c03c0dc5671b786f16a28533b0a31",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 5.712,
+    "bytes": 46227,
+    "sha256": "e30ccf990f237e59971ba5564ae9872feb420b9a8d95f25a05555b8491348e63",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.099,
+        "end": 4.638,
+        "text": "صِل الأسلاك، واغمس قطبي الكربون، ثم أغلق المفتاح. تتبع"
+      },
+      {
+        "start": 4.684,
+        "end": 5.624,
+        "text": "مسار الدائرة."
+      }
+    ]
+  },
+  "lab-acid-paper": {
+    "file": "assets/audio/phase2/lab-acid-paper.mp3",
+    "text_sha256": "c47b1fb12fec914630c37c75d2e049e39c6b04fbaca83d159ac2ef925ed52677",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 6.293,
+    "bytes": 50825,
+    "sha256": "faf4fa290e0d224da80d1037f0b619c6bfff3adf8961e8e08e7b7b8a556fa3aa",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.088,
+        "end": 4.615,
+        "text": "اختر المحلول ولون الورقة، ثم اغمسها افتراضيًا. غيّر أحد"
+      },
+      {
+        "start": 4.662,
+        "end": 6.16,
+        "text": "الاختيارين للمقارنة."
+      }
+    ]
+  },
+  "lab-hydrogen": {
+    "file": "assets/audio/phase2/lab-hydrogen.mp3",
+    "text_sha256": "5aeaaa6712b122e3686ffb938f8bdb3ac547de3551438e973c6eb11a7f663086",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 8.104,
+    "bytes": 65453,
+    "sha256": "011f2583f9c5ff73a7e0eb2960abe14a398e8d835613ca97ae5b05eb708663c5",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.134,
+        "end": 4.29,
+        "text": "أضف الحمض المخفف، ثم شريط المغنيسيوم، ثم شاهد الكشف"
+      },
+      {
+        "start": 4.336,
+        "end": 7.982,
+        "text": "الرقمي الآمن عن الغاز. لا تُجرِ هذه التجربة منزليًا."
+      }
+    ]
+  },
+  "lab-result-acid-current": {
+    "file": "assets/audio/phase2/lab-result-acid-current.mp3",
+    "text_sha256": "da3e89c81e1dd81aa64bb0729393c89c2ddcd96d5bb77d82a6f9a9ae7d8ee6cb",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 8.499,
+    "bytes": 68588,
+    "sha256": "a74fb2716d86b32821f17b4f1782d0734f322a63c5a4ea24a49313824db3df8f",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.122,
+        "end": 4.813,
+        "text": "يضيء المصباح عند اكتمال الدائرة. تنقل الأيونات المتحركة الشحنة"
+      },
+      {
+        "start": 5.022,
+        "end": 8.331,
+        "text": "داخل المحلول، وتتحرك الإلكترونات في الأسلاك."
+      }
+    ]
+  },
+  "lab-result-acid-paper": {
+    "file": "assets/audio/phase2/lab-result-acid-paper.mp3",
+    "text_sha256": "56cc661ddf7b34bd11ad4e272fbcbff74d6c9716a224f256eb9c4b85c0132857",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 8.935,
+    "bytes": 72140,
+    "sha256": "2833ec244f036c217723e9ff86697ea65d7024ac517b9bd05cb30bbdbe835dc1",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.168,
+        "end": 4.475,
+        "text": "الحموض تحوّل الورقة الزرقاء إلى الحمراء، وتبقى الحمراء على"
+      },
+      {
+        "start": 4.545,
+        "end": 8.888,
+        "text": "لونها. الماء المقطر المتعادل لا يغير لون الورقتين."
+      }
+    ]
+  },
+  "lab-result-hydrogen": {
+    "file": "assets/audio/phase2/lab-result-hydrogen.mp3",
+    "text_sha256": "bdec39d05978bd2d1dcc17022fd8f1860225c5d502756d130f3942905f226e8a",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 13.664,
+    "bytes": 109966,
+    "sha256": "e86326c2a3a81ab32d692ed48255e28eb60cda5fa901b0c365fe3febaaecc079",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.046,
+        "end": 5.55,
+        "text": "تتصاعد فقاعات غاز الهيدروجين ويتآكل المغنيسيوم، ويُسمع صوت فرقعة"
+      },
+      {
+        "start": 5.608,
+        "end": 9.519,
+        "text": "قصير في الكشف الرقمي. يتفاعل مغنيسيوم واحد مع جزيئين"
+      },
+      {
+        "start": 9.567,
+        "end": 13.606,
+        "text": "من حمض الهيدروكلوريك ليعطي كلوريد المغنيسيوم والهيدروجين."
+      }
+    ]
+  },
+  "lab-base-current": {
+    "file": "assets/audio/phase2/lab-base-current.mp3",
+    "text_sha256": "dd9f31f7281f45b0906f782e744794a29a71c3dd3580ca053ab04d981c94ec60",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 6.845,
+    "bytes": 55422,
+    "sha256": "541221498311b9f59b2bb9df3616f7a4d558782fb030ca73beef361914198af0",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.058,
+        "end": 4.691,
+        "text": "صِل أسلاك الدائرة، واغمس قطبي الكربون في محلول هيدروكسيد"
+      },
+      {
+        "start": 4.737,
+        "end": 6.746,
+        "text": "الصوديوم، ثم أغلق المفتاح."
+      }
+    ]
+  },
+  "lab-base-paper": {
+    "file": "assets/audio/phase2/lab-base-paper.mp3",
+    "text_sha256": "1794380f53520e1785b67c502a452583e3f54831abaa020c862c1c7bd6b20432",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 7.43,
+    "bytes": 60020,
+    "sha256": "abba35f7dbfdec84c09cce6f0b73e625f3acda1a0c4df6bf46ca9c273232d9de",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.099,
+        "end": 3.964,
+        "text": "اختر محلول الرماد أو هيدروكسيد الصوديوم ولون الورقة، ثم"
+      },
+      {
+        "start": 4.012,
+        "end": 7.262,
+        "text": "اغمسها. لا تلمس المواد ولا تتذوقها."
+      }
+    ]
+  },
+  "lab-result-base-current": {
+    "file": "assets/audio/phase2/lab-result-base-current.mp3",
+    "text_sha256": "4f70d539c5c078b0a636c7f121f1b0826a651580f82a4f2af42cfcfbdfb12cc4",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 7.356,
+    "bytes": 59393,
+    "sha256": "d9e8b03402f128b5658d0af2f23fd558bb6070eeb840a3551ecd488dccfdcfaa",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.168,
+        "end": 5.498,
+        "text": "عند اكتمال الدائرة يضيء المصباح؛ أيونات الصوديوم والهيدروكسيل المتحركة"
+      },
+      {
+        "start": 5.672,
+        "end": 7.286,
+        "text": "تنقل الشحنة في المحلول."
+      }
+    ]
+  },
+  "lab-result-base-paper": {
+    "file": "assets/audio/phase2/lab-result-base-paper.mp3",
+    "text_sha256": "161be3691da62d7bcf07fc8f2e6b8c2612d2414ae81791eb6ef6928811d8f473",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 6.623,
+    "bytes": 53541,
+    "sha256": "36c42cd8222f84a7f39ca72f90f4e5a8d254f8e07613370a4bb585a7f366c6b5",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.07,
+        "end": 5.712,
+        "text": "تحول القواعد الورقة الحمراء إلى الزرقاء، وتبقى الزرقاء على"
+      },
+      {
+        "start": 5.793,
+        "end": 6.512,
+        "text": "لونها."
+      }
+    ]
+  },
+  "lab-neutral": {
+    "file": "assets/audio/phase2/lab-neutral.mp3",
+    "text_sha256": "0a5a01687b08c5be68775dcd37221fc0d4c5a601acae0a93c69f2fa29d26d0cb",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-2",
+    "duration": 9.401,
+    "bytes": 75484,
+    "sha256": "7895a8673cad380d2fd65fbe2c75bf8430c42a30b6d2a1676b3026a2cd4d9aa7",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.111,
+        "end": 5.137,
+        "text": "جهّز القاعدة ثم أضف الحمض قطرة قطرة. تابع مؤشر"
+      },
+      {
+        "start": 5.207,
+        "end": 9.375,
+        "text": "الحالة، وتوقف عند التعادل قبل التبخر."
+      }
+    ]
+  }
+}

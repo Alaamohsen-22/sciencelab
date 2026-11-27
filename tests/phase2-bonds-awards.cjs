@@ -1,0 +1,4 @@
+/* Reuse the original full journey; add assertions for durable learning rewards. */
+const fs=require('node:fs');let source=fs.readFileSync('tests/bonds.cjs','utf8');
+source=source.replace(' // Reset a manual attempt; only this lesson\'s certificate becomes unavailable.',` const achievement=await p.evaluate(()=>LabAchievements.snapshot());assert.equal(achievement.progress.bonds,100,'Full original journey completes the durable journey');assert.equal(achievement.awards['mastery:bonds'].value,20);assert.equal(achievement.awards['lesson:bonds'].value,15);assert(achievement.certificates.bonds);for(const id of ['lif','mgcl2','h2','o2','ch4'])assert.equal(achievement.awards['experiment:bonds:'+id].value,10);assert(achievement.badges.includes('mastery'));\n // Reset a manual attempt; only this lesson's certificate becomes unavailable.`);
+require('node:vm').runInThisContext('(function(require){'+source+'\n})',{filename:__filename})(require);

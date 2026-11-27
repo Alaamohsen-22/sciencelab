@@ -1,0 +1,74 @@
+{
+  "cover-welcome": {
+    "file": "assets/audio/phase2/cover-welcome.mp3",
+    "text_sha256": "5ed7808a5514894dd50f93e98238b3e870911df34df85cdec2f0f63e7174d12c",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "generation_id": "Sekq3Wq0n4QSqVtUsQwe",
+    "credits": 256,
+    "duration": 23.719184,
+    "bytes": 190005,
+    "sha256": "53c84933c12276802e48214409fef5c57ca2dde64f79ab924f9d32d0e62bed7c"
+  },
+  "reaction-result-cabbage": {
+    "file": "assets/audio/phase2/reaction-result-cabbage.mp3",
+    "text_sha256": "a869e2b21e67e86cedd89b4b7b9d38dfd08bb39f062330e034a6af181bdffe2f",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-final",
+    "duration": 11.582000000000008,
+    "bytes": 93247,
+    "sha256": "904b2690ac7f8c9e861e33888b2817effc8f30f33ba9333bbab1800e667690f1",
+    "alignment": 1.0,
+    "edit": "Removed duplicated spoken formula-name label; original written formula is unchanged."
+  },
+  "reward-explorer": {
+    "file": "assets/audio/phase2/reward-explorer.mp3",
+    "text_sha256": "c67ca85b0218c9db5e261713f92b31e9bc2770273198082ced3d7df6943260ac",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "derived_from": "batch-final",
+    "source_start": 99.76,
+    "source_end": 102.0,
+    "duration": 2.24,
+    "bytes": 18433,
+    "sha256": "4149300b0cd2e35275fa91265e249605c5f5dca20f1e5442325ac9300e933d72",
+    "credits": 0
+  },
+  "reward-observer": {
+    "file": "assets/audio/phase2/reward-observer.mp3",
+    "text_sha256": "5574b987078881af24c377447a4f64123b0a73394a2de527732ec7dae3945feb",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "derived_from": "batch-final",
+    "source_start": 105.0,
+    "source_end": 107.18,
+    "duration": 2.18,
+    "bytes": 17388,
+    "sha256": "7296584f5bb5c45af49a696971742c517a16c656b09f070663f62fbf95f943db",
+    "credits": 0
+  },
+  "bonds-page-0": {
+    "file": "assets/audio/phase2/bonds-page-0.mp3",
+    "text_sha256": "d0e634860d89338ce1fd10dbb075e42114c14fec4e0b29ac43e466991e46c42a",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "derived_from": [
+      "bond-goal-0",
+      "bond-goal-1",
+      "bond-goal-2",
+      "bond-goal-3",
+      "bond-goal-4",
+      "bond-goal-5"
+    ],
+    "duration": 18.050612,
+    "bytes": 144655,
+    "sha256": "8dc31d467440eb1fe3f68bb8a9915c656d7494ab9ba0f58c5b6283dfa302a9ed",
+    "credits": 0
+  }
+}

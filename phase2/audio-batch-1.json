@@ -1,0 +1,999 @@
+{
+  "bond-goal-0": {
+    "file": "assets/audio/phase2/bond-goal-0.mp3",
+    "text_sha256": "87d3eaec9007162394241bd0c2e08c7170c418b9ca653e5d902ac8add208dedf",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 2.496,
+    "bytes": 20523,
+    "sha256": "abecab0d31bd3c31e92eb667a50942e03ab3d1027b641c43254f18d7fb1ed4a9",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0,
+        "end": 2.438,
+        "text": "توضيح مفهوم الرابطة الكيميائية."
+      }
+    ]
+  },
+  "bond-goal-1": {
+    "file": "assets/audio/phase2/bond-goal-1.mp3",
+    "text_sha256": "922a5c84014bc0b4e7d14135f14d85754714979e86a830f808dae87421731f34",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 2.45,
+    "bytes": 20105,
+    "sha256": "05b4bf633851eaab457a8c021bf09deb881033018402cdff9f1864311460a1c7",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.058,
+        "end": 2.392,
+        "text": "تفسير تكوّن الرابطة الأيونية."
+      }
+    ]
+  },
+  "bond-goal-2": {
+    "file": "assets/audio/phase2/bond-goal-2.mp3",
+    "text_sha256": "1e882cfdc4ec704a05953ed4fb4327889f011ee462799edbcb3fb8f19a47afee",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 3.385,
+    "bytes": 27628,
+    "sha256": "98dfdfd692a5e94b14a04ca55da7be2924b1087fdbcbbe4494cc3363f977124b",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.058,
+        "end": 3.251,
+        "text": "تمثيل انتقال الإلكترونات وتكوّن الأيونات."
+      }
+    ]
+  },
+  "bond-goal-3": {
+    "file": "assets/audio/phase2/bond-goal-3.mp3",
+    "text_sha256": "28c00893e6ab365c9cb1327f92b162f2b9f06b93334ff85f974b8ad28642c922",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 2.588,
+    "bytes": 21358,
+    "sha256": "6a523c78437927b4fcf7293f632c4bdbb5966fea02a4f764013dc6595718ec0c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.133,
+        "end": 2.489,
+        "text": "تفسير تكوّن الرابطة التساهمية."
+      }
+    ]
+  },
+  "bond-goal-4": {
+    "file": "assets/audio/phase2/bond-goal-4.mp3",
+    "text_sha256": "2310b8c65058fc7e5cb3d87c5f2b04baf4285ccaed2907de634feb5bcb1d768e",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 3.431,
+    "bytes": 28046,
+    "sha256": "9276528f93a99f9073ecbe2d5f354d6a4a5321acbf94093bc4502f7fe80982e5",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.099,
+        "end": 3.384,
+        "text": "تمثيل مشاركة الإلكترونات في جزيئات بسيطة."
+      }
+    ]
+  },
+  "bond-goal-5": {
+    "file": "assets/audio/phase2/bond-goal-5.mp3",
+    "text_sha256": "3baa3fe5e0ac4348d0189a049f1c632d8b23b1bc66de50011294e839c5c19672",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 3.449,
+    "bytes": 28255,
+    "sha256": "6e43b39b30dd90f2997cac3e9a7922339cd01baab01d79cc3156424d53458ae1",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.046,
+        "end": 3.367,
+        "text": "التمييز بين الرابطتين الأيونية والتساهمية."
+      }
+    ]
+  },
+  "bonds-page-1": {
+    "file": "assets/audio/phase2/bonds-page-1.mp3",
+    "text_sha256": "11fc08cc6afb4edf07d3827da64970bed99f79d450148af210d4baf7583ed176",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 12.835,
+    "bytes": 103278,
+    "sha256": "9e1d6ddf12aed24701d15f03a84cc8319230dbf687df035794820ba76df7380f",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.081,
+        "end": 5.283,
+        "text": "ابدأ بذرتي الليثيوم والفلور. التوزيع الإلكتروني لليثيوم اثنان، واحد؛"
+      },
+      {
+        "start": 5.492,
+        "end": 10.472,
+        "text": "وللفلور اثنان، سبعة. اضغط زر المشاهدة لتتبع إلكترون التكافؤ،"
+      },
+      {
+        "start": 10.635,
+        "end": 12.69,
+        "text": "ثم جرّب نقله بنفسك في النشاط."
+      }
+    ]
+  },
+  "bonds-page-2": {
+    "file": "assets/audio/phase2/bonds-page-2.mp3",
+    "text_sha256": "a347b8e0c38b76a3116368f6d9aa61e02024e91be0faa3b84714899212050050",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 13.455,
+    "bytes": 108294,
+    "sha256": "baf5dabb8b55d5c611968c8952012599558ced242c957fdf84f0d9d1bc58075e",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.145,
+        "end": 4.882,
+        "text": "أمامك ذرة مغنيسيوم وذرتا كلور. توزيع المغنيسيوم اثنان، ثمانية،"
+      },
+      {
+        "start": 4.975,
+        "end": 9.723,
+        "text": "اثنان؛ وتوزيع كل ذرة كلور اثنان، ثمانية، سبعة. تتبّع"
+      },
+      {
+        "start": 9.781,
+        "end": 13.415,
+        "text": "إلكتروني التكافؤ في المثال، ثم كوّن الارتباط بنفسك."
+      }
+    ]
+  },
+  "bonds-page-3": {
+    "file": "assets/audio/phase2/bonds-page-3.mp3",
+    "text_sha256": "3c590ec08dfd6037053c945d52e39c28b60197ca851fe6bbf20df22eb7fa5170",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 11.094,
+    "bytes": 89277,
+    "sha256": "d9fe2aca0606e0167932c33c772bc8b0384e26510ceef4ba9dc8babf756c18ef",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.041,
+        "end": 4.871,
+        "text": "لذرة الهيدروجين إلكترون واحد. شاهد اقتراب الذرتين، وتتبع الإلكترونين"
+      },
+      {
+        "start": 4.918,
+        "end": 8.679,
+        "text": "في منطقة التداخل. بعد المثال اختر إلكترونًا من كل"
+      },
+      {
+        "start": 8.772,
+        "end": 10.967,
+        "text": "ذرة ونفّذ المشاركة بنفسك."
+      }
+    ]
+  },
+  "bonds-page-4": {
+    "file": "assets/audio/phase2/bonds-page-4.mp3",
+    "text_sha256": "6196e561ea6860031fad03db3aa72f1f38c00eb5373b079ff5b6080743039c0c",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 12.097,
+    "bytes": 97427,
+    "sha256": "e61b65c131e6925499f87d35ee49dc377dc349a585689789ca4c43baedc0f071",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.127,
+        "end": 4.969,
+        "text": "توزيع الأكسجين اثنان، ستة. تتبع إلكترونات التكافؤ في الذرتين."
+      },
+      {
+        "start": 5.143,
+        "end": 9.23,
+        "text": "شاهد المثال لتتعرف إلى عدد الأزواج المشتركة، ثم أنشئ"
+      },
+      {
+        "start": 9.264,
+        "end": 11.981,
+        "text": "الرابطة بنفسك وقارن تمثيلك بالرسم."
+      }
+    ]
+  },
+  "bonds-page-5": {
+    "file": "assets/audio/phase2/bonds-page-5.mp3",
+    "text_sha256": "7d1725bcf101863113332db1027a176fc03b3e3a4640d03525b8c0f5d007ba35",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 16.266,
+    "bytes": 130655,
+    "sha256": "36ec5856e366e66402fba4b1806d4c6dd268cd8b3d979377ca251aad54d8ad1f",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.116,
+        "end": 5.248,
+        "text": "أمامك كربون وأربع ذرات هيدروجين. للكربون أربعة إلكترونات تكافؤ،"
+      },
+      {
+        "start": 5.399,
+        "end": 10.124,
+        "text": "ولكل هيدروجين إلكترون واحد. اختر جهة رابطة، وشارك إلكترونًا"
+      },
+      {
+        "start": 10.159,
+        "end": 14.269,
+        "text": "من الكربون وإلكترونًا من الهيدروجين المقابل. كرّر ذلك في"
+      },
+      {
+        "start": 14.292,
+        "end": 16.092,
+        "text": "الجهات الأربع، ثم تحقق."
+      }
+    ]
+  },
+  "bonds-page-6": {
+    "file": "assets/audio/phase2/bonds-page-6.mp3",
+    "text_sha256": "53cb36d67a8d4a75e2e702839fa8005a4d778afb7c1557370c6a6ec1d7746e8c",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 10.623,
+    "bytes": 85515,
+    "sha256": "7620957f33ff2f72b30250784ed1d1d9cdc8c35b0089b6929cfe7739437e218c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.174,
+        "end": 5.062,
+        "text": "اكتشف الفرق بين انتقال الإلكترونات ومشاركتها. صنّف الأمثلة واحدًا"
+      },
+      {
+        "start": 5.097,
+        "end": 9.311,
+        "text": "واحدًا، واستند إلى كيفية تكوّن الرابطة، لا إلى حفظ"
+      },
+      {
+        "start": 9.369,
+        "end": 10.553,
+        "text": "اسم الصيغة وحده."
+      }
+    ]
+  },
+  "bonds-page-7": {
+    "file": "assets/audio/phase2/bonds-page-7.mp3",
+    "text_sha256": "31abe73557490fc48d8e345b369fb4d6e18ea24fdfe21aeae8503a48cb84d08f",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 13.316,
+    "bytes": 107040,
+    "sha256": "5e9736eb7868d131bc2324247738cb4fab56e459e34b5995b1f2ae0d574d80ad",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.07,
+        "end": 4.795,
+        "text": "خريطة الروابط تجمع علاقات الدرس. افتح مسار الأيونية، ثم"
+      },
+      {
+        "start": 4.853,
+        "end": 9.903,
+        "text": "التساهمية، ثم قارن الأمثلة. اتبع الأسهم، وكبّر رسم الأزواج"
+      },
+      {
+        "start": 9.973,
+        "end": 13.27,
+        "text": "أو انتقال الإلكترونات لتراجع الدليل قبل الاختبار."
+      }
+    ]
+  },
+  "compound-acid-ion": {
+    "file": "assets/audio/phase2/compound-acid-ion.mp3",
+    "text_sha256": "6cfabd0c6c017eb2f1d41e91f37ad145131869b7dc31911ab12ef4f856c51cc0",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 18.042,
+    "bytes": 144865,
+    "sha256": "873757678cecec84b506d27cf71beb655cc41f737989f017a14c98eb4737782f",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.046,
+        "end": 4.4,
+        "text": "عند تأين حمض الهيدروكلوريك في الماء تتكون أيونات الهيدروجين"
+      },
+      {
+        "start": 4.448,
+        "end": 9.846,
+        "text": "الموجبة والكلوريد السالبة. نستخدم الهيدروجين الموجب تمثيلًا مبسطًا كما"
+      },
+      {
+        "start": 9.915,
+        "end": 14.362,
+        "text": "في المنهاج. ولحمض الكبريتيك في النموذج المبسط أيونا هيدروجين"
+      },
+      {
+        "start": 14.409,
+        "end": 17.984,
+        "text": "موجب وأيون كبريتات بشحنتين سالبتين."
+      }
+    ]
+  },
+  "compounds-page-1": {
+    "file": "assets/audio/phase2/compounds-page-1.mp3",
+    "text_sha256": "48d8c6ed4e0e0aa9f53088ba2baaad30dba7aab7563c9aaaf0b6b0f813ef4e83",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 16.69,
+    "bytes": 133998,
+    "sha256": "f17824381b364c632169016eef9bca76468f19dc5348272d961011eb22510e86",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.058,
+        "end": 4.18,
+        "text": "مرحبًا في محطة الحموض. تتكوّن أيونات الهيدروجين في الماء"
+      },
+      {
+        "start": 4.226,
+        "end": 8.789,
+        "text": "وفق التمثيل المبسط في المنهاج. اكتشف أثر الكاشف والتوصيل"
+      },
+      {
+        "start": 8.812,
+        "end": 13.422,
+        "text": "الكهربائي والتفاعل مع الفلز. لا تلمس مواد المختبر ولا"
+      },
+      {
+        "start": 13.48,
+        "end": 16.661,
+        "text": "تتذوقها؛ التجارب الخطرة رقمية فقط."
+      }
+    ]
+  },
+  "use-acid-0": {
+    "file": "assets/audio/phase2/use-acid-0.mp3",
+    "text_sha256": "1ded8f08fea697a01b84bf18436370af5d46fb7e5eeecfb830074bb366fb978b",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.095,
+    "bytes": 49362,
+    "sha256": "75ef06314f34efaeebca3a6dba2eba177ef1b1dcdb5b1177a60f5dd0ece02224",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.029,
+        "end": 4.777,
+        "text": "حمض الهيدروكلوريك. يوجد في معدة الإنسان. تأمل الصيغة واستخدام"
+      },
+      {
+        "start": 4.812,
+        "end": 5.973,
+        "text": "المركب في البطاقة."
+      }
+    ]
+  },
+  "use-acid-1": {
+    "file": "assets/audio/phase2/use-acid-1.mp3",
+    "text_sha256": "1e9aeb74faa1ea151257806acfbabd30ab8baa7ee66dd57d8667e56c1d95d3e0",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.258,
+    "bytes": 50616,
+    "sha256": "9d2ef5ca822f33096e561e43e4071901c6d830fd4c7dd9c411fbae1e17318f45",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.122,
+        "end": 5.474,
+        "text": "حمض الكبريتيك. بطاريات السيارات. تأمل الصيغة واستخدام المركب في"
+      },
+      {
+        "start": 5.486,
+        "end": 6.159,
+        "text": "البطاقة."
+      }
+    ]
+  },
+  "use-acid-2": {
+    "file": "assets/audio/phase2/use-acid-2.mp3",
+    "text_sha256": "ca3aa9ff15a2a9dc66bc37defeb155f077ab098a7bf4d21adad7f7a816467114",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 5.417,
+    "bytes": 43928,
+    "sha256": "3014ba4bec2994df1e1a03e7561c92628911b22e2b294e746b1bfcbd428278b4",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.099,
+        "end": 4.603,
+        "text": "حمض النيتريك. صناعة الأسمدة. تأمل الصيغة واستخدام المركب في"
+      },
+      {
+        "start": 4.65,
+        "end": 5.312,
+        "text": "البطاقة."
+      }
+    ]
+  },
+  "use-acid-3": {
+    "file": "assets/audio/phase2/use-acid-3.mp3",
+    "text_sha256": "ff276f834a5591d4999e1f1ac2003f80025bf320a2b5a69415b15b7a0751c54c",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 5.183,
+    "bytes": 42047,
+    "sha256": "84b43d9eb374c9789bbeec7f99019d944fd3767c87afb6c89d78d99ba5100669",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.105,
+        "end": 4.4,
+        "text": "حمض الخليك. صناعة الخل. تأمل الصيغة واستخدام المركب في"
+      },
+      {
+        "start": 4.434,
+        "end": 5.084,
+        "text": "البطاقة."
+      }
+    ]
+  },
+  "compound-base-ion": {
+    "file": "assets/audio/phase2/compound-base-ion.mp3",
+    "text_sha256": "ed183e3ab7d2b3af539239935e2234b8bcc067876fcf06d8f25f472910d5eaf9",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 14.896,
+    "bytes": 119788,
+    "sha256": "b3a92fbe8b39bdeb610a0a93ff0beab2cdb362c6a57beee8ec5a5c9a7e525987",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.099,
+        "end": 4.754,
+        "text": "يتفكك هيدروكسيد البوتاسيوم في الماء إلى أيون بوتاسيوم موجب"
+      },
+      {
+        "start": 5.033,
+        "end": 10.385,
+        "text": "وأيون هيدروكسيل سالب. تبقى مجموعة الهيدروكسيل معًا. طبّق الفكرة"
+      },
+      {
+        "start": 10.409,
+        "end": 14.844,
+        "text": "على هيدروكسيد الصوديوم، واحفظ عدد الذرات ومجموع الشحنة."
+      }
+    ]
+  },
+  "compounds-page-2": {
+    "file": "assets/audio/phase2/compounds-page-2.mp3",
+    "text_sha256": "658a1b848fee0da252fd16a5811882dd96ffc41db4471be5c2e351bcf9b1c515",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 14.106,
+    "bytes": 113309,
+    "sha256": "8ae1ccfe1922922c86654610b2adc126255b383720e4c190b28f72fa1b667c40",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.052,
+        "end": 4.51,
+        "text": "مرحبًا في محطة القواعد. تتكوّن أيونات الهيدروكسيل في الماء."
+      },
+      {
+        "start": 4.626,
+        "end": 8.492,
+        "text": "قارن أثر القاعدة في الكاشف، ثم أكمل الدائرة وافحص"
+      },
+      {
+        "start": 8.551,
+        "end": 13.311,
+        "text": "التوصيل. لا نختبر القواعد بلمسها أو تذوقها؛ بعض القواعد"
+      },
+      {
+        "start": 13.403,
+        "end": 13.984,
+        "text": "كاوية."
+      }
+    ]
+  },
+  "use-base-0": {
+    "file": "assets/audio/phase2/use-base-0.mp3",
+    "text_sha256": "24b4cb3884fbad981a8b52674100ce4c1824f9eb2c9c15985a75e492efc36b1d",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.06,
+    "bytes": 48944,
+    "sha256": "7a074ec986d3889891bea4af18b887c312541391dc9c01ab878190b9ed2e9026",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.122,
+        "end": 5.184,
+        "text": "هيدروكسيد الصوديوم. صناعة الصابون الصلب. تأمل الصيغة واستخدام المركب"
+      },
+      {
+        "start": 5.23,
+        "end": 5.938,
+        "text": "في البطاقة."
+      }
+    ]
+  },
+  "use-base-1": {
+    "file": "assets/audio/phase2/use-base-1.mp3",
+    "text_sha256": "15ba2c480951b4c3168daaeadc54ba8ec89b22427a6445a0312e41f4d8c89709",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.107,
+    "bytes": 49362,
+    "sha256": "cf3b673170c5380fe0c3c078e076e423e73e24d0a567567fe2123045edb58360",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.122,
+        "end": 5.277,
+        "text": "هيدروكسيد البوتاسيوم. صناعة الصابون السائل. تأمل الصيغة واستخدام المركب"
+      },
+      {
+        "start": 5.335,
+        "end": 5.974,
+        "text": "في البطاقة."
+      }
+    ]
+  },
+  "use-base-2": {
+    "file": "assets/audio/phase2/use-base-2.mp3",
+    "text_sha256": "f0d6bd9f5197ebeb2c97f584aa89205374f155fc411c05c39991c5b1278e7146",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.374,
+    "bytes": 51452,
+    "sha256": "eb71f31c8d76b515621cd2fe6db355b1806a0a33363cc17bffe66a2b90e9e880",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.133,
+        "end": 5.555,
+        "text": "هيدروكسيد المغنيسيوم. علاج حموضة المعدة. تأمل الصيغة واستخدام المركب"
+      },
+      {
+        "start": 5.602,
+        "end": 6.275,
+        "text": "في البطاقة."
+      }
+    ]
+  },
+  "compounds-page-3": {
+    "file": "assets/audio/phase2/compounds-page-3.mp3",
+    "text_sha256": "55052b68ffcb0e392b5bfb715ff3f0309ccdb7615208c5d92640f3ab0b849036",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 14.641,
+    "bytes": 117698,
+    "sha256": "2cb917bbbe33c2653f63100c537571cdd18dfb86f8207d671897ddf71d7fcb5c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.099,
+        "end": 4.464,
+        "text": "كيف يتكوّن الملح؟ أضف الحمض إلى القاعدة قطرة قطرة"
+      },
+      {
+        "start": 4.603,
+        "end": 9.131,
+        "text": "في النموذج الرقمي، وراقب مؤشر حالة المحلول. تابع الأيونات"
+      },
+      {
+        "start": 9.189,
+        "end": 12.614,
+        "text": "ثم تبخر الماء. لا يدل اللون الزهري لدوار الشمس"
+      },
+      {
+        "start": 12.707,
+        "end": 14.507,
+        "text": "وحده على نقطة التعادل."
+      }
+    ]
+  },
+  "use-salt-0": {
+    "file": "assets/audio/phase2/use-salt-0.mp3",
+    "text_sha256": "467038f53a48c7d93aeeebb07bb55963f6a628ad1cbbef7256340ad2f4426b60",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.217,
+    "bytes": 50198,
+    "sha256": "8801d3f10d1d49ebcc642c515e832316db2b69fb949cda4221880725bf911e7e",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.133,
+        "end": 5.369,
+        "text": "كلوريد الصوديوم. حفظ الأجبان والمخللات. تأمل الصيغة واستخدام المركب"
+      },
+      {
+        "start": 5.416,
+        "end": 6.113,
+        "text": "في البطاقة."
+      }
+    ]
+  },
+  "use-salt-1": {
+    "file": "assets/audio/phase2/use-salt-1.mp3",
+    "text_sha256": "1b1ba6d532b5272043033e1a891725fc3756726aaa028e9c555ece2bf6124c47",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.13,
+    "bytes": 49571,
+    "sha256": "9ea4ddc94cba71d83ed06a36c2dd7554c89beef47c394645a0f4b9b11ece3838",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.104,
+        "end": 5.212,
+        "text": "بيكربونات الصوديوم. صناعة الخبز والكعك. تأمل الصيغة واستخدام المركب"
+      },
+      {
+        "start": 5.27,
+        "end": 6.036,
+        "text": "في البطاقة."
+      }
+    ]
+  },
+  "use-salt-2": {
+    "file": "assets/audio/phase2/use-salt-2.mp3",
+    "text_sha256": "9b6a6e62e115b7da019eb29832180927000bdb0a7d937b7091cf30810d059c4a",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.739,
+    "bytes": 54377,
+    "sha256": "964ebb7d974b5068e9c1a0de0685688a6365e60a02b90d0f8206e0d11081ca18",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.093,
+        "end": 5.41,
+        "text": "كبريتات المغنيسيوم. علاج الإمساك بوصفة مختص. تأمل الصيغة واستخدام"
+      },
+      {
+        "start": 5.457,
+        "end": 6.641,
+        "text": "المركب في البطاقة."
+      }
+    ]
+  },
+  "use-salt-3": {
+    "file": "assets/audio/phase2/use-salt-3.mp3",
+    "text_sha256": "38ffea098479c1f3151f93b21223332061e7b887248cba00b1f0ec8a68dbf451",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.154,
+    "bytes": 49780,
+    "sha256": "8f83facff23f26dcb5d4d353cbf6d7cb9cac34fc0961f5c8e7537095350778d8",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.099,
+        "end": 5.254,
+        "text": "كبريتات النحاس. الطلاء الكهربائي. تأمل الصيغة واستخدام المركب في"
+      },
+      {
+        "start": 5.277,
+        "end": 5.986,
+        "text": "البطاقة."
+      }
+    ]
+  },
+  "compounds-page-4": {
+    "file": "assets/audio/phase2/compounds-page-4.mp3",
+    "text_sha256": "8d2316e68515b7cd4ae18097c3b54948ff010eae95499a4b1bd7f19b16f36e19",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 14.884,
+    "bytes": 119579,
+    "sha256": "4fd91e7620aa0615139706f86d3f446ec70d024b3c04bae50d370b16d790daf6",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.168,
+        "end": 4.533,
+        "text": "الأكسيد مركب يتكوّن من الأكسجين وعنصر آخر. قارن مثال"
+      },
+      {
+        "start": 4.58,
+        "end": 8.875,
+        "text": "الكبريت بمثال الكالسيوم. لون اللهب لا يساوي لون الغاز،"
+      },
+      {
+        "start": 9.05,
+        "end": 13.125,
+        "text": "ولا نعمم على كل أكاسيد الفلزات واللافلزات. لا تُجرِ"
+      },
+      {
+        "start": 13.148,
+        "end": 14.715,
+        "text": "التجربة خارج المحاكاة."
+      }
+    ]
+  },
+  "use-oxide-0": {
+    "file": "assets/audio/phase2/use-oxide-0.mp3",
+    "text_sha256": "97a0585dbeac45ac6b6108d1ee0dc4ea021717542fc0b670e0543d1b4ad9e0b2",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.762,
+    "bytes": 54586,
+    "sha256": "19b8e4e44af9bbfe8356eb8bfd337362dc3c1c534fcb8f62b2217de9891c7359",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.168,
+        "end": 5.439,
+        "text": "ثاني أكسيد الرصاص. صناعة بطاريات السيارات. تأمل الصيغة واستخدام"
+      },
+      {
+        "start": 5.486,
+        "end": 6.635,
+        "text": "المركب في البطاقة."
+      }
+    ]
+  },
+  "use-oxide-1": {
+    "file": "assets/audio/phase2/use-oxide-1.mp3",
+    "text_sha256": "bda7c4fa2b23409b91d722f97c506b8875b8744860060a2feda627309fddbe90",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.002,
+    "bytes": 48526,
+    "sha256": "f6ccaffff132cfe4b1ec92f2eccf5103fe35ee175bdd837bd41be6fb4c1e1d9c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.128,
+        "end": 5.178,
+        "text": "أكسيد الخارصين. صناعة الدهانات. تأمل الصيغة واستخدام المركب في"
+      },
+      {
+        "start": 5.213,
+        "end": 5.898,
+        "text": "البطاقة."
+      }
+    ]
+  },
+  "use-oxide-2": {
+    "file": "assets/audio/phase2/use-oxide-2.mp3",
+    "text_sha256": "f8397d574e5208f70b68753d73a7a22bbece42c60fbe468f7d1ca62278ec40e3",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 6.026,
+    "bytes": 48735,
+    "sha256": "18ad3c30ecca7197a97935a96329e67eeca709c93c32d816ff712a97815f8f37",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.105,
+        "end": 5.109,
+        "text": "ثاني أكسيد الكربون. إطفاء الحرائق. تأمل الصيغة واستخدام المركب"
+      },
+      {
+        "start": 5.155,
+        "end": 5.922,
+        "text": "في البطاقة."
+      }
+    ]
+  },
+  "use-oxide-3": {
+    "file": "assets/audio/phase2/use-oxide-3.mp3",
+    "text_sha256": "335e57dadf36b42bc0d50dc8d01209640640516936cb3e8c04f944d7fa2f96fb",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 5.909,
+    "bytes": 47899,
+    "sha256": "3d77b2930802cb49cf03e9ba4ff31d256c205aa24eaad95a0aace8cb071ed2da",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.104,
+        "end": 5.072,
+        "text": "أكسيد السيليكون. صناعة الزجاج. تأمل الصيغة واستخدام المركب في"
+      },
+      {
+        "start": 5.107,
+        "end": 5.804,
+        "text": "البطاقة."
+      }
+    ]
+  },
+  "compounds-page-5": {
+    "file": "assets/audio/phase2/compounds-page-5.mp3",
+    "text_sha256": "6bbff0f264e2fd6fad8d922ebf9a4c3869c5a96d28d7626836340a9c7d959421",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 12.73,
+    "bytes": 102443,
+    "sha256": "14c964f1ff903f622385defddd9044242d0265ee6386cd6f513fa63b3aa4cb4c",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.104,
+        "end": 4.272,
+        "text": "راجع العائلات الأربع في خريطة المركبات. افتح كل عائلة"
+      },
+      {
+        "start": 4.318,
+        "end": 9.914,
+        "text": "واربط مفهومها وأمثلتها واستخداماتها بالدليل المناسب. تأمل رسم التعادل،"
+      },
+      {
+        "start": 10.031,
+        "end": 12.678,
+        "text": "ثم صنّف عبوات البداية قبل الاختبار."
+      }
+    ]
+  },
+  "reaction-page-1": {
+    "file": "assets/audio/phase2/reaction-page-1.mp3",
+    "text_sha256": "4851751c56ce767ce2812305162e07f838afc532075d6f2ab853aeb7428281ea",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 10.548,
+    "bytes": 84888,
+    "sha256": "e4babf5544dfef86dc7eda57b07b867dd2b781e43de6e35acaa85a2e032c2f32",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.052,
+        "end": 4.998,
+        "text": "في هذه الرحلة ستفسر التفاعل الكيميائي وتتعرف إلى دلالاته."
+      },
+      {
+        "start": 5.079,
+        "end": 9.595,
+        "text": "تأمل الأهداف المكتوبة، واربط كل هدف بما ستنفذه وتلاحظه"
+      },
+      {
+        "start": 9.712,
+        "end": 10.362,
+        "text": "في المختبر."
+      }
+    ]
+  },
+  "reaction-page-2": {
+    "file": "assets/audio/phase2/reaction-page-2.mp3",
+    "text_sha256": "abebe3a02626a21af6aee7f5953aff6edcf30c1307bcf8403d8dc06b061bb16a",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 10.93,
+    "bytes": 88023,
+    "sha256": "2a76d7257692d223d2b3df00b2e3b34d0f7661abdd5c07545cc7cb95fe42a1e1",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.185,
+        "end": 4.272,
+        "text": "أمامك مسمار حديد. أضف الماء، ثم عرّضه للهواء، ثم"
+      },
+      {
+        "start": 4.388,
+        "end": 8.626,
+        "text": "تابع مرور الزمن المسرّع. ما الذي يتغير؟ احتفظ بتوقعك،"
+      },
+      {
+        "start": 8.8,
+        "end": 10.843,
+        "text": "ثم استند إلى الملاحظة في إجابتك."
+      }
+    ]
+  },
+  "reaction-page-3": {
+    "file": "assets/audio/phase2/reaction-page-3.mp3",
+    "text_sha256": "61a371f4de9bf48cd7cf656d5e7eefec844c3e78b51a0b1964c2dcdd93932279",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-1",
+    "duration": 12.422,
+    "bytes": 99726,
+    "sha256": "47d63d30129438a78b39e38c16db2da7380c660c526e5a38d7ceb0fa1ddca27f",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.087,
+        "end": 3.315,
+        "text": "نميّز المواد التي يبدأ بها التفاعل من المواد التي"
+      },
+      {
+        "start": 3.373,
+        "end": 8.191,
+        "text": "تتكوّن بعده. اتبع اتجاه السهم في المثال، ثم صنّف"
+      },
+      {
+        "start": 8.261,
+        "end": 12.394,
+        "text": "المواد وفق موضعها قبل التفاعل وبعده."
+      }
+    ]
+  }
+}

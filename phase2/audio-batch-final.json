@@ -1,0 +1,239 @@
+{
+  "lab-result-neutral": {
+    "file": "assets/audio/phase2/lab-result-neutral.mp3",
+    "text_sha256": "6bbe7d9b7121a62bcf78d49f3a4d4ef90460df993f7f1487b6643ec2dfe9feb3",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-final",
+    "duration": 17.514,
+    "bytes": 140686,
+    "sha256": "9f3d81e9128062482065ae49654e530aeb6c9d7bd05642f9122b46950bd5d411",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0,
+        "end": 4.76,
+        "text": "في هذا النموذج تعادل أربع إضافات متساوية كمية القاعدة."
+      },
+      {
+        "start": 4.853,
+        "end": 10.136,
+        "text": "يتحد الهيدروجين الموجب والهيدروكسيل السالب لتكوين الماء، وتبقى أيونات"
+      },
+      {
+        "start": 10.182,
+        "end": 14.687,
+        "text": "الصوديوم والكلوريد. عند تبخر الماء تظهر بلورات كلوريد الصوديوم."
+      },
+      {
+        "start": 14.872,
+        "end": 17.369,
+        "text": "زيادة الحمض تجعل المحلول حمضيًا."
+      }
+    ]
+  },
+  "lab-result-oxide": {
+    "file": "assets/audio/phase2/lab-result-oxide.mp3",
+    "text_sha256": "07a626882a38368fd71c3072e8c6587dba5cc2cd070618a9c5da36afe8708f39",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-final",
+    "duration": 18.722,
+    "bytes": 150299,
+    "sha256": "8cdd601072756d856bfc1eff13bff4f5023962c2bbba15e739a2a0e1c5f765e2",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.145,
+        "end": 4.476,
+        "text": "يحترق الكبريت بلهب أزرق ويكوّن ثاني أكسيد الكبريت العديم"
+      },
+      {
+        "start": 4.522,
+        "end": 8.504,
+        "text": "اللون. يظهر أثر حمضي مع الماء فتحمر الورقة الزرقاء"
+      },
+      {
+        "start": 8.551,
+        "end": 12.951,
+        "text": "المبللة. وفي المثال الآخر يكون أكسيد الكالسيوم قاعديًا مع"
+      },
+      {
+        "start": 12.998,
+        "end": 17.897,
+        "text": "الماء. أكسيد الألومنيوم متردد، ولا نعمم التصنيف على كل"
+      },
+      {
+        "start": 17.943,
+        "end": 18.675,
+        "text": "الأكاسيد."
+      }
+    ]
+  },
+  "reaction-result-balloon": {
+    "file": "assets/audio/phase2/reaction-result-balloon.mp3",
+    "text_sha256": "b4e97dbe7f6cc6cbab793bdf7751d9aaf29fd66a7a7b6765cfab0a8c59917ea8",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-final",
+    "duration": 10.983,
+    "bytes": 88441,
+    "sha256": "37b0b43b9dcb8c26d61318ef4178fc5dedfc5ff638459b8099ab0d9a3f6da524",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.046,
+        "end": 5.828,
+        "text": "لنربط الملاحظة بالتفسير. يتآكل الخارصين تدريجيًا وينتج غاز الهيدروجين،"
+      },
+      {
+        "start": 5.99,
+        "end": 10.855,
+        "text": "فينتفخ البالون. تكوّنت مواد جديدة تختلف عن المواد المتفاعلة."
+      }
+    ]
+  },
+  "reaction-result-heat": {
+    "file": "assets/audio/phase2/reaction-result-heat.mp3",
+    "text_sha256": "764dbb550f039cea24f4ca7b57fc1e26674f634d132e389c1022a8cddeccdc7b",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-final",
+    "duration": 10.414,
+    "bytes": 83843,
+    "sha256": "26c9f969958bf714d75cfdc6605a29dd24a32ffa11220b95c37624f063b2ee62",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.127,
+        "end": 5.328,
+        "text": "لنربط الملاحظة بالتفسير. تصاعد غاز الهيدروجين وارتفاع الحرارة دليلان"
+      },
+      {
+        "start": 5.422,
+        "end": 10.38,
+        "text": "على حدوث التفاعل. ينتج محلول كبريتات الألمنيوم وغاز الهيدروجين."
+      }
+    ]
+  },
+  "reaction-result-iodine": {
+    "file": "assets/audio/phase2/reaction-result-iodine.mp3",
+    "text_sha256": "209f1a78caf68e2976ad6841b809a05bb7659365f2f5c9951cd3e1f09e01bca0",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-final",
+    "duration": 12.184,
+    "bytes": 98054,
+    "sha256": "9f638b46bfff9a7798c60742b7426aff95fba4632287b0fe19040446052798a1",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.035,
+        "end": 4.586,
+        "text": "لنربط الملاحظة بالتفسير. يتغيّر لون الخبز إلى البنفسجي الغامق"
+      },
+      {
+        "start": 4.644,
+        "end": 8.44,
+        "text": "المائل إلى الأسود نتيجة تفاعل اليود مع النشا فيه."
+      },
+      {
+        "start": 8.533,
+        "end": 12.132,
+        "text": "ولاحظ أنه لا يتغيّر لون الحليب عند إضافة اليود."
+      }
+    ]
+  },
+  "reaction-result-precipitate": {
+    "file": "assets/audio/phase2/reaction-result-precipitate.mp3",
+    "text_sha256": "32b612ecc9234a59987e8fa030d4379ebacd3289590911fa70a8add30490d6db",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-final",
+    "duration": 14.907,
+    "bytes": 119788,
+    "sha256": "4246bac2c203ccf6edeb72955268944bcb49799eb04f121bf2e56f5e772ba04e",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.053,
+        "end": 4.987,
+        "text": "لنربط الملاحظة بالتفسير. ينتج راسب أبيض من كلوريد الفضة"
+      },
+      {
+        "start": 5.254,
+        "end": 9.48,
+        "text": "عند تفاعل محلول نترات الفضة مع محلول ملح الطعام."
+      },
+      {
+        "start": 10.072,
+        "end": 13.729,
+        "text": "الراسب مادة غير ذائبة في الماء، وتشكّله من دلالات"
+      },
+      {
+        "start": 13.811,
+        "end": 14.821,
+        "text": "حدوث التفاعل."
+      }
+    ]
+  },
+  "reaction-result-cabbage": {
+    "file": "assets/audio/phase2/reaction-result-cabbage.mp3",
+    "text_sha256": "051703a35b074b871f50d7ea13c5c20210e3b6b087a654ee8d01de8f6551e068",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-final",
+    "duration": 14.982,
+    "bytes": 120415,
+    "sha256": "8fb0c4d10f4b927600d16e2bbf94b39d084ed988c20b7eaf201d43b2fc7597ba",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.087,
+        "end": 4.638,
+        "text": "لنربط الملاحظة بالتفسير. يتغيّر لون كاشف الملفوف الأحمر إلى"
+      },
+      {
+        "start": 4.684,
+        "end": 8.852,
+        "text": "الأحمر مع الحمض، وإلى الأخضر مع القاعدة. صيغة بيكربونات"
+      },
+      {
+        "start": 8.91,
+        "end": 14.831,
+        "text": "الصوديوم بيكربونات الصوديوم. ومحلول الشاي مثال آخر لكاشف طبيعي."
+      }
+    ]
+  },
+  "shared-certificate": {
+    "file": "assets/audio/phase2/shared-certificate.mp3",
+    "text_sha256": "c0192f56dbeb9c19d0be72282d14b65a13a7bcfef9b21a5392d9d1b3b315248f",
+    "voice_id": "EUojVLG1QfxaqqH4ce6s",
+    "voice_name": "Razan – Academic & Cultural Narration",
+    "model": "eleven_multilingual_v2",
+    "batch": "batch-final",
+    "duration": 10.242,
+    "bytes": 81754,
+    "sha256": "29f6b7a44abf1d711bfba126cfee1708338f1ba925fd565e6e1440141982b5d5",
+    "alignment": 1.0,
+    "cues": [
+      {
+        "start": 0.151,
+        "end": 6.455,
+        "text": "أحسنت أيها المستكشف! استوفيت شروط شهادة الإنجاز. هذه ثمرة"
+      },
+      {
+        "start": 6.537,
+        "end": 10.217,
+        "text": "ملاحظتك وتجاربك وتفكيرك العلمي."
+      }
+    ]
+  }
+}

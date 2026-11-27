@@ -29,7 +29,7 @@ const Effects=(()=>{
   try{
    if(!context){context=new (window.AudioContext||window.webkitAudioContext)();
     ready=Promise.all(['click','error','success'].map(async kind=>{try{buffers[kind]=await decode(`assets/sounds/${kind}.wav`);}catch{}}));
-    rewardsReady=(async()=>{try{const response=await fetch('assets/audio/rewards/manifest.json');if(!response.ok)return;const list=await response.json();await Promise.all(list.map(async item=>{try{const buffer=await decode(`assets/audio/rewards/${item.file}`);rewards.push({...item,buffer});}catch{}}));}catch{}})();
+    rewardsReady=(async()=>{try{const response=await fetch('assets/audio/rewards/manifest.json');if(!response.ok)return;const list=await response.json();await Promise.all(/* P2:start */(window.RazanRewardPool||/* P2:end */list/* P2:start */)/* P2:end */.map(async item=>{try{const buffer=await decode(/* P2:start */item.sourceFile||window.NarrationAssets?.['reward-'+item.id]?.file||/* P2:end */`assets/audio/rewards/${item.file}`);rewards.push({...item,buffer});}catch{}}));}catch{}})();
    }
    if(context.state==='suspended')context.resume().catch(()=>{});
   }catch{}
@@ -44,7 +44,7 @@ const Effects=(()=>{
    node.start();document.dispatchEvent(new CustomEvent('lab-effect',{detail:{kind,duration:buffer.duration,...detail}}));
   });
  }
- function chooseReward(){const available=rewards.filter(r=>rewards.length===1||r.id!==lastReward);return available[Math.floor(Math.random()*available.length)];}
+ function chooseReward(){const available=rewards.filter(r=>rewards.length===1||r.id!==lastReward);/* P2:start */const positive=available.filter(r=>!r.certificateOnly);if(positive.length)return positive[Math.floor(Math.random()*positive.length)];/* P2:end */return available[Math.floor(Math.random()*available.length)];}
  async function drain(){
   if(running)return;running=true;const token=epoch;
   try{
@@ -52,16 +52,16 @@ const Effects=(()=>{
    while(enabled&&token===epoch&&queue.length){
     const entry=queue.shift();if(!entry.root?.isConnected||entry.root!==root())continue;
     pauseTeacher();
-    if(!await source('success',buffers.success,token))break;
+    /* P2:start */if(!LabAudio.effectsMuted)/* P2:end */if(!await source('success',buffers.success,token))break;
     if(token!==epoch||!enabled)break;
     await rewardsReady;if(token!==epoch||!enabled)break;
-    const reward=(entry.preferredReward&&rewards.find(r=>r.id===entry.preferredReward))||chooseReward();
+    const reward=(entry.preferredReward&&rewards.find(r=>r.id===entry.preferredReward/* P2:start */&&!r.certificateOnly&&r.id!==lastReward/* P2:end */))||chooseReward();
     if(reward){lastReward=reward.id;if(!await source('reward',reward.buffer,token,{id:reward.id,label:reward.label}))break;}
    }
   }finally{if(token===epoch){running=false;queue=[];resumeTeacher();}}
  }
  async function play(kind,preferredReward=null){
-  if(!enabled||!context||LabAudio.volume===0)return;
+  /* P2:start */if(kind!=='success'&&LabAudio.effectsMuted)return;/* P2:end */if(!enabled||!context||LabAudio.volume===0)return;
   if(kind==='success'){queue.push({root:root(),preferredReward});drain();return;}
   if(running||queue.length)return;
   const token=epoch;await ready;
@@ -84,7 +84,7 @@ const Effects=(()=>{
  function result(ok,key,scope,target=scope,educational=true,preferredReward=null){
   suppressClick=true;
   if(!scope)return;if(educational&&typeof LabRuntime!=='undefined'&&LabRuntime.isDemonstrating){if(ok)LabAudio.tone('complete');return;}
-  let keys=seen.get(scope);if(!keys){keys=new Set();seen.set(scope,keys);}
+/* P2:start */if(educational)LabLearning.answer(ok,key,scope);/* P2:end */  let keys=seen.get(scope);if(!keys){keys=new Set();seen.set(scope,keys);}
   const repeated=ok&&keys.has(key);
   if(ok){keys.add(key);let badge=target.querySelector('.fx-reward');if(!badge){badge=document.createElement('span');badge.className='fx-reward';badge.setAttribute('aria-label','إجابة صحيحة');target.append(badge);}badge.textContent='✓';if(!repeated){badge.classList.remove('fx-pop');void badge.offsetWidth;badge.classList.add('fx-pop');}}
   if(repeated)return;
